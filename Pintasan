@@ -1,0 +1,21 @@
+#!/bin/bash
+
+cd /data/data/com.termux/files/usr/bin/
+
+ls
+
+rm off
+rm on
+
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/on
+
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/off
+
+chmod +x on
+chmod +x off
+
+cd
+
+
+clear
+echo -e "\033[0;37mSilahkan masuk linux dengan ketik" "\033[0;32mon" "\033[0;37m, untuk mematikan silahkan swipe aja, atau ketik" "\033[0;32moff" "\033[0;37m lalu enter.."
