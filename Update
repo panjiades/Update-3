@@ -3,5 +3,7 @@ rm Update
 rm Update1
 rm Update2
 rm Update3
-rm Update4
+rm -rf Update
+rm -rf Update1
+rm -rf Update2
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update | bash
