@@ -31,18 +31,8 @@ cd
 clear
 echo -e "\033[0;32mBERHASIL DiPERBAHARUI"
 echo -e "\033[1;37mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
-echo -e "\033[0;31m "
-# Fungsi untuk menampilkan hitung mundur horizontal
-function countdown() {
-    local seconds=$1
-    for ((i=seconds; i>=0; i--)); do
-        printf "\rJendela ini akan keluar dalam %ds" $i
-        sleep 1
-    done
-    printf "\n"
-}
-# Panggil fungsi countdown dengan argumen 10 detik
-countdown 15
+echo -e "\033[0;31m Tutup aja Apk Termux ini "
+
 
 # Keluar dari terminal
 exit
