@@ -1,4 +1,5 @@
 #!/bin/bash
+ls
 rm Update
 rm Update1
 rm Update2
