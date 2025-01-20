@@ -10,15 +10,15 @@ rm Buka.2
 rm Tutup
 rm Tutup.1
 rm Tutup.2
-rm Update
-rm Update.1
-rm Update.2
+rm Buka_Update
+rm Buka_Update.1
+rm Buka_Update.2
 wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Buka
 wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Tutup
-wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Buka_Update
 chmod +x Buka
 chmod +x Tutup
-chmod +x Update
+chmod +x Buka_Update
 cd
 
 cd /data/data/com.termux/files/usr/bin/
@@ -33,7 +33,7 @@ chmod +x off
 cd
 
 clear
-echo -e "\033[0;32mBERHASIL DiPERBAHARUI"
+echo -e "\033[0;32mBERHASIL DIPERBAHARUI"
 echo -e "\033[1;37mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
 
 echo -e "\033[0;31msilahkan ketik Exit, lalu enter..."
