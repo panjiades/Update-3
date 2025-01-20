@@ -34,7 +34,8 @@ cd
 clear
 echo -e "\033[0;32mBERHASIL DiPERBAHARUI"
 echo -e "\033[1;37mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
-echo -e "\033[0;31mTutup aja Apk Termux ini "
+
+echo -e "\033[0;31msilahkan ketik Exit, lalu enter..."
 
 
 # Keluar dari terminal
