@@ -3,10 +3,13 @@
 cd .shortcuts
 rm Mulai.sh
 rm Matikan.sh
+rm Buka
 rm Buka.1
 rm Buka.2
+rm Tutup
 rm Tutup.1
 rm Tutup.2
+rm Update
 rm Update.1
 rm Update.2
 wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Buka
@@ -31,7 +34,7 @@ cd
 clear
 echo -e "\033[0;32mBERHASIL DiPERBAHARUI"
 echo -e "\033[1;37mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
-echo -e "\033[0;31m Tutup aja Apk Termux ini "
+echo -e "\033[0;31mTutup aja Apk Termux ini "
 
 
 # Keluar dari terminal
