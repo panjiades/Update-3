@@ -1,6 +1,7 @@
 #!/bin/bash                              
 
 cd .shortcuts
+ls
 rm Mulai.sh
 rm Matikan.sh
 rm Buka
