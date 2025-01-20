@@ -1,0 +1,48 @@
+#!/bin/bash                              
+
+cd .shortcuts
+rm Mulai.sh
+rm Matikan.sh
+rm Buka.1
+rm Buka.2
+rm Tutup.1
+rm Tutup.2
+rm Update.1
+rm Update.2
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Buka
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Tutup
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update
+chmod +x Buka
+chmod +x Tutup
+chmod +x Update
+cd
+
+cd /data/data/com.termux/files/usr/bin/
+ls
+rm off
+rm on
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/on
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/off
+chmod +x on
+chmod +x off
+
+cd
+
+clear
+echo -e "\033[0;32mBERHASIL DiPERBAHARUI"
+echo -e "\033[1;37mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
+echo -e "\033[0;31m "
+# Fungsi untuk menampilkan hitung mundur horizontal
+function countdown() {
+    local seconds=$1
+    for ((i=seconds; i>=0; i--)); do
+        printf "\rJendela ini akan keluar dalam %ds" $i
+        sleep 1
+    done
+    printf "\n"
+}
+# Panggil fungsi countdown dengan argumen 10 detik
+countdown 15
+
+# Keluar dari terminal
+exit
