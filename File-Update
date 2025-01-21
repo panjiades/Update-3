@@ -42,5 +42,5 @@ exit
   sleep 1
 done
 echo "Keluar..."
-exit
+exit 0
 esac
