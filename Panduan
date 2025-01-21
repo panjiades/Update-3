@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 # Warna hijau
 green='\e[0;32m'
 reset='\e[0m'
