@@ -1,12 +1,12 @@
 #!/bin/bash
 cd
 ls
-rm Update
-rm Update1
-rm Update2
-rm Update3
-rm -rf Update
-rm -rf Update1
-rm -rf Update2
-rm -rf Update3
+rm File-Update
+rm File-Update1
+rm File-Update2
+rm File-Update3
+rm -rf File-Update
+rm -rf File-Update1
+rm -rf File-Update2
+rm -rf File-Update3
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update | bash
