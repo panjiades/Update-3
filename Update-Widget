@@ -1,5 +1,7 @@
 #!/bin/bash                              
 
+ls
+rm .bashrc
 cd .shortcuts
 ls
 rm Mulai.sh
