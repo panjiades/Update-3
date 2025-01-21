@@ -8,7 +8,7 @@ reset='\e[0m'
 echo -e "${green}Bagian ini sedang dibuat.. mohon di tunggu${reset}"
 
 # Hitung mundur
-for i in {5..1}; do
+for i in {10..1}; do
   echo -ne "\r jendela akan keluar otomatis dalam $i detik..."
   sleep 1
 done
