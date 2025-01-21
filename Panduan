@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Warna hijau
+green='\e[0;32m'
+reset='\e[0m'
+
+# Pesan utama
+echo -e "${green}Bagian ini sedang dibuat.. mohon di tunggu${reset}"
+
+# Hitung mundur
+for i in {5..1}; do
+  echo -ne "\r jendela akan keluar otomatis dalam $i detik..."
+  sleep 1
+done
+
+# Keluar
+echo ""
+exit
