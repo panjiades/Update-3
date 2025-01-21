@@ -7,9 +7,14 @@ BACKTITLE="Menu update"
 TITLE="Pilih menu"
 MENU="Last update 20 Januari 2025:"
 
-OPTIONS=(1 "Install WPS 365"
-         2 "Install WPS 2019"
-         3 "Cooming soon")
+OPTIONS=(
+1 "Tutorial"
+2 "Buka Web Tutorial"
+3 "Cooming Soon"
+4 "Cooming Soon"
+5 "Install WPS 365"
+6 "Install WPS 2019"
+7 "Cooming soon")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
