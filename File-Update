@@ -7,7 +7,7 @@ BACKTITLE="Update sedang pengembangan"
 TITLE="Pilih menu"
 MENU="Last update 20 Januari 2025:"
 
-#INI_MENU_AWAL
+# INI MENU AWAL
 OPTIONS=(
 1 "Link Tutorial"
 2 "Install Sudo"
