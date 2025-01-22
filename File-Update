@@ -27,16 +27,18 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
-        1)
+
+1)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/p/update.html?m=1
 exit 0
 ;;
 
-        2)
+2)
 clear
 echo Masukan perintah
 ;;
-        3)
+
+3)
             for i in {7..1}; do
   echo "BELUM TERSEDIA DALAM PENGEMBANGAN - keluar dalam $i detik"
   sleep 1
