@@ -9,7 +9,7 @@ MENU="Last update 20 Januari 2025:"
 
 OPTIONS=(
 1 "Link Tutorial"
-2 "Cooming Soon"
+2 "Terminal"
 3 "Cooming Soon"
 4 "Cooming Soon"
 5 "Install WPS 365"
@@ -32,12 +32,7 @@ exit 0
 ;;
 
         2)
-for i in {7..1}; do
-  echo "BELUM TERSEDIA DALAM PENGEMBANGAN - keluar dalam $i detik"
-  sleep 1
-done
-echo "Keluar..."
-exit 0
+clear
 ;;
         3)
             for i in {7..1}; do
