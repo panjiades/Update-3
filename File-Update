@@ -28,7 +28,7 @@ clear
 case $CHOICE in
         1)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/p/update.html?m=1
-done
+exit 0
 ;;
 
         2)
