@@ -33,6 +33,7 @@ exit 0
 
         2)
 clear
+echo Masukan perintah
 ;;
         3)
             for i in {7..1}; do
