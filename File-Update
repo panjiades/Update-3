@@ -7,7 +7,7 @@ WIDTH=40
 CHOICE_HEIGHT=4
 BACKTITLE="Update sedang pengembangan"
 TITLE="Pilih menu"
-MENU="Last update 20 Januari 2025:"
+MENU="Last update 23 Januari 2025:"
 
 # INI MENU AWAL
 OPTIONS=(
