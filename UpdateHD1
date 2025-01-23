@@ -48,8 +48,8 @@ function countdown() {
         printf "\rCek file dalam : %ds" $i
         sleep 1
     done
-    printf "\n"
-}
+    printf "\n" }
+
 # Panggil fungsi countdown dengan argumen 10 detik
 countdown 15
 
