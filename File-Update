@@ -53,8 +53,7 @@ exit 0
 ;;
 
 2)
-clear
-echo "Masukan perintah"
+am start -a android.intent.action.VIEW -d https://tiktok.com/@rekberinnet
 ;;
 
 3)
