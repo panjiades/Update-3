@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Tentukan path ke file yang ingin dicek
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh"
+
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  echo "next"
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+echo -e  "Eror :" "\033[31mSilahkan memakai jasa 085865480245 untuk menginstall paket linux terlebih dahulu.."
+exit 0
+fi
+
 # Clear the screen
 clear
 
@@ -49,7 +62,7 @@ if [ -f "$file" ]; then
   echo -e  "Cek file :" "\033[32mFile Update paket 1 Sudah di download"
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
-  echo -e "Cek File :" "\033[31mFile belum di download, anda akan di arahkan ke halaman download..."
+  echo -e "Cek File :" "\033[31mFile Update paket 1 Belum di download, Silahkan download dahulu!"
 fi
 
 echo  " "
@@ -66,44 +79,24 @@ if [ -f "$file" ]; then
  read -n 1 -p "Tekan sembarang tombol untuk Memulai instalasi Upgrade ke Linux versi HD.. ( proses sekitar 10 menit )"
 proot-distro remove ubuntu
 cd storage/downloads
-
-ls
-
 mv Paket1HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
-
 cd
-
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
-
-ls
-
 tar xvf Paket1HD.tar
-
-ls
-
 rm Paket1HD.tar
-
 cd
-
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/upgrade-ke-linux-hd-selesai.html?m=1
 
-exit 0
 
 else
 
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
-
-read -n 1 -p "Tekan sembarang tombol untuk membuka Halaman download.."
-
-sleep 10
-
+  read -n 1 -p "Tekan sembarang tombol untuk membuka Halaman download.."
 am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=1-B8cq7t0BiSqnnWd70rpZ3iEF-6t6DBO&export=download&authuser=0
 
 sleep 60
 
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/proses-upgrade-ke-linux-versi-hd.html?m=1
-
-exit 0
 
 fi
 
