@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# Clear the screen
+clear
+
+#Deskripsi
+
+echo " "
+echo -e "\033[32mMENGENAI UPDATE WPS KE VERSI YANG LEBIH HD INI"
+echo " "
+echo " "
+echo -e "\033[33mDeskripsi :"
+echo -e "\033[37m
+
+Upgrade Ini di tujukan Untuk instalasi LINUX WPS sebelum 23 Januari 2025. Bagi yang install sesudah tanggal itu tidak perlu upgrade.
+
+Update ini akan mengganti full Linux sebelumnya, dari segi tampilan dan konfigurasi. 
+
+Cata ini juga bisa untuk install ulang linux kamu.
+
+Untuk paket aplikasi terinstall tidak jauh berbeda. 
+Data linux akan hilang, namun data di internal aman. 
+Silahkan Backup data di Document/Download linux kalian."
+echo " "
+echo "Akan di arahkan untuk Download file update 3.5 GB.
+Setelah download selesai, silahkan masuk ke menu ini lagi."
+
+echo " "
+echo " "
+
+# Fungsi untuk menampilkan hitung mundur horizontal
+function countdown() {
+    local seconds=$1
+    for ((i=seconds; i>=0; i--)); do
+        printf "\rCek file dalam : %ds" $i
+        sleep 1
+    done
+    printf "\n"
+}
+# Panggil fungsi countdown dengan argumen 10 detik
+countdown 15
+
+# Tentukan path ke file yang ingin dicek
+file="storage/downloads/Paket1HD.tar"
+
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  echo -e  "Cek file :" "\033[32mFile Update paket 1 Sudah di download"
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+  echo -e "Cek File :" "\033[31mFile Update paket 1 Belum di download, Silahkan download dahulu!"
+fi
+
+echo  " "
+echo " "
+
+echo -e "\033[37m "
+# INSTALASI ATAU DOWNLOAD LINK
+file="storage/downloads/Paket1HD.tar"
+
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+
+  # Jika file ada, tampilkan pesan "Ada"
+ read -n 1 -p "Tekan sembarang tombol untuk Memulai instalasi Upgrade ke Linux versi HD.. ( proses sekitar 10 menit )"
+proot-distro remove ubuntu
+cd storage/downloads
+mv Paket1HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+cd
+cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+tar xvf Paket1HD.tar
+rm Paket1HD.tar
+cd
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/upgrade-ke-linux-hd-selesai.html?m=1
+
+
+else
+
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+  read -n 1 -p "Tekan sembarang tombol untuk membuka Halaman download.."
+am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=1-B8cq7t0BiSqnnWd70rpZ3iEF-6t6DBO&export=download&authuser=0
+
+sleep 60
+
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/proses-upgrade-ke-linux-versi-hd.html?m=1
+
+fi
+
+
+exit 0
