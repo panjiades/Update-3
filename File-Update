@@ -13,11 +13,13 @@ MENU="Last update 20 Januari 2025:"
 OPTIONS=(
 1 "Link Tutorial"
 2 "Install Sudo"
-3 "Cooming Soon"
-4 "Cooming Soon"
-5 "Install WPS 365"
+3 "Update Paket1 HD Version"
+4 "Update Paket2 HD Version"
+5 "Update Paket 3/4/5 HD Version"
 6 "Install WPS 2019"
-7 "Cooming soon")
+7 "Install WPS 365"
+8 " "
+9 " ")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
