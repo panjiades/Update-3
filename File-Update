@@ -43,12 +43,7 @@ echo Masukan perintah
 ;;
 
 3)
-            for i in {7..1}; do
-  echo "BELUM TERSEDIA DALAM PENGEMBANGAN - keluar dalam $i detik"
-  sleep 1
-done
-echo "Keluar..."
-exit 0
+ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash
 ;;
 esac
 
