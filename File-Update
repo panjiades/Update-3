@@ -28,8 +28,8 @@ OPTIONS=(
 ‎  ""
 6 "Update Kirim file .docx"
 6 "Cara perbesar tampilan WPS & Linux"
-7 "Install WPS 365"
-8 " "
+7 "Install WPS 365 ( bebas downgrade )"
+8 "Install WPS 2019 ( bebas Upgrade )"
 9 " ")
 
 CHOICE=$(dialog --clear \
