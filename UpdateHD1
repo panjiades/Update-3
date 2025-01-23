@@ -66,15 +66,21 @@ if [ -f "$file" ]; then
  read -n 1 -p "Tekan sembarang tombol untuk Memulai instalasi Upgrade ke Linux versi HD.. ( proses sekitar 10 menit )"
 proot-distro remove ubuntu
 cd storage/downloads
+
 ls
+
 mv Paket1HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
 cd
 
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+
 ls
+
 tar xvf Paket1HD.tar
+
 ls
+
 rm Paket1HD.tar
 
 cd
