@@ -68,7 +68,9 @@ if [ -f "$file" ]; then
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
 echo " "
-echo -e  "Gagal :" "\033[31mTerdeteksi perangkat baru atau Silahkan memakai jasa 085865480245 untuk menginstall Paket 1 linux terlebih dahulu.."
+echo -e  "Gagal :" "\033[31mTerdeteksi belum pernah instal Paket 1. 
+Atau Terdeteksi perangkat baru.
+Silahkan memakai jasa 085865480245 untuk menginstall Paket 1 linux terlebih dahulu.."
 sleep 15
 exit 0
 fi
@@ -86,7 +88,9 @@ if [ -f "$file" ]; then
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
 echo " "
-echo -e  "Gagal :" "\033[31mTerdeteksi perangkat baru atau Silahkan memakai jasa 085865480245 untuk menginstall Paket 2 linux terlebih dahulu.."
+echo -e  "Gagal :" "\033[31mTerdeteksi belum pernah install Paket 2.
+Atau terdeteksi perangkat baru.
+Silahkan memakai jasa 085865480245 untuk menginstall Paket 2 linux terlebih dahulu.."
 
 sleep 15
 exit 0
