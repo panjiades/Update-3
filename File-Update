@@ -34,21 +34,33 @@ case $CHOICE in
 
 1)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/p/update.html
-
 exit 0
 ;;
 
 2)
 clear
-echo Masukan perintah
+echo "Masukan perintah"
 ;;
 
 3)
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh"; if [ -f "$file" ]; then; wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash; else; echo -e  "Eror :" "\033[31mSilahkan memakai jasa 085865480245 untuk menginstall paket linux terlebih dahulu.."; exit 0; fi
+# Tentukan path ke file yang ingin dicek
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh"
 
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash
+
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+echo -e  "Eror :" "\033[31mSilahkan memakai jasa 085865480245 untuk menginstall paket linux terlebih dahulu.."
+sleep 5
+exit 0
+fi
 ;;
 
 6)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/cara-memperbesar-tampilan-jika-terlalu.html
-
 ;;
+
+esac
