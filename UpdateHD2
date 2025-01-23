@@ -50,10 +50,10 @@ file="storage/downloads/Paket2HD.tar"
 # Periksa keberadaan file
 if [ -f "$file" ]; then
   # Jika file ada, tampilkan pesan "Ada"
-  echo -e  "Cek file :" "\033[32mFile Update paket 1 Sudah di download, melakukan otomatis install.."
+  echo -e  "Cek file :" "\033[32mFile Update PAKET 2 Sudah di download, melakukan otomatis install.."
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
-  echo -e "Cek File :" "\033[31mFile Update paket 1 Belum di download, Anda diarahkan otomatis ke halaman download.."
+  echo -e "Cek File :" "\033[31mFile Update PAKET 2 Belum di download, Anda diarahkan otomatis ke halaman download.."
 fi
 
 sleep 10
