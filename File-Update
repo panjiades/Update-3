@@ -59,5 +59,6 @@ fi
 ;;
 
 6)
-am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/cara-memperbesar-tampilan-jika-terlalu.html?m=1
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/cara-memperbesar-tampilan-jika-terlalu.html
+
 ;;
