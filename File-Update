@@ -43,7 +43,19 @@ echo Masukan perintah
 ;;
 
 3)
- wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash
+# Tentukan path ke file yang ingin dicek
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh"
+
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+echo -e  "Eror :" "\033[31mSilahkan memakai jasa 085865480245 untuk menginstall paket linux terlebih dahulu.."
+exit 0
+fi
+
 ;;
 
 6)
