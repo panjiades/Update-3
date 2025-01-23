@@ -44,14 +44,7 @@ echo Masukan perintah
 ;;
 
 3)
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh"
-
-if [ -f "$file" ]; then
-  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash
-else
-echo -e  "Eror :" "\033[31mSilahkan memakai jasa 085865480245 untuk menginstall paket linux terlebih dahulu.."
-exit 0
-fi
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh"; if [ -f "$file" ]; then; wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash; else; echo -e  "Eror :" "\033[31mSilahkan memakai jasa 085865480245 untuk menginstall paket linux terlebih dahulu.."; exit 0; fi
 
 ;;
 
