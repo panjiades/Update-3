@@ -77,7 +77,7 @@ fi
 
 4)
 # Tentukan path ke file yang ingin dicek
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh"
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.shh"
 
 # Periksa keberadaan file
 if [ -f "$file" ]; then
