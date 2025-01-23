@@ -13,7 +13,7 @@ echo " "
 echo -e "\033[33mDeskripsi :"
 echo -e "\033[37m
 
-Paket 2
+PAKET 2
 
 Upgrade Ini di tujukan Untuk instalasi LINUX WPS sebelum 23 Januari 2025. Bagi yang install sesudah tanggal itu tidak perlu upgrade.
 
