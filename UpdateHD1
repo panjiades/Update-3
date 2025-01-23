@@ -80,6 +80,7 @@ cd
 
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/upgrade-ke-linux-hd-selesai.html?m=1
 
+exit 0
 
 else
 
@@ -95,7 +96,7 @@ sleep 60
 
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/proses-upgrade-ke-linux-versi-hd.html?m=1
 
-exit
+exit 0
 
 fi
 
