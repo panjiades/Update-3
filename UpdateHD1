@@ -67,11 +67,17 @@ if [ -f "$file" ]; then
 proot-distro remove ubuntu
 cd storage/downloads
 mv Paket1HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+
 cd
+
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+
 tar xvf Paket1HD.tar
+
 rm Paket1HD.tar
+
 cd
+
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/upgrade-ke-linux-hd-selesai.html?m=1
 
 
