@@ -20,10 +20,12 @@ MENU="Last update 23 Januari 2025. Jika dibuka tak ada apa², maka dalam proses.
 # INI MENU AWAL
 OPTIONS=(
 1 "Link Tutorial"
-2 "Install Sudo"
+2 "Tiktok Creator"
+‎  ""
 3 "Update Paket1 HD Version"
 4 "Update Paket2 HD Version"
 5 "Update Paket 3/4/5 HD Version"
+‎  ""
 6 "Update Kirim file .docx"
 6 "Cara perbesar tampilan WPS & Linux"
 7 "Install WPS 365"
@@ -40,6 +42,10 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
+
+‎ )
+exit
+;;
 
 1)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/p/update.html
