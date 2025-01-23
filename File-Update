@@ -1,5 +1,14 @@
 #!/bin/bash
 
+cd .shortcuts
+ls
+rm Buka_Update
+rm Buka_Update1
+rm Buka_Update2
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Buka_Update
+chmod +x Buka_Update
+
+cd
 
 # INI MENU PILIHAN
 HEIGHT=40
