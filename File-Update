@@ -2,10 +2,9 @@
 
 
 # INI MENU PILIHAN
-HEIGHT=50
-WIDTH=150
-CHOICE_HEIGHT=4
-BACKTITLE="Update sedang pengembangan"
+HEIGHT=40
+WIDTH=170
+CHOICE_HEIGHT=5
 TITLE="Pilih menu update"
 MENU="Last update 23 Januari 2025. Jika dibuka tak ada apa², maka dalam proses."
 
