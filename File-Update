@@ -58,7 +58,7 @@ am start -a android.intent.action.VIEW -d https://tiktok.com/@rekberinnet
 
 3)
 # Tentukan path ke file yang ingin dicek
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh"
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.local/share/mime/packages/Override.xml"
 
 # Periksa keberadaan file
 if [ -f "$file" ]; then
