@@ -87,7 +87,8 @@ am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/
 else
 
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
-  read -n 1 -p "Tekan sembarang tombol untuk membuka Halaman download.."
+sleep 10
+read -n 1 -p "Tekan sembarang tombol untuk membuka Halaman download.."
 am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=1-B8cq7t0BiSqnnWd70rpZ3iEF-6t6DBO&export=download&authuser=0
 
 sleep 60
