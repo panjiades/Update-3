@@ -53,7 +53,7 @@ if [ -f "$file" ]; then
 
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
-echo -e  "Eror :" "\033[31mSilahkan memakai jasa 085865480245 untuk menginstall paket linux terlebih dahulu.."
+echo -e  "Gagal :" "\033[31mSilahkan memakai jasa 085865480245 untuk menginstall Paket 1 linux terlebih dahulu.."
 sleep 5
 exit 0
 fi
