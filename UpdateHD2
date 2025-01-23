@@ -42,7 +42,7 @@ function countdown() {
 }
 
 # Panggil fungsi countdown dengan argumen 10 detik
-countdown 30
+countdown 60
 
 # Tentukan path ke file yang ingin dicek
 file="storage/downloads/Paket2HD.tar"
