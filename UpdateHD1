@@ -99,6 +99,10 @@ sleep 120
 
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/proses-upgrade-ke-linux-versi-hd.html?m=1
 
+sleep 120
+
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/proses-upgrade-ke-linux-versi-hd.html?m=1
+
 fi
 
 
