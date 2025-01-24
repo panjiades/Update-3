@@ -4,15 +4,17 @@
 HEIGHT=12
 WIDTH=80
 CHOICE_HEIGHT=2
-TITLE="DESKRIPSI"
+TITLE="DESKRIPSI INSTAL GIMP & INKSCAPE"
 MENU="
-Fix ini di tujukan buat kalian yang pada saat mengirim file word, excel, ppt melalui WA web di linux tidak dapat dibuka oleh HP teman lain.
-Dengan fix ini akan memperbaiki itu.
-"
+
+Ini akan menginstal aplikasi inkscape adalah alternatif dari CorelDraw, dan GIMP adalah alternatif dari Photoshop. 
+
+Ukuran file mungkin kecil di bawah 1 GB. 
+Proses install mungkin 10 menit tergantung internet kalian.
 
 # INI MENU AWAL
 OPTIONS=(
-1 "Lanjut fix"
+1 "Lanjut install gimp dan inkscape"
 2 "Batalkan")
 
 CHOICE=$(dialog --clear \
