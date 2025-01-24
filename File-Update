@@ -98,7 +98,7 @@ fi
 ;;
 
 6) wget -O - https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/UpdateFixWAweb | bash
-
+;;
 
 
 7)
