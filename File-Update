@@ -27,10 +27,10 @@ OPTIONS=(
 5 "Update Paket 3/4/5 HD Version"
 ‎  ""
 6 "Update Kirim file .docx"
-6 "Cara perbesar tampilan WPS & Linux"
-7 "Install WPS 365 ( bebas downgrade )"
-8 "Install WPS 2019 ( bebas Upgrade )"
-9 " ")
+7 "Cara perbesar tampilan WPS & Linux"
+8 "Install WPS 365 ( bebas downgrade )"
+9 "Install WPS 2019 ( bebas Upgrade )"
+10 " ")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -97,7 +97,11 @@ exit 0
 fi
 ;;
 
-6)
+6) wget -O - https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/UpdateFixWAweb | bash
+
+
+
+7)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/cara-memperbesar-tampilan-jika-terlalu.html
 ;;
 
