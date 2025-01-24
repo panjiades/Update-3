@@ -1,6 +1,5 @@
 #!/bin/bash
 
-clear
 # INI MENU PILIHAN
 HEIGHT=40
 WIDTH=100
