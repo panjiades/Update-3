@@ -1,27 +1,13 @@
-#!/bin/bash                              
+#!/bin/bash
 
-echo " "
-echo "DESKRIPSI :
+echo "Pilih salah satu:"
+echo "1. Lanjutkan"
+echo "2. Exit"
 
-Fix ini di tujukan buat kalian yang pada saat mengirim file word, excel, ppt melalui WA web di linux tidak dapat dibuka oleh HP teman lain.
-Dengan fix ini akan memperbaiki itu."
-echo " "
+read pilihan
 
-while true; do
-  echo "Menu Pilihan:"
-  echo "1. Lanjutkan"
-  echo "2. Keluar"
-  read -p "Masukkan pilihan Anda (1/2): " pilihan
-
-  case $pilihan in
-    1)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape1 | bash
-      ;;
-    2)
-      exit 0
-      ;;
-    *)
-      echo "Pilihan tidak valid. Silakan pilih 1 atau 2."
-      ;;
-  esac
-sleep 5
+if [ "$pilihan" -eq 1 ]; then
+  echo "Halo!"
+else
+  exit
+fi
