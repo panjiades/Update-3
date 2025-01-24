@@ -13,7 +13,7 @@ cd
 # INI MENU PILIHAN
 HEIGHT=40
 WIDTH=170
-CHOICE_HEIGHT=5
+CHOICE_HEIGHT=7
 TITLE="Pilih menu update"
 MENU="Last update 23 Januari 2025. Jika dibuka tak ada apa², maka dalam proses."
 
