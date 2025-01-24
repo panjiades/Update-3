@@ -1,0 +1,54 @@
+#!/bin/bash
+
+clear
+# INI MENU PILIHAN
+HEIGHT=12
+WIDTH=80
+CHOICE_HEIGHT=2
+TITLE="DESKRIPSI UPDATE KE PAKET 2 HD"
+MENU="
+
+UDAH TEH INI ADALAH DIPERUNTUKKAN UNTUK YANG SUDAH INSTAL PAKET 2. 
+
+Data Linux sebelumnya akan digantikan ulang atau terhapus semua namun di folder internal aman. 
+pastikan kalian memiliki koneksi internet. 
+
+Ukuran file 3 GB+
+
+Silakan pilih download file update terlebih dahulu. 
+setelah itu lanjut install."
+
+# INI MENU AWAL
+OPTIONS=(
+1 "Download Bahan Update"
+2 "Install"
+3 "Batal")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+
+‎ )
+exit
+;;
+
+1)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2 | bash
+;;
+
+2)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2 | bash
+;;
+
+3)
+exit
+;;
+
+esac
