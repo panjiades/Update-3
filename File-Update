@@ -98,32 +98,9 @@ fi
 ;;
 
 6) 
-echo " "
-echo "DESKRIPSI :
-
-Fix ini di tujukan buat kalian yang pada saat mengirim file word, excel, ppt melalui WA web di linux tidak dapat dibuka oleh HP teman lain.
-Dengan fix ini akan memperbaiki itu."
-echo " "
-
-while true; do
-  echo "Menu Pilihan:"
-  echo "1. Lanjutkan"
-  echo "2. Keluar"
-  read -p "Masukkan pilihan Anda (1/2): " pilihan
-
-  case $pilihan in
-    1)
-wget -O - https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/UpdateFixWAweb | bash
-      ;;
-    2)
-      exit 0
-      ;;
-    *)
-      echo "Pilihan tidak valid. Silakan pilih 1 atau 2."
-      ;;
-  esac
+echo dalam perbaikan
+sleep 10
 ;;
-
 
 7)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/cara-memperbesar-tampilan-jika-terlalu.html
