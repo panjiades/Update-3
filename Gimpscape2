@@ -24,4 +24,4 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/G
       echo "Pilihan tidak valid. Silakan pilih 1 atau 2."
       ;;
   esac
-done
+sleep 5
