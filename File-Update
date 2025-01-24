@@ -111,5 +111,5 @@ am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/
 esac
 
 8)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape2 | bash 
 ;;
