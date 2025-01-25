@@ -100,8 +100,7 @@ fi
 ;;
 
 6) 
-echo dalam perbaikan
-sleep 10
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFixWAweb2 | bash
 ;;
 
 7)
