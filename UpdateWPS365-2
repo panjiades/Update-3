@@ -1,0 +1,52 @@
+#!/bin/bash
+
+clear
+# INI MENU PILIHAN
+HEIGHT=30
+WIDTH=80
+CHOICE_HEIGHT=4
+TITLE="DESKRIPSI INSTAL WPS 365"
+MENU="
+
+Ini akan menginstall WPS 365. WPS 2019 akan hilang. Ukuran file 700mb+
+Kalian bisa bebas suatu saat Upgrade ke WPS 365 ini.
+Kalian Juga bebas Downgrade ke WPS 2019 secara gratis.
+
+Fitur utama WPS 365 adalah compayibilitas dan tampilan baru.
+WPS 365 adalah trial 30 hari, setelah itu membutuhkan aktivasi.
+"
+
+# INI MENU AWAL
+OPTIONS=(
+1 "Lanjut install WPS 365"
+2 "Lihat review dahulu"
+2 "Batalkan")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+
+‎ )
+exit
+;;
+
+1)
+wget -O - https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/UpdateWPS365 | bash
+;;
+
+2)
+echo "Review sedang dibuat"
+;;
+
+3)
+exit
+;;
+
+esac
