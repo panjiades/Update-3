@@ -115,7 +115,7 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/G
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateWPS365-2 | bash
 ;;
 
-10
+10)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateWPS2019-2 | bash
 ;;
 
