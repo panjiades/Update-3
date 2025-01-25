@@ -5,7 +5,7 @@ clear
 HEIGHT=30
 WIDTH=80
 CHOICE_HEIGHT=4
-TITLE="DESKRIPSI INSTAL GIMP & INKSCAPE"
+TITLE="DESKRIPSI FIX WA WEB"
 MENU="
 
 Fix ini dilakukan apabila kalian mengirim file dokumen .docx .xls atau dokumen WPS, melalui WhatsApp web di Firefox Linux dan setelah dikirim file-nya tidak bisa dibuka oleh teman kalian.
