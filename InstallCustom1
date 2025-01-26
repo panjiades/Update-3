@@ -13,5 +13,6 @@ read -p "Masukkan password: " password
 if [ "$password" = "InstallPaket2-888" ]; then
   wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2-2 | bash
 else
-   echo "EROR ANDA TIDAK PUNYA PASSWORD TOKEN"
+   wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2-2 | bash
+else
 fi
