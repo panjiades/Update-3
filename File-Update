@@ -99,6 +99,22 @@ exit 0
 fi
 ;;
 
+5)
+# Tentukan path ke file yang ingin dicek
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu//home/user2/opt/android-studio/build.txt"
+
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
+
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+echo " "
+echo -e  "Gagal :" "\033[31mTerdeteksi perangkat baru atau Silahkan memakai jasa 085865480245 untuk menginstall Paket 3 linux terlebih dahulu.."
+
+fi
+
 6) 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFixWAweb2 | bash
 ;;
