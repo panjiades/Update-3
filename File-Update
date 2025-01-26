@@ -32,7 +32,8 @@ OPTIONS=(
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
 9 "Install WPS 365 ( bebas downgrade )"
 10 "Install WPS 2019 ( bebas Upgrade )"
-11 " ")
+11 "Install Custom")
+12
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -134,6 +135,10 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 
 10)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateWPS2019-2 | bash
+;;
+
+11)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/InstallCustom2 | bash
 ;;
 
 esac
