@@ -13,7 +13,7 @@ Silahkan minta ke creator untuk Password tokenya."
 OPTIONS=(
 1 "Masukan Password"
 2 "Batal"
-
+)
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
                 --title "$TITLE" \
