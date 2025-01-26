@@ -32,8 +32,8 @@ OPTIONS=(
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
 9 "Install WPS 365 ( bebas downgrade )"
 10 "Install WPS 2019 ( bebas Upgrade )"
-11 "Install Custom")
-12 "Perbaiki Widget"
+11 "Install Custom"
+12 "Perbaiki Widget")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
