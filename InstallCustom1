@@ -8,3 +8,5 @@ if [ "$password" = "InstallPaket2-888" ]; then
 else
   echo "Password salah!"
 fi
+
+esac
