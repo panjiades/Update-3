@@ -114,6 +114,7 @@ echo " "
 echo -e  "Gagal :" "\033[31mTerdeteksi perangkat baru atau Silahkan memakai jasa 085865480245 untuk menginstall Paket 3 linux terlebih dahulu.."
 
 fi
+;;
 
 6) 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFixWAweb2 | bash
