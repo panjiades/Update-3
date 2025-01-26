@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# INI MENU PILIHAN
+HEIGHT=30
+WIDTH=80
+CHOICE_HEIGHT=4
+TITLE="Install Custom"
+MENU="
+Install custom membutuhkan Password sebagai token akses spesial yang di beri oleh creator.
+
+Silahkan minta ke creator untuk Password tokenya."
+# INI MENU AWAL
+OPTIONS=(
+1 "Masukan Password"
+2 "Batal"
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+
+‎ )
+exit
+;;
+
+1)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/InstallCustom1 | bash
+;;
+
+2)
+exit 0
+;;
+
+esac
