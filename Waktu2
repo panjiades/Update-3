@@ -1,0 +1,47 @@
+#!/bin/bash
+
+clear
+# INI MENU PILIHAN
+HEIGHT=30
+WIDTH=80
+CHOICE_HEIGHT=4
+TITLE="DESKRIPSI INSTAL GIMP & INKSCAPE"
+MENU="
+
+Ini akan mengubah Zona Jam, pada linux kalian.
+
+WIB ( Sumatra, Jawa, madura, Kalbar, Kalteng )
+WITA ( Kaltim, Kalsel, Bali, NTB, NTT, Sulawesi )
+WIT ( Maluku, Papua )"
+
+
+# INI MENU AWAL
+OPTIONS=(
+1 "Set WIB"
+2 "Set WITA"
+3."Set WIT")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+
+‎ )
+exit
+;;
+
+1)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape1 | bash
+;;
+
+2)
+exit
+;;
+
+esac
