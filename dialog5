@@ -39,7 +39,7 @@ start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/
 ;;
 
 2)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
 ;;
 
 3)
