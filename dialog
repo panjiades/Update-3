@@ -11,7 +11,7 @@ Silahkan pilih menu"
 # INI MENU AWAL
 OPTIONS=(
 1 "Matikan"
-2 "Update"
+2 "Buka_Update"
 3 "Terminal")
 
 CHOICE=$(dialog --clear \
