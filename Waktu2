@@ -36,6 +36,8 @@ case $CHOICE in
 exit
 ;;
 
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo update-mime-database -V ~/.local/share/mime/; ls -A; cd .local/share/mime/packages; ls; chmod 444 Override.xml;"
+
 1)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape1 | bash
 ;;
