@@ -22,7 +22,7 @@ WIT ( Maluku, Papua )"
 OPTIONS=(
 1 "Set WIB"
 2 "Set WITA"
-3."Set WIT")
+3"Set WIT")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
