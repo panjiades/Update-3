@@ -10,7 +10,7 @@ Silahkan pilih menu"
 
 # INI MENU AWAL
 OPTIONS=(
-1 "Matikan"
+1 "Tutup Linux"
 2 "Buka_Update"
 3 "Terminal")
 
