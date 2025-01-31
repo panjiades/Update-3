@@ -11,3 +11,10 @@ rm .bashrc
 rm .bashrc1
 
 rm .bashrc2
+
+rm dialog
+rm dialog1
+
+echo " "
+echo "SUKSES DI PASANG, METODE MASUK LINUX TELAH DIRUBAH"
+echo " "
