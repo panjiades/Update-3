@@ -41,20 +41,26 @@ exit
 
 1)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime;"
+clear
 echo " "
-echo "Selesai, sekarang buka linux kembali, jam akan menyesuaikan waktu tempat kalian."
+echo -e "\033[32m"Selesai, sekarang buka linux kembali, klik di bagian jam. Jam akan menyesuaikan waktu tempat kalian."
+echo -e "\033[37m "
 ;;
 
 2)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Makassar /etc/localtime;"
+clear
 echo " "
-echo "Selesai, sekarang buka linux kembali, jam akan menyesuaikan waktu tempat kalian."
+echo -e "\033[32m"Selesai, sekarang buka linux kembali, klik di bagian jam. Jam akan menyesuaikan waktu tempat kalian."
+echo -e "\033[37m "
 ;;
 
 3)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jayapura /etc/localtime;"
+clear
 echo " "
-echo "Selesai, sekarang buka linux kembali, jam akan menyesuaikan waktu tempat kalian."
+echo -e "\033[32m"Selesai, sekarang buka linux kembali, klik di bagian jam. Jam akan menyesuaikan waktu tempat kalian."
+echo -e "\033[37m "
 ;;
 
 esac
