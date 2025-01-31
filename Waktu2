@@ -47,5 +47,6 @@ proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/
 
 3)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jayapura /etc/localtime;"
+;;
 
 esac
