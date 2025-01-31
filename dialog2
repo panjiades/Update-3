@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd
+
+ls -A
+
+ls
+
+rm .bashrc
+
+rm .bashrc1
+
+rm .bashrc2
