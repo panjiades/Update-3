@@ -33,7 +33,10 @@ OPTIONS=(
 9 "Install WPS 365 ( bebas downgrade )"
 10 "Install WPS 2019 ( bebas Upgrade )"
 11 "Install Custom"
-12 "Perbaiki Widget")
+12 "Perbaiki Widget"
+‎  ""
+13 "Perbaiki jam linux"
+)
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -148,4 +151,8 @@ pkg install wget -y
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash
 ;;
 
+13)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Waktu2 | bash
+;;
+;;
 esac
