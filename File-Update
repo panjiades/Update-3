@@ -154,5 +154,4 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 13)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Waktu2 | bash
 ;;
-;;
 esac
