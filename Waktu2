@@ -40,14 +40,20 @@ exit
 
 1)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime;"
+echo " "
+echo "Selesai, sekarang buka linux kembali, jam akan menyesuaikan waktu tempat kalian."
 ;;
 
 2)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Makassar /etc/localtime;"
+echo " "
+echo "Selesai, sekarang buka linux kembali, jam akan menyesuaikan waktu tempat kalian."
 ;;
 
 3)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jayapura /etc/localtime;"
+echo " "
+echo "Selesai, sekarang buka linux kembali, jam akan menyesuaikan waktu tempat kalian."
 ;;
 
 esac
