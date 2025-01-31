@@ -8,8 +8,10 @@ CHOICE_HEIGHT=4
 TITLE="DESKRIPSI INSTAL GIMP & INKSCAPE"
 MENU="
 
+Fix Jam kelebihan 1 jam atau kelambatan 2jam dll.
 Ini akan mengubah Zona Jam, pada linux kalian.
 
+pilih zona kalian :
 WIB ( Sumatra, Jawa, madura, Kalbar, Kalteng )
 WITA ( Kaltim, Kalsel, Bali, NTB, NTT, Sulawesi )
 WIT ( Maluku, Papua )"
@@ -36,14 +38,14 @@ case $CHOICE in
 exit
 ;;
 
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo update-mime-database -V ~/.local/share/mime/; ls -A; cd .local/share/mime/packages; ls; chmod 444 Override.xml;"
-
 1)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape1 | bash
-;;
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime;"
 
 2)
-exit
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Makassar /etc/localtime;"
 ;;
+
+3)
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jayapura /etc/localtime;"
 
 esac
