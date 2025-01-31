@@ -56,6 +56,14 @@ case $CHOICE in
 exit
 ;;
 
+14)
+echo "dalam perbaikan"
+;;
+
+15)
+echo "dalam perbaikan"
+;;
+
 1)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/p/update.html
 exit 0
