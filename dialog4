@@ -35,7 +35,7 @@ exit
 ;;
 
 1)
-start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/masuk-linux-dengan-widget.html?m=1
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/masuk-linux-dengan-widget.html?m=1
 ;;
 
 2)
