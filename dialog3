@@ -1,0 +1,24 @@
+#!/bin/bash
+
+cd
+
+ls -A
+
+ls
+
+rm .bashrc
+rm .bashrc1
+rm dialog
+rm dialog1
+rm dialog2
+
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/.bashrc
+
+
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog
+
+clear
+
+echo " "
+echo "SUKSES DI PASANG, METODE MASUK LINUX TELAH DIRUBAH"
+echo " "
