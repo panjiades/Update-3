@@ -57,6 +57,10 @@ case $CHOICE in
 exit
 ;;
 
+16)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/02/mengubah-metode-scrool.html?m=1
+;;
+
 14)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog4 | bash
 ;;
