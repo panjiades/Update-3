@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d
+
+ls
+
+rm dark_mode
+rm site_dark_mode
+
+cd
+clear
+echo -e "\033[0;32m=== SELESAI ==="
