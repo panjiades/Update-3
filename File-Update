@@ -22,6 +22,7 @@ OPTIONS=(
 1 "Link Tutorial"
 2 "Tiktok Creator"
 ‎  ""
+17 "Enable/Disable Dark Mode Chromium"
 16 "Cara Setting scrool 1 jari"
 14 "Masuk linux Dengan Widget"
 15 "Masuk linux Tanpa Widget"
@@ -55,6 +56,23 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+17)
+# Tentukan path ke file yang ingin dicek
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
+
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+echo " "
+echo -e  "Gagal : Install Chromium dulu, atau order Paket 2 yang ada Chromiumnya"
+echo " "
+fi
 ;;
 
 16)
