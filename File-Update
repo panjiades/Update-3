@@ -65,7 +65,7 @@ file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubun
 # Periksa keberadaan file
 if [ -f "$file" ]; then
   # Jika file ada, tampilkan pesan "Ada"
-  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome1 | bash
 
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
