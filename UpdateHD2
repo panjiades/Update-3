@@ -76,18 +76,13 @@ cd storage/downloads
 
 mv Paket2HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
-mv Paket2HD(1).tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
-
-
 cd
 
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
 tar xvf Paket2HD.tar
-tar xvf Paket2HD(1).tar
 
 rm Paket2HD.tar
-rm Paket2HD(1).tar
 
 cd
 
