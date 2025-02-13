@@ -22,6 +22,7 @@ OPTIONS=(
 1 "Link Tutorial"
 2 "Tiktok Creator"
 ‎  ""
+18 "Instal Libre / Editor PDF"
 17 "Enable/Disable Dark Mode Chromium"
 16 "Cara Setting scrool 1 jari"
 14 "Masuk linux Dengan Widget"
@@ -56,6 +57,11 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+
+18)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Libre2 | bash
 ;;
 
 17)
