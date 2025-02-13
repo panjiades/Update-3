@@ -15,8 +15,9 @@ Proses install mungkin 10 menit tergantung internet kalian."
 
 # INI MENU AWAL
 OPTIONS=(
-1 "Lanjut install gimp dan inkscape"
-2 "Batalkan")
+1 "Lihat panduan penggunaan"
+2 "Lanjut install gimp dan inkscape"
+3 "Batalkan")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -34,6 +35,8 @@ exit
 ;;
 
 1)
+
+2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Libre1 | bash
 ;;
 
