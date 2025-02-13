@@ -17,6 +17,7 @@ OPTIONS=(
 1 "Link Tutorial"
 2 "Tiktok Creator"
 ‎  ""
+19 "Instal Audacity"
 18 "Instal Libre / Editor PDF"
 17 "Enable/Disable Dark Mode Chromium"
 16 "Cara Setting scrool 1 jari"
@@ -54,6 +55,9 @@ case $CHOICE in
 exit
 ;;
 
+19)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Audacity2 | bash
+;;
 
 18)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Libre2 | bash
