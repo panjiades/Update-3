@@ -1,1 +1,44 @@
-q
+#!/bin/bash
+
+clear
+# INI MENU PILIHAN
+HEIGHT=30
+WIDTH=80
+CHOICE_HEIGHT=4
+TITLE="DESKRIPSI INSTAL GIMP & INKSCAPE"
+MENU="
+
+Ini akan menginstal aplikasi inkscape adalah alternatif dari CorelDraw, dan GIMP adalah alternatif dari Photoshop. 
+
+Ukuran file mungkin kecil 100mb+
+Proses install mungkin 10 menit tergantung internet kalian."
+
+# INI MENU AWAL
+OPTIONS=(
+1 "Lanjut install gimp dan inkscape"
+2 "Batalkan")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+
+‎ )
+exit
+;;
+
+1)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Libre1 | bash
+;;
+
+2)
+exit
+;;
+
+esac
