@@ -1,7 +1,17 @@
 #!/bin/bash
 
 proot-distro login ubuntu --shared-tmp -- bash -c "cd; apt update; apt remove sudo -y; apt install sudo -y;"
+
 clear
 
 echo -e "Masukan password" "\033[32m123456" "\033[37mlalu enter ( password tidak terlihat )"
+
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt instal libreoffice -y;"
+
+clear
+
+echo " "
+echo "INSTAL SELESAI, PAHAMI PANDUAN PENGGUNANAAN"
+echo " "
+
 
