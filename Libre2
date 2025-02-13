@@ -15,7 +15,7 @@ Aplikasi ini berfungsi seperti WPS Office, namun bisa untuk edit file PDF secara
 # INI MENU AWAL
 OPTIONS=(
 1 "Lihat panduan penggunaan"
-2 "Lanjut install gimp dan inkscape"
+2 "Lanjut Libre Office"
 3 "Batalkan")
 
 CHOICE=$(dialog --clear \
