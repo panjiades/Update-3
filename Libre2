@@ -5,13 +5,12 @@ clear
 HEIGHT=30
 WIDTH=80
 CHOICE_HEIGHT=4
-TITLE="DESKRIPSI INSTAL GIMP & INKSCAPE"
+TITLE="DESKRIPSI INSTAL LIBRE OFFICE"
 MENU="
 
-Ini akan menginstal aplikasi inkscape adalah alternatif dari CorelDraw, dan GIMP adalah alternatif dari Photoshop. 
-
-Ukuran file mungkin kecil 100mb+
-Proses install mungkin 10 menit tergantung internet kalian."
+Ini akan menginstal aplikasi LIBRE OFFICE.
+Ukuran sekitar 216 MB. 
+Aplikasi ini berfungsi seperti WPS Office, namun bisa untuk edit file PDF secara langsung."
 
 # INI MENU AWAL
 OPTIONS=(
