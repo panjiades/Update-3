@@ -39,6 +39,7 @@ exit
 ;;
 
 3)
-pkg j;;
+pkg j
+;;
 
 esac
