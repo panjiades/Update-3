@@ -24,8 +24,8 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
+)
 
- )
 exit
 ;;
 
