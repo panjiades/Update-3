@@ -24,10 +24,11 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
-)
 
+‎ )
 exit
 ;;
+
 
 1)
 pkill -f com.termux.x11
