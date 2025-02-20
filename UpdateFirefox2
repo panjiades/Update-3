@@ -8,7 +8,7 @@ TITLE="UPDATE FIREFOX"
 MENU="
 Update Firefox umumnya berkisar 60mb sampai 100mb.
 Data firefox tidak akan hilang.
-Hanya lakukan ini ketika di firefox ada notif update."
+Hanya lakukan ini ketika di firefox ada notif meminta update."
 
 # INI MENU AWAL
 OPTIONS=(
