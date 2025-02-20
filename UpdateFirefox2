@@ -1,3 +1,41 @@
 #!/bin/bash
 
-proot-distro login ubuntu -- bash -c "cd; ;"
+# INI MENU PILIHAN
+HEIGHT=30
+WIDTH=80
+CHOICE_HEIGHT=4
+TITLE="UPDATE FIREFOX"
+MENU="
+Update Firefox umumnya berkisar 60mb sampai 100mb.
+Hanya lakukan ini ketika di firefox ada notif update."
+
+# INI MENU AWAL
+OPTIONS=(
+1 "Update"
+2 "Batal")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+
+‎ )
+exit
+;;
+
+1)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFirefox | bash
+;;
+
+2)
+exit
+;;
+
+
+esac
