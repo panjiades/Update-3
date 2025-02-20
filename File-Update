@@ -17,6 +17,8 @@ OPTIONS=(
 1 "Link Tutorial"
 2 "Tiktok Creator"
 ‎  ""
+20 "Update Firefox"
+‎  ""
 19 "Instal Audacity"
 18 "Instal Libre / Editor PDF"
 17 "Enable/Disable Dark Mode Chromium"
@@ -53,6 +55,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+20)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFirefox2 | bash
 ;;
 
 19)
