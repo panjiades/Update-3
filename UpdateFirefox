@@ -1,10 +1,10 @@
 #!/bin/bash
 
-proot-distro login ubuntu -- bash -c "cd; sudo apt update;"
+proot-distro login ubuntu -- bash -c "cd; sudo apt update; sudo apt install firefox-esr -y;"
 
 clear
 
 echo " "
-echo -e "\033[37mSilahkan ketik huruf" "\033[32mY" "\033[37mLalu ENTER"
-
-proot-distro login ubuntu -- bash -c "cd; sudo apt install firefox-esr;"
+echo -e "\033[32mSELESAI UPDATE"
+echo -e "\033[37mSilahkan tutup linux, lalu buka lagi.."
+echo " "
