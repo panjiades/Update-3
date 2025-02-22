@@ -6,7 +6,15 @@ file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubun
 # Periksa keberadaan file
 if [ -f "$file" ]; then
   # Jika file ada, tampilkan pesan "Ada"
-  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBrave2 | bash
+
+proot-distro login ubuntu -- bash -c "cd; apt remove sudo -y; apt install sudo -y;"
+
+clear
+
+echo " "
+echo -e "\033[37mMasukan password " "\033[32m123456" "\033[37m, lalu enter saja ( password tidak terlihat )"
+echo " "
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt install brave-browser -y;"
 
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
