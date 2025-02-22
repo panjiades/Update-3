@@ -18,6 +18,7 @@ OPTIONS=(
 2 "Tiktok Creator"
 ‎  ""
 20 "Update Firefox"
+21 "Update Brave Browser"
 ‎  ""
 19 "Instal Audacity"
 18 "Instal Libre / Editor PDF"
@@ -55,6 +56,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+21)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBrave2 | bash
 ;;
 
 20)
