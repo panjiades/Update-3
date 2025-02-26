@@ -62,8 +62,12 @@ case $CHOICE in
 exit
 ;;
 
+24)
+am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMU9Es7w/
+;;
+
 23)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBrave2 | bash
+am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMU9K4AY/
 ;;
 
 22)
