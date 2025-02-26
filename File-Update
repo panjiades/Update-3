@@ -17,8 +17,12 @@ OPTIONS=(
 1 "Link Tutorial"
 2 "Tiktok Creator"
 ‎  ""
+23 "Cara save file ke tablet"
+24 "Cara insert Gambar ke WPS"
+‎  ""
 20 "Update Firefox"
 21 "Update Brave Browser"
+22 "Update Chromium"
 ‎  ""
 19 "Instal Audacity"
 18 "Instal Libre / Editor PDF"
@@ -56,6 +60,14 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+23)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBrave2 | bash
+;;
+
+22)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateChromium2 | bash
 ;;
 
 21)
