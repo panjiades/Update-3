@@ -24,6 +24,7 @@ echo " "
 
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
+clear
 echo " "
 echo -e  "Gagal :" "\033[31mTerdeteksi belum pernah instal Chromium. 
 Atau Terdeteksi perangkat baru.
