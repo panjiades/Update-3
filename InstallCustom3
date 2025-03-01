@@ -4,16 +4,16 @@ proot-distro remove ubuntu
 
 cd storage/downloads
 
-mv Paket2HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+mv Paket3HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
 
 cd
 
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
-tar xvf Paket2HD.tar
+tar xvf Paket3HD.tar
 
-rm Paket2HD.tar
+rm Paket3HD.tar
 
 
 cd
