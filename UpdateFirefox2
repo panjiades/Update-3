@@ -31,7 +31,7 @@ exit
 ;;
 
 1)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFirefox | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateGimp2 | bash
 ;;
 
 2)
