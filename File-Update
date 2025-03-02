@@ -23,6 +23,7 @@ OPTIONS=(
 20 "Update Firefox"
 21 "Update Brave Browser"
 22 "Update Chromium"
+23 "Update Gimp"
 ‎  ""
 19 "Instal Audacity"
 18 "Instal Libre / Editor PDF"
@@ -60,6 +61,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+23)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateGimp2 | bash
 ;;
 
 24)
