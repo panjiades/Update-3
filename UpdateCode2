@@ -6,7 +6,7 @@ WIDTH=80
 CHOICE_HEIGHT=4
 TITLE="UPDATE VSCODE"
 MENU="
-Data VsCode tidak akan hilang.
+Data VsCode tidak akan hilang. Umumnya update ukuran 90mb+.
 Hanya lakukan ini ketika di VsCode ada notif meminta update."
 
 # INI MENU AWAL
