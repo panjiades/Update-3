@@ -1,0 +1,10 @@
+#!/bin/bash
+
+proot-distro login ubuntu -- bash -c "cd; sudo apt update; clear; sudo apt install inkscape -y;"
+
+clear
+
+echo " "
+echo -e "\033[32mSELESAI UPDATE"
+echo -e "\033[37mSilahkan tutup linux, lalu buka lagi.."
+echo " "
