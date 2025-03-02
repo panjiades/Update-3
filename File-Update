@@ -26,6 +26,7 @@ OPTIONS=(
 23 "Update Gimp"
 24 "Update Inkscape"
 25 "Update Visual Studio Code"
+25 "Update Blender"
 ‎  ""
 19 "Instal Audacity"
 18 "Instal Libre / Editor PDF"
@@ -63,6 +64,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+26)
+https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBlender2 | bash
 ;;
 
 25)
