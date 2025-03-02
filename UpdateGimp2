@@ -7,7 +7,6 @@ CHOICE_HEIGHT=4
 TITLE="UPDATE GIMP"
 MENU="
 Update Gimp umumnya berkisar 60mb sampai 100mb.
-Data firefox tidak akan hilang.
 Hanya lakukan ini ketika di Gimp ada notif meminta update/ada versi terbaru."
 
 # INI MENU AWAL
