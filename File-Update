@@ -24,6 +24,7 @@ OPTIONS=(
 21 "Update Brave Browser"
 22 "Update Chromium"
 23 "Update Gimp"
+24 "Update Inkscape"
 ‎  ""
 19 "Instal Audacity"
 18 "Instal Libre / Editor PDF"
@@ -61,6 +62,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+24)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateInkscape2 | bash
 ;;
 
 23)
