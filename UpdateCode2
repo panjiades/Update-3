@@ -7,7 +7,7 @@ CHOICE_HEIGHT=4
 TITLE="UPDATE VSCODE"
 MENU="
 Data VsCode tidak akan hilang.
-Hanya lakukan ini ketika di Chromium ada notif meminta update."
+Hanya lakukan ini ketika di VsCode ada notif meminta update."
 
 # INI MENU AWAL
 OPTIONS=(
