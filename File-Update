@@ -69,19 +69,19 @@ exit
 ;;
 
 28)
-https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Notify2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Notify2 | bash
 ;;
 
 27)
-https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateAudacity2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateAudacity2 | bash
 ;;
 
 26)
-https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBlender2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBlender2 | bash
 ;;
 
 25)
-https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateCode2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateCode2 | bash
 ;;
 
 24)
