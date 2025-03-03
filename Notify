@@ -1,0 +1,6 @@
+#!/bin/bash
+rm cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/Notify.sh
+clear
+echo " "
+echo "Notif Selamat datang kembali di linux sudah hilang saat memulai ulang."
+echo " "
