@@ -33,7 +33,7 @@ exit
 ;;
 
 1)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateGimp | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Notify | bash
 ;;
 
 2)
