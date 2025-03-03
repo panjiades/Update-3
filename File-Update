@@ -19,6 +19,7 @@ OPTIONS=(
 ‎  ""
 23 "Cara save file WPS ke tablet"
 24 "Cara insert Gambar ke WPS"
+28 "Remove/Hapus Watermarks"
 ‎  ""
 20 "Update Firefox"
 21 "Update Brave Browser"
@@ -65,6 +66,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+28)
+https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Notify2 | bash
 ;;
 
 27)
