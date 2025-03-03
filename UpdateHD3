@@ -94,7 +94,7 @@ else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
 sleep 10
 read -n 1 -p "Tekan sembarang tombol untuk membuka Halaman download.."
-am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=102BlhWNbmCJkcFbmPs2voPd-9QcGC2uO&export=download&authuser=0
+am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=16eDUCVRnOhQbV0DZdM3y9Mn7s-4xmRWZ&export=download&authuser=0
 
 sleep 120
 
