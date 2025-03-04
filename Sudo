@@ -1,0 +1,9 @@
+#!/bin/bash
+
+proot-distro login ubuntu --shared-tmp -- bash -c "cd; apt update; apt remove sudo -y; apt install sudo -y;"
+
+clear
+
+echo " "
+echo "Sudo aktiv"
+echo " "
