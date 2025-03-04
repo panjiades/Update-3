@@ -29,6 +29,7 @@ OPTIONS=(
 25 "Update Visual Studio Code"
 26 "Update Blender"
 27 "Update Audacity"
+29 "Install Sudo"
 ‎  ""
 19 "Instal Audacity"
 18 "Instal Libre / Editor PDF"
@@ -66,6 +67,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+29) 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Sudo | bash
 ;;
 
 28)
