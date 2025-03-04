@@ -5,5 +5,5 @@ proot-distro login ubuntu --shared-tmp -- bash -c "cd; apt update; apt remove su
 clear
 
 echo " "
-echo "Sudo aktiv"
+echo "Sudo aktiv. Password default : 123456"
 echo " "
