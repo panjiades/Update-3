@@ -247,16 +247,19 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 
 12)
 pkg update
-pkg remove x11-repo && yes
-pkg install x11-repo && yes
-pkg remove termux-x11-nightly && yes
-pkg install termux-x11-nightly && yes
-pkg remove file && yes
-pkg install file && yes
-pkg remove pulseaudio && yes
-pkg install pulseaudio && yes
-pkg remove virglrenderer-android && yes
-pkg install virglrenderer-android && yes
+clear
+echo "setiap pertanyaan silahkan ketikguruf Y lalu enter"
+sleep 10
+pkg remove x11-repo
+pkg install x11-repo
+pkg remove termux-x11-nightly
+pkg install termux-x11-nightly
+pkg remove file
+pkg install file
+pkg remove pulseaudio
+pkg install pulseaudio
+pkg remove virglrenderer-android
+pkg install virglrenderer-android
 ;;
 
 13)
