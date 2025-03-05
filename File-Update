@@ -49,7 +49,7 @@ OPTIONS=(
 9 "Install WPS 365 ( bebas downgrade )"
 10 "Install WPS 2019 ( bebas Upgrade )"
 11 "Install Custom"
-12 "Perbaiki Widget"
+12 "Perbaiki Linux"
 ‎  ""
 13 "Perbaiki jam linux"
 )
@@ -246,10 +246,17 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 ;;
 
 12)
-apt update
-pkg remove wget -y
-pkg install wget -y
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash
+pkg update
+pkg remove x11-repo -y
+pkg install x11-repo -y 
+pkg remove termux-x11-nightly -y
+pkg install termux-x11-nightly -y
+pkg remove file -y
+pkg install file -y
+pkg remove pulseaudio -y
+pkg install pulseaudio -y
+pkg remove virglrenderer-android -y
+pkg install virglrenderer-android -y
 ;;
 
 13)
