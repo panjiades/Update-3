@@ -17,6 +17,7 @@ OPTIONS=(
 1 "Link Tutorial"
 2 "Tiktok Creator"
 ‎  ""
+30 "Fix Keyboard tidak mau ngetik/hapus sendiri)
 23 "Cara save file WPS ke tablet"
 24 "Cara insert Gambar ke WPS"
 28 "Remove/Hapus Watermarks"
@@ -67,6 +68,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+30)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/cara-mengatasi-keyboard-hapus.html?m=1
 ;;
 
 29) 
