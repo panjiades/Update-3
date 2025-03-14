@@ -18,8 +18,8 @@ OPTIONS=(
 2 "Tiktok Creator"
 ‎  ""
 30 "Fix Keyboard tidak mau ngetik/hapus sendiri"
-23 "Cara save file WPS ke tablet"
-24 "Cara insert Gambar ke WPS"
+31 "Cara save file WPS ke tablet"
+32 "Cara insert Gambar ke WPS"
 28 "Remove/Hapus Watermarks"
 ‎  ""
 20 "Update Firefox"
@@ -102,12 +102,12 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateGimp2 | bash
 ;;
 
-24)
-am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMU9Es7w/
+32)
+am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMn5TrCQ/
 ;;
 
-23)
-am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMU9K4AY/
+31)
+am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMnPbdsk/
 ;;
 
 22)
