@@ -37,16 +37,3 @@ cd
 clear
 echo -e "\033[0;32mBERHASIL DIPERBAHARUI"
 echo -e "\033[1;33mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
-echo -e "\033[1;37m "
-clear_and_print() {
-  echo -ne "\rJendela ini akan keluar otomatis dalam $1 detik"
-  sleep 1
-}
-
-# Loop untuk hitung mundur
-for i in {30..1}; do
-  clear_and_print "$i"
-done
-echo "Jendela ditutup!"
-exit 0
-
