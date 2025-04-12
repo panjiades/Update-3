@@ -247,7 +247,7 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 ;;
 
 11)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1-2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2-2 | bash
 ;;
 
 12)
