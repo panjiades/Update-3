@@ -13,5 +13,13 @@ elif [ "$model" == "2311DRK48G" ]; then
 else
 
 clear
-  echo "Gagal. Hubungi Creator untuk install Custom"
+model=$(getprop ro.product.model)
+echo " "
+echo -e "\033[32mID Perangkat kamu" :  "\033[31m$model"
+
+echo -e "\033[37m"
+echo " "
+echo "Gagal. Hubungi 085865480245 & Sertakan ID Perangkat kamu untuk di daftarkan ke fitur ini."
+echo " "
+echo " "
 fi
