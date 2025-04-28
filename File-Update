@@ -49,7 +49,7 @@ OPTIONS=(
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
 9 "Install WPS 365 ( bebas downgrade )"
 10 "Install WPS 2019 ( bebas Upgrade )"
-11 "Install Custom"
+11 "Install Custom By Request"
 12 "Perbaiki Linux"
 ‎  ""
 13 "Perbaiki jam linux"
@@ -247,7 +247,7 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 ;;
 
 11)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Updat| bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update | bash
 ;;
 
 12)
