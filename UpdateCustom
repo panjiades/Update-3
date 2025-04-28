@@ -33,6 +33,7 @@ proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt ins
 wget -O - https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/UpdateAkunChrome | bash
 
 clear
+echo -e "\033[37m"
 echo " "
 echo "Berhasil, Silahkan masuk ke linux kalian"
 echo " " 
