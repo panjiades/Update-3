@@ -50,5 +50,6 @@ echo -e "\033[37m"
 echo " "
 echo "Gagal. Hubungi 085865480245 & Sertakan ID Perangkat kamu agar dapat akses ke fitur ini."
 echo " "
+sleep 10
 echo " "
 fi
