@@ -7,9 +7,33 @@ if [ "$model" == "23117DRK48G" ]; then
   echo "Menjalankan pkg update..."
   pkg update
 
-elif [ "$model" == "d2311DRK48G" ]; then
+elif [ "$model" == "2311DRK48G" ]; then
   clear
-  echo "berhasil"
+echo "Akan install Chromium Browser (Sekitar 200mb)"
+sleep 5
+echo " "
+echo "Pess ctrl+c untuk cancel"
+sleep 10
+
+proot-distro login ubuntu  -- bash -c "dpkg --configure -a; apt remove sudo -y; apt install sudo -y"
+
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt update"
+
+clear
+
+echo -e "\033[0;31mSilahkan Ketik angka Password :" "\033[0;32m123456" "\033[0;37mlalu ENTER di keyboard kalian" 
+echo "(password tidak terlihat, ketik aja)"
+echo " "
+
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt install chromium -y; sudo sed -i 's/chromium %U/chromium --no-sandbox %U/g' /usr/share/applications/chromium.desktop"
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/UpdateAkunChrome | bash
+
+clear
+echo " "
+echo "Berhasil, Silahkan masuk ke linux kalian"
+echo " " 
+
 
 else
 
