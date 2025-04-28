@@ -1,12 +1,13 @@
 #!/bin/bash
 
+clear
 model=$(getprop ro.product.model)
 if [ "$model" == "23117DRK48G" ]; then
   echo "Model perangkat terdeteksi: $model"
   echo "Menjalankan pkg update..."
   pkg update
 
-elif [ "$model" == "2311DRK48G" ]; then
+elif [ "$model" == "d2311DRK48G" ]; then
   clear
   echo "berhasil"
 
@@ -19,7 +20,7 @@ echo -e "\033[32mID Perangkat kamu" :  "\033[31m$model"
 
 echo -e "\033[37m"
 echo " "
-echo "Gagal. Hubungi 085865480245 & Sertakan ID Perangkat kamu untuk di daftarkan ke fitur ini."
+echo "Gagal. Hubungi 085865480245 & Sertakan ID Perangkat kamu agar dapat akses ke fitur ini."
 echo " "
 echo " "
 fi
