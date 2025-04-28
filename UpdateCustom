@@ -1,0 +1,10 @@
+#!/bin/bash
+
+model=$(getprop ro.product.model)
+if [ "$model" == "23117DRK48G" ]; then
+  echo "Model perangkat terdeteksi: $model"
+  echo "Menjalankan pkg update..."
+  pkg update
+else
+  echo "Gagal !!! Hubungi Creator untuk install Custom"
+fi
