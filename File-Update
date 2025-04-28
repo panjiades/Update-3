@@ -16,6 +16,7 @@ MENU="Last update 20 Febuari 2025. Jika dibuka tak ada apa², maka dalam proses.
 OPTIONS=(
 1 "Tutorial Tambahan"
 2 "Tiktok Creator"
+11 "Install Custom By Request"
 ‎  ""
 30 "Fix Keyboard tidak mau ngetik/hapus sendiri"
 31 "Cara save file WPS ke tablet"
@@ -49,7 +50,6 @@ OPTIONS=(
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
 9 "Install WPS 365 ( bebas downgrade )"
 10 "Install WPS 2019 ( bebas Upgrade )"
-11 "Install Custom By Request"
 12 "Perbaiki Linux"
 ‎  ""
 13 "Perbaiki jam linux"
