@@ -6,5 +6,7 @@ if [ "$model" == "23117DRK48G" ]; then
   echo "Menjalankan pkg update..."
   pkg update
 else
+
+clear
   echo "Gagal !!! Hubungi Creator untuk install Custom"
 fi
