@@ -18,6 +18,7 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
+33 "Cara Auto Kapital saat mengetik di WPS"
 30 "Fix Keyboard tidak mau ngetik/hapus sendiri"
 31 "Cara save file WPS ke tablet"
 32 "Cara Buka Dokumen & Cara insert Gambar ke WPS"
@@ -69,6 +70,11 @@ case $CHOICE in
 ‎ )
 exit
 ;;
+
+33)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/04/automatic-uppercase-awal-paragraf_30.html?m=1
+;;
+
 
 30)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/cara-mengatasi-keyboard-hapus.html?m=1
