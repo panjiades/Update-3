@@ -2,10 +2,10 @@
 
 clear
 model=$(getprop ro.product.model)
-if [ "$model" == "23117DRK48G" ]; then
-  echo "Model perangkat terdeteksi: $model"
-  echo "Menjalankan pkg update..."
-  pkg update
+if [ "$model" == "Infinix X1101B" ]; then
+  clear
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
 elif [ "$model" == "23043RP34G" ]; then
   clear
