@@ -7,7 +7,7 @@ if [ "$model" == "23117DRK48G" ]; then
   echo "Menjalankan pkg update..."
   pkg update
 
-elif [ "$model" == "23073RPBFG" ]; then
+elif [ "$model" == "23043RP34G" ]; then
   clear
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1-2 | bash
