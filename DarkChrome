@@ -4,7 +4,6 @@ cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/
 
 ls
 
-rm README
 rm apikeys
 rm chromerefresh2023
 rm dark_mode
