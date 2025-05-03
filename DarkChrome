@@ -9,7 +9,6 @@ rm apikeys
 rm chromerefresh2023
 rm dark_mode
 rm enable_sync
-rm extensions
 rm performance_improvements
 rm reduce_writes
 rm site_dark_mode
