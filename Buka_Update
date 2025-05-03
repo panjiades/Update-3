@@ -11,8 +11,6 @@ rm -rf File-Update2
 rm -rf File-Update3
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update | bash
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
-
 echo " "
 echo " "
 function countdown() {
