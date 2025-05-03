@@ -17,19 +17,3 @@ rm site_dark_mode
 rm tab_scrolling
 rm zzzz_combine_values
 
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/README
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/apikeys
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/chromerefresh2023
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/dark_mode
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/default-flags
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/enable_sync
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/extensions
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/performance_improvements
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/reduce_writes
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/site_dark_mode
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/tab_scrolling
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/zzzz_combine_values
-
-cd
-clear
-echo -e "\033[0;32m=== SELESAI ==="
