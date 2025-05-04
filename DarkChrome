@@ -11,3 +11,4 @@ rm enable_sync
 rm performance_improvements
 rm reduce_writes
 rm site_dark_mode
+cd
