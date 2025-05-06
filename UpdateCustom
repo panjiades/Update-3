@@ -15,6 +15,8 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 
 else
 
+echo " "
+Install Custom adalah install aplikasi sesuai request Customer dan berbayar. Jika tidak request maka tidak perlu akses ke fitur ini. 
 clear
 model=$(getprop ro.product.model)
 echo " "
@@ -22,7 +24,7 @@ echo -e "\033[32mID Perangkat kamu" :  "\033[31m$model"
 
 echo -e "\033[37m"
 echo " "
-echo "Gagal. Hubungi 085865480245 & Sertakan ID Perangkat kamu agar dapat akses ke fitur ini."
+echo "Gagal.❌ Hubungi 085865480245 & Sertakan ID Perangkat kamu jika ingin request sesuatu."
 echo " "
 sleep 10
 echo " "
