@@ -33,6 +33,8 @@ OPTIONS=(
 18 "Instal Libre / Editor PDF"
 12 "Perbaiki Linux"
 ‎  ""
+34 "Ubah fungsi Tombol volume & swipe"
+‎  ""
 20 "Update Firefox"
 21 "Update Brave Browser"
 22 "Update Chromium"
@@ -71,6 +73,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+34)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/ubah-tombol-volume-keyboard-swipe.html?m=1
 ;;
 
 33)
