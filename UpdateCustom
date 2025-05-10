@@ -2,16 +2,38 @@
 
 clear
 model=$(getprop ro.product.model)
-if [ "$model" == "Infinix X1101B" ]; then
+if [ "$model" == "SM7-X216B" ]; then
   clear
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
-elif [ "$model" == "23043RP34G" ]; then
-  clear
+elif [ "$model" == "SM-X216B" ]; then
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1-2 | bash
+clear
+echo "Akan install Chromium Browser (Sekitar 200mb)"
+sleep 5
+echo " "
+echo "Pess ctrl+c untuk cancel"
+sleep 10
 
+proot-distro login ubuntu  -- bash -c "dpkg --configure -a; apt remove sudo -y; apt install sudo -y"
+
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt update"
+
+clear
+
+echo -e "\033[0;31mSilahkan Ketik angka Password :" "\033[0;32m123456" "\033[0;37mlalu ENTER di keyboard kalian" 
+echo "(password tidak terlihat, ketik aja, lalu enter)"
+echo " "
+
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt install chromium -y; sudo sed -i 's/chromium %U/chromium --no-sandbox %U/g' /usr/share/applications/chromium.desktop"
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+
+clear
+echo " "
+echo "Berhasil install Chromium Web Browser,  Silahkan masuk ke linux kalian"
+echo " " 
 
 else
 
