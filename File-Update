@@ -12,7 +12,7 @@ HEIGHT=40
 WIDTH=170
 CHOICE_HEIGHT=7
 TITLE="Pilih menu update"
-MENU="Last update 20 Febuari 2025. Jika dibuka tak ada apa², maka dalam proses."
+MENU="Last update 10 Mei 2025. Jika dibuka tak ada apa², maka dalam proses."
 
 # INI MENU AWAL
 OPTIONS=(
