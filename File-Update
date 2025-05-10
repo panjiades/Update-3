@@ -267,7 +267,7 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 12)
 pkg update
 clear
-echo "setiap pertanyaan silahkan ketikguruf Y lalu enter"
+echo "Setiap pertanyaan silahkan ketik huruf Y lalu enter"
 sleep 10
 pkg remove x11-repo
 pkg install x11-repo
