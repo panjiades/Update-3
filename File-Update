@@ -78,6 +78,7 @@ exit
 
 35)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PerbaikiLinux2 | bash
+;;
 
 34)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/ubah-tombol-volume-keyboard-swipe.html?m=1
