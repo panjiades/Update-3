@@ -32,6 +32,7 @@ OPTIONS=(
 10 "Install WPS 2019 ( bebas Upgrade )"
 18 "Instal Libre / Editor PDF"
 12 "Perbaiki Linux"
+35 "Perbaiki Linux 2"
 ‎  ""
 34 "Ubah fungsi Tombol volume & swipe"
 ‎  ""
@@ -74,6 +75,9 @@ case $CHOICE in
 ‎ )
 exit
 ;;
+
+35)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PerbaikiLinux2 | bash
 
 34)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/ubah-tombol-volume-keyboard-swipe.html?m=1
