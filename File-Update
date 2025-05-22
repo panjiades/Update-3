@@ -28,6 +28,7 @@ OPTIONS=(
 13 "Perbaiki jam linux"
 36 "Cara install/tambah font"
 37 "Cara ketik Font arab"
+38 "Cara keyboard Melayang/Floating/Kecil"
 ‎  ""
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
 9 " "
@@ -76,6 +77,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+38)
+am start -a android.intent.action.VIEW -d https://youtu.be/X5-afjInb6w?si=el9eR1DpTs8kwvTp
 ;;
 
 37)
