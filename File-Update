@@ -80,7 +80,7 @@ exit
 ;;
 
 38)
-am start -a android.intent.action.VIEW -d https://youtu.be/X5-afjInb6w?si=el9eR1DpTs8kwvTp
+am start -a android.intent.action.VIEW -d https://youtube.com/shorts/ytnSd2uiRiM?si=Q-ZJIN8poz6lOesM
 ;;
 
 37)
