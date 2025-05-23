@@ -2,3 +2,9 @@
 
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Downloads
 
+ls
+
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Panel.tar.bz2
+
+
+
