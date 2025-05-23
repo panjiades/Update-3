@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Downloads
+
