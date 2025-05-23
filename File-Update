@@ -29,6 +29,7 @@ OPTIONS=(
 36 "Cara install/tambah font"
 37 "Cara ketik Font arab"
 38 "Cara keyboard Melayang/Floating/Kecil"
+39 "Cara kembalikan Panel bawah yang hilang"
 ‎  ""
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
 9 " "
@@ -77,6 +78,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+39) 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/BackupPanel | bash
 ;;
 
 38)
