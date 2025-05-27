@@ -61,7 +61,8 @@ OPTIONS=(
 5 "Update Paket 3/4/5 ke HD Version"
 ‎  ""
 6 "Update Kirim file .docx"
-7 "Cara perbesar tampilan WPS & Linux"
+7 "Cara perbesar tampilan WPS & Linux Tablet"
+40 "Cara perbesar tampilan Linux di HP"
 ‎  ""
 )
 
@@ -78,6 +79,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+40)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/membesarkan-mengecilkan-tampilan-linux.html?m=1
 ;;
 
 39) 
