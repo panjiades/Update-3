@@ -301,7 +301,7 @@ pkg update
 clear
 echo "Setiap pertanyaan silahkan ketik huruf Y lalu enter"
 sleep 10
-pkg remove x11-repo; pkg install x11-repo; pkg remove termux-x11-nightly; pkg install termux-x11-nightly; pkg remove file; pkg install file; pkg remove pulseaudio; pkg install pulseaudio; pkg remove virglrenderer-android; pkg install virglrenderer-android
+pkg update; pkg remove x11-repo; pkg install x11-repo; pkg remove termux-x11-nightly; pkg install termux-x11-nightly; pkg remove file; pkg install file; pkg remove pulseaudio; pkg install pulseaudio; pkg remove virglrenderer-android; pkg install virglrenderer-android
 ;;
 
 13)
