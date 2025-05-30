@@ -30,6 +30,11 @@ OPTIONS=(
 37 "Cara ketik Font arab"
 38 "Cara keyboard Melayang/Floating/Kecil"
 39 "Cara kembalikan Panel bawah yang hilang"
+16 "Cara Mode Mouse & Setting scrool 1 jari"
+14 "Cara Masuk linux Dengan Widget"
+15 "Cara Masuk linux Tanpa Widget"
+41 "Cara Export PDF di WPS"
+42 "PhpMyAdmin No Privileges to Create Database"
 ‎  ""
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
 9 " "
@@ -49,12 +54,7 @@ OPTIONS=(
 26 "Update Blender"
 27 "Update Audacity"
 29 "Install Sudo"
-‎  ""
 19 "Instal Audacity"
-17 "Enable/Disable Dark Mode Chromium"
-16 "Mode Mouse & Setting scrool 1 jari"
-14 "Masuk linux Dengan Widget"
-15 "Masuk linux Tanpa Widget"
 ‎  ""
 3 "Update Paket1 ke HD Version"
 4 "Update Paket2 ke HD Version"
@@ -79,6 +79,14 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+42)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/solusi-no-privilege-to-create-database.html?m=1
+;;
+
+41)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/cara-export-pdf-di-wps.html?m=1
 ;;
 
 40)
