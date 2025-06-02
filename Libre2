@@ -15,7 +15,8 @@ Aplikasi ini berfungsi seperti WPS Office, namun bisa untuk edit file PDF secara
 # INI MENU AWAL
 OPTIONS=(
 1 "Lanjut install Libre Office"
-2 "Batalkan")
+2 "Panduan"
+3 "Batalkan")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -34,11 +35,14 @@ exit
 
 1)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Libre | bash
-
-am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/02/panduan-setelah-install-libre-office.html?m=1
 ;;
 
 2)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/02/panduan-setelah-install-libre-office.html?m=1
+;;
+
+
+3)
 exit
 ;;
 
