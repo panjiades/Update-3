@@ -14,4 +14,8 @@ echo " "
 echo "INSTAL SELESAI, PAHAMI PANDUAN PENGGUNANAAN"
 echo " "
 
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/02/panduan-setelah-install-libre-office.html?m=1
+;;
+
+
 
