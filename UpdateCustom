@@ -7,7 +7,7 @@ if [ "$model" == "2307783RPBFG" ]; then
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
-elif [ "$model" == "SM-X216B" ]; then
+elif [ "$model" == "23073RPBFG" ]; then
 
 clear
 echo "Akan install Chromium Browser (Sekitar 200mb)"
