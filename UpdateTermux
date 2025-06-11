@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Download the APK
+wget https://f-droid.org/repo/com.termux_1022.apk
+
+# Install the APK (this will open the Android package installer)
+termux-open com.termux_1022.apk
+
+rm com.termux_1022.apk
+
