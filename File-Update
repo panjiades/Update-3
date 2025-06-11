@@ -45,6 +45,7 @@ OPTIONS=(
 ‎  ""
 34 "Ubah fungsi Tombol volume & swipe keyboard"
 ‎  ""
+43 "Update Termux"
 20 "Update Firefox"
 21 "Update Brave Browser"
 22 "Update Chromium"
@@ -79,6 +80,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+43) 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateTermux | bash
 ;;
 
 42)
