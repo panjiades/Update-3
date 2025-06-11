@@ -1,5 +1,17 @@
 #!/bin/bash
 
+
+# Dapatkan versi Termux
+termux_version=$(echo $TERMUX_VERSION)
+
+# Cek apakah versi Termux sama dengan "0.119.0-beta.3"
+if [ "$termux_version" = "0.119.0-beta.3" ]; then
+    echo "Termux sudah paling update"
+echo " "
+sleep 5
+else
+    echo "Termux belum update.. akan otomatis instal"
+sleep 5
 # Download the APK
 wget https://f-droid.org/repo/com.termux_1022.apk
 
@@ -8,3 +20,4 @@ termux-open com.termux_1022.apk
 
 rm com.termux_1022.apk
 
+fi
