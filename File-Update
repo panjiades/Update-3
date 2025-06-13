@@ -2,10 +2,8 @@
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
 
-cd .shortcuts
-ls
-
-cd
+echo "haloooo"
+sleep 10
 
 # INI MENU PILIHAN
 HEIGHT=40
