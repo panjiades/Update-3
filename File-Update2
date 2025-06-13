@@ -7,8 +7,8 @@ clear
 HEIGHT=40
 WIDTH=170
 CHOICE_HEIGHT=7
-TITLE="Pilih menu update"
-MENU="Last update 10 Mei 2025. Jika dibuka tak ada apa², maka dalam proses."
+TITLE="MENU TUTORIAL"
+MENU="Silahkan pilih menu, scrool ke bawah pake tanda panah"
 
 # INI MENU AWAL
 OPTIONS=(
