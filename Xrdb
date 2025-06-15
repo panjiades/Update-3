@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd /data/data/com.termux/files/usr/bin/
+
+ls
+rm on
+
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/on
+
+chmod +x on
+cd
+
+clear
+echo -e "\033[0;32mBERHASIL DIPERBAHARUI"
+echo -e "\033[1;33mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
+echo " "
+echo " "
