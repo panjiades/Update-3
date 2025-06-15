@@ -21,6 +21,8 @@ echo " "
 
 sleep 5
 
+pkill -f com.termux.x11
+
 echo -e "\033[32m "
 read -n 1 -s -r -p "Tekan tombol apapun untuk lanjut update ke Termux $termux_version"
 
