@@ -35,6 +35,8 @@ exit
 ;;
 
 1)
+pkill -f com.termux.x11
+
 wget -O - https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/DowngradeKeWPS2019 | bash
 ;;
 
