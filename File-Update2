@@ -31,6 +31,7 @@ OPTIONS=(
 15 "Cara Masuk linux Tanpa Widget"
 41 "Cara Export PDF di WPS"
 42 "PhpMyAdmin No Privileges to Create Database"
+44 "Install XRDB Not Cenected"
 ‎  ""
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
 9 " "
@@ -76,6 +77,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+44)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/xrdb | bash
 ;;
 
 43) 
