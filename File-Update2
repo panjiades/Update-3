@@ -16,6 +16,7 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
+45 "Buat pintasan file folder WhatsApp"
 33 "Cara Auto Kapital saat mengetik di WPS"
 30 "Fix Keyboard tidak mau ngetik/hapus sendiri"
 31 "Cara save file WPS ke tablet"
@@ -77,6 +78,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+45)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PintasanWA | bash
 ;;
 
 44)
