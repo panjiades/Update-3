@@ -8,7 +8,8 @@ HEIGHT=40
 WIDTH=170
 CHOICE_HEIGHT=7
 TITLE="VERSI TERMUX TERBARU"
-MENU="Tolong rutun cek ke sini ya, untuk cek update baru.
+MENU="Tolong rutin cek ke sini, untuk cek update baru.
+
 Silahkan pilih menu setting, scrool ke bawah pake tanda panah"
 
 # INI MENU AWAL
