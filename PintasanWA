@@ -4,5 +4,3 @@ proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd Desktop; ln -
 
 
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd Desktop; ln -s /storage/self/primary/Android/media/com.whatsapp/WhatsApp/Media/ WhatsApp; exit"
-
-am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/06/sukses-memasang-pintasan-folder-whatsapp.html?m=1
