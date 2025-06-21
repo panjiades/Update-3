@@ -5,7 +5,7 @@ model=$(getprop ro.product.model)
 if [ "$model" == "BAH3-W59" ]; then
   clear
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD5-2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
 elif [ "$model" == "23073RPBFG" ]; then
 
