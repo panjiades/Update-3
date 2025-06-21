@@ -86,6 +86,14 @@ rm Paket2HD.tar
 
 cd
 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PintasanWA | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
+
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/upgrade-ke-linux-hd-selesai.html?m=1
 
 
