@@ -13,7 +13,7 @@ OPTIONS=(
 1 "Tutup Linux"
 2 "Buka_Update"
 3 "Terminal"
-4 "Buka Linux")
+4 "Buka Linux jika not conected")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
