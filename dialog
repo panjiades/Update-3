@@ -12,7 +12,8 @@ Silahkan pilih menu"
 OPTIONS=(
 1 "Tutup Linux"
 2 "Buka_Update"
-3 "Terminal")
+3 "Terminal"
+4 "Buka Linux")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -41,6 +42,10 @@ exit
 
 3)
 pkg j
+;;
+
+4)
+bash on
 ;;
 
 esac
