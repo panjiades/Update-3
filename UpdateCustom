@@ -22,7 +22,7 @@ sleep 10
 
 proot-distro login ubuntu  -- bash -c "dpkg --configure -a; apt remove sudo -y; apt install sudo -y"
 
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt update"
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; apt update"
 
 clear
 
