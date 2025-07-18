@@ -18,6 +18,7 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
+46 "Jika Bagian bawah kanan WPS ketutup"
 45 "Buat pintasan file folder WhatsApp"
 ‎  ""
 33 "Cara Auto Kapital saat mengetik di WPS"
@@ -81,6 +82,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+46)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/mengatasi-bar-bawah-wps-ketutup.html?m=1
 ;;
 
 45)
