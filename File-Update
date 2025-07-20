@@ -28,6 +28,8 @@ read -n 1 -s -r -p "Tekan tombol apapun untuk lanjut update ke Termux $termux_ve
 
 am start -a android.intent.action.VIEW -d https://f-droid.org/repo/com.termux_1022.apk
 
+sleep 10
+
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/06/otomatis-download-termux-terbaru.html?m=1
 
 
