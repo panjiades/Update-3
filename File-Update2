@@ -18,6 +18,7 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
+47 "Cara tampilkan garis tepi Word WPS"
 46 "Jika Bagian bawah kanan WPS ketutup"
 45 "Buat pintasan file folder WhatsApp"
 ‎  ""
@@ -82,6 +83,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+47)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/cara-aktivkan-garis-terpi-margin-di-wps.html?m=1
 ;;
 
 46)
