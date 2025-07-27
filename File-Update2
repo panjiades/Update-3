@@ -85,6 +85,7 @@ exit
 
 48)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/setting-touchpadmouse-terlalu-pelan.html
+;;
 
 47)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/cara-aktivkan-garis-terpi-margin-di-wps.html?m=1
