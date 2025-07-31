@@ -15,6 +15,7 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
+50 "Cara ganti walpaper"
 49 "Cara Print Dokumen"
 48 "Cara atur sensitivitas mouse external"
 47 "Cara tampilkan garis tepi Word WPS"
@@ -82,6 +83,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+50)
+am start -a android.intent.action.VIEW -d https://www.youtube.com/watch?v=V6UmleoH-rU
 ;;
 
 49)
