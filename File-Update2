@@ -15,6 +15,7 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
+49 "Cara Print Dokumen"
 48 "Cara atur sensitivitas mouse external"
 47 "Cara tampilkan garis tepi Word WPS"
 46 "Jika Bagian bawah kanan WPS ketutup"
@@ -81,6 +82,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+49)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/cara-print.html?m=1
 ;;
 
 48)
