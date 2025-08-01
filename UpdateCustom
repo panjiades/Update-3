@@ -2,16 +2,16 @@
 
 clear
 model=$(getprop ro.product.model)
-if [ "$model" == "BAH73-W59" ]; then
+if [ "$model" == "BA7H73-W59" ]; then
   clear
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
-elif [ "$model" == "itel P10003L" ]; then
+elif [ "$model" == "24018RPACG" ]; then
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
 
-elif [ "$model" == "AGS6-W09" ]; then
+elif [ "$model" == "A7GS6-W09" ]; then
 
 clear
 echo "Akan install Chromium Browser (Sekitar 200mb)"
