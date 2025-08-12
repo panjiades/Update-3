@@ -262,6 +262,7 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/d
 
 1)
 pkg update && yes | pkg upgrade
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "apt update; apt upgrade -y"
 clear
 echo " "
 echo "Selesai, Termux uptodate."
