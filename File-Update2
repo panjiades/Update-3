@@ -266,6 +266,8 @@ clear
 echo " "
 echo "Selesai, Termux uptodate."
 echo " "
+echo -e "\033[32mtujuan update agar termux tetap lancar dan terbaru. tidak wajib namun di sarankan."
+sleep 5
 ;;
 
 2)
