@@ -13,7 +13,7 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 elif [ "$model" == "2311DRK48G" ]; then
 termux-setup-storage
 termux-change-repo
-pkg update && yes 
+pkg update
 pkg install proot-distro
 pkg install wget
 pkg install android-tools
