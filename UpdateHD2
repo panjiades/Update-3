@@ -80,7 +80,7 @@ mkdir .shortcuts
 
 cd storage/downloads
 
-mv Paket2HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+cp Paket2HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
 cd
 
