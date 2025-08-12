@@ -15,6 +15,8 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
+51 "Cara otomatis firefox download file masuk internal"
+‎  ""
 50 "Cara ganti walpaper"
 49 "Cara Print Dokumen"
 48 "Cara atur sensitivitas mouse external"
@@ -83,6 +85,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+51)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/08/cara-downloadan-firefox-otomatis-masuk.html?m=1
 ;;
 
 50)
