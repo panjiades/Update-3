@@ -11,7 +11,7 @@ Silahkan pilih menu setting, scrool ke bawah pake tanda panah"
 
 # INI MENU AWAL
 OPTIONS=(
-1 "Update Termux berkala seminggu 1x (disarankan)"
+
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
