@@ -15,6 +15,7 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
+52 "Aktivkan WebGL Firefox"
 51 "Cara otomatis firefox download file masuk internal"
 ‎  ""
 50 "Cara ganti walpaper"
@@ -85,6 +86,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+52)
+am start -a android.intent.action.VIEW -d wps-pclevel.blogspot.com/2025/08/install-webgl.html
 ;;
 
 51)
