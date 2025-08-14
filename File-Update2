@@ -89,7 +89,7 @@ case $CHOICE in
 exit
 ;;
 
-53
+53)
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/08/whatsapp-web-chromium-tidak-keluar.html?m=1
 ;;
 
