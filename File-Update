@@ -5,7 +5,8 @@ termux_version=$(echo $TERMUX_VERSION)
 
 # Periksa kondisi versi
 if [ "$termux_version" == "0.119.0-beta.3" ]; then
-  
+
+sleep 10
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update2 | bash
 
 else
