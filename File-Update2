@@ -365,8 +365,6 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 
 12)
 termux-change-repo
-pkg update
-pkg upgrade
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; apt update; apt upgrade"
 clear
 echo "Setiap pertanyaan silahkan ketik huruf Y lalu enter"
