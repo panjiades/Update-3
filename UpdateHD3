@@ -74,23 +74,29 @@ proot-distro remove ubuntu
 
 mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+
 chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
 mkdir .shortcuts
 
 cd storage/downloads
+ls
 
 cp Paket3HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 
 cd
+ls
 
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+ls
 
 tar xvf Paket3HD.tar
 
 rm Paket3HD.tar
 
 cd
+ls
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
 
