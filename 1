@@ -1,12 +1,7 @@
 #!/bin/bash
 
 clear
-pkg install proot-distro;
-pkg install x11-repo;
-pkg install termux-x11-nightly;
-pkg install file;
-pkg install pulseaudio;
-pkg install virglrenderer-android;
+pkg install proot-distro && pkg install x11-repo && pkg install termux-x11-nightly && pkg install file && pkg install pulseaudio && pkg install virglrenderer-android
 
 # Daftar paket yang akan diperiksa
 PACKAGES=(
