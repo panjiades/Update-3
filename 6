@@ -32,3 +32,38 @@ if [ "$ALL_INSTALLED" = true ]; then
 else
     echo -e "\e[31mTerdapat paket yang belum terpasang, silahkan ulangi langkah ini lagi. Cek koneksi internet, atau paksa berhenti termux dahulu. \e[0m"
 fi
+
+
+echo " "
+echo " "
+
+# Define the folders
+FOLDER1="storage/shared/android/media/linux1"
+FOLDER2="storage/shared/android/media/linux2"
+FOLDER3="storage/shared/android/media/linux3"
+
+# Define the colors
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+# Check for Folder 1
+if [ -d "$FOLDER1" ]; then
+    echo -e "${GREEN}PAKET 1 BISA DI INSTALL${NC}"
+else
+    echo -e "${RED}PAKET 1 TIDAK BISA DI INSTALL${NC}"
+fi
+
+# Check for Folder 2
+if [ -d "$FOLDER2" ]; then
+    echo -e "${GREEN}PAKET 2 BISA DI INSTALL${NC}"
+else
+    echo -e "${RED}PAKET 2 TIDAK BISA DI INSTALL${NC}"
+fi
+
+# Check for Folder 3
+if [ -d "$FOLDER3" ]; then
+    echo -e "${GREEN}PAKET 3 BISA DI INSTALL${NC}"
+else
+    echo -e "${RED}PAKET 3 TIDAK BISA DI INSTALL${NC}"
+fi
