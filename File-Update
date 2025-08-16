@@ -1,36 +1,24 @@
 #!/bin/bash
-clear
-# Cek versi Termux
-termux_version=$(echo $TERMUX_VERSION)
 
-# Periksa kondisi versi
-if [ "$termux_version" == "0.119.0-beta.3" ]; then
+# Path ke file-file yang akan diperiksa
+file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user/Desktop/WPS Writer.desktop"
+file2="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
+file3="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/opt/android-studio/build.txt"
+
+# Periksa keberadaan file1
+if [ -f "$file1" ]; then
+    mkdir -pv storage/shared/android/media/linux1
+fi
+
+# Periksa keberadaan file2
+if [ -f "$file2" ]; then
+    mkdir -pv storage/shared/android/media/linux2
+fi
+
+# Periksa keberadaan file3
+if [ -f "$file3" ]; then
+    mkdir -pv storage/shared/android/media/linux3
+fi
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update2 | bash
 
-else
-
-clear
-echo " "
-echo -e "\033[31mGAGAL "
-echo " "
-echo " "
-echo -e "\033[37mDiperlukan Update ke TERMUX VERSI $termux_version agar bisa uptodate dan berjalan dengan baik."
-echo " "
-echo " "
-
-sleep 5
-
-pkill -f com.termux.x11
-
-echo -e "\033[32m "
-read -n 1 -s -r -p "Tekan tombol apapun untuk lanjut update ke Termux $termux_version"
-
-am start -a android.intent.action.VIEW -d https://f-droid.org/repo/com.termux_1022.apk
-
-sleep 10
-
-am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/06/otomatis-download-termux-terbaru.html?m=1
-
-
-fi
