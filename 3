@@ -1,7 +1,16 @@
 #!/bin/bash
 
-file2="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
+# Define folder paths
+FOLDER2="storage/shared/android/media/linux2"
 
-if [ -f "$file2" ]; then
+# Define colors
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+if [ -d "$FOLDER2" ]; then
     wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2 | bash
+else
+    echo -e "${RED}❌ PAKET 2 TIDAK TERSEDIA${NC}"
 fi
+
