@@ -1,7 +1,16 @@
 #!/bin/bash
 
-file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user/Desktop/WPS Writer.desktop"
+# Define folder paths
+FOLDER1="storage/shared/android/media/linux1"
 
-if [ -f "$file1" ]; then
+# Define colors
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+if [ -d "$FOLDER1" ]; then
     wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash
+else
+    echo -e "${RED}❌ PAKET 1 TIDAK TERSEDIA${NC}"
 fi
+
