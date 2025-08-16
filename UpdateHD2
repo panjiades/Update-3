@@ -110,4 +110,5 @@ else
 
 echo "gagal"
 
+fi
 exit 0
