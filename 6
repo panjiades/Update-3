@@ -1,3 +1,33 @@
 #!/bin/bash
 clear
 pkg install virglrenderer-android -y
+
+PACKAGES=(
+    proot-distro
+    x11-repo
+    termux-x11-nightly
+    file
+    pulseaudio
+    virglrenderer-android
+)
+
+# Inisialisasi status
+ALL_INSTALLED=true
+
+# Loop untuk memeriksa setiap paket
+for pkg in "${PACKAGES[@]}"; do
+    if ! pkg list-installed | grep -q "^$pkg/"; then
+        echo -e "\e[31m[TIDAK TERPASANG]\e[0m $pkg"
+        ALL_INSTALLED=false
+    else
+        echo -e "\e[32m[TERPASANG]\e[0m $pkg"
+    fi
+done
+
+# Cek hasil akhir dan tampilkan pesan
+echo "---"
+if [ "$ALL_INSTALLED" = true ]; then
+    echo -e "\e[32mSemua paket sudah terpasang.\e[0m"
+else
+    echo -e "\e[31mTerdapat paket yang belum terpasang.\e[0m"
+fi
