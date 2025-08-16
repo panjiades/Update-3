@@ -72,23 +72,21 @@ if [ -f "$file" ]; then
  read -n 1 -p "Tekan sembarang tombol untuk Memulai instalasi Upgrade ke Linux versi HD.. ( proses sekitar 10 menit )"
 proot-distro remove ubuntu
 
-mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+mkdir -pv "/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/halo"
 
-mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+chmod 777 -R "/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs"
 
-chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+mkdir ".shortcuts"
 
-mkdir .shortcuts
-
-cd storage/downloads
+cd "storage/downloads"
 ls
 
-cp Paket2HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+cp Paket2HD.tar "/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs"
 
 cd
 ls
 
-cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+cd "/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs"
 ls
 
 tar xvf Paket2HD.tar
@@ -106,8 +104,7 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/P
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
 
-am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/upgrade-ke-linux-hd-selesai.html?m=1
-
+read -n 1 -s; exit 0
 
 else
 
