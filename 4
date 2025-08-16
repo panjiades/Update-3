@@ -10,7 +10,23 @@ NC='\033[0m' # No Color
 
 if [ -d "$FOLDER3" ]; then
    
- wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3 | bash
+ 
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+mkdir .shortcuts
+cd storage/downloads
+cp Paket3HD.tar /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+cd
+cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+tar xvf Paket3HD.tar
+read -n 1 -s
+rm Paket3HD.tar
+cd
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Sudo | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PintasanWA | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash; read -n 1 -s; exit 0
 
 else
 
