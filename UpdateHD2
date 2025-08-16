@@ -108,5 +108,6 @@ read -n 1 -s; exit 0
 
 else
 
- echo "gagal"
+echo "gagal"
+
 exit 0
