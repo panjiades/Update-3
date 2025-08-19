@@ -1,65 +1,25 @@
 #!/bin/bash
-
+# Skrip login dengan perulangan dan beberapa kondisi, sandi terlihat
 clear
-model=$(getprop ro.product.model)
-if [ "$model" == "BA7H73-W59" ]; then
-  clear
+echo "Ini adalah fitur berbayar, Hubungi admin untuk meminta sandi masuk."
+echo " "
+while true; do
+    read -p "Masukkan sandi: " password
+    echo
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
-
-elif [ "$model" == "24018RPACG" ]; then
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
-
-elif [ "$model" == "2311DRK48G" ]; then
-#!/bin/bash
-termux-setup-storage
-termux-change-repo && pkg update && pkg install proot-distro && pkg install wget && pkg install android-tools && pkg install x11-repo && pkg install termux-x11-nightly && pkg install file && pkg install pulseaudio && pkg install virglrenderer-android && read -n 1 -s; exit 0
-
-
-elif [ "$model" == "A7GS6-W09" ]; then
-
+    if [ "$password" == "1" ]; then
+        echo "Halo!"
+        break
+    elif [ "$password" == "2" ]; then
 clear
-echo "Akan install Chromium Browser (Sekitar 200mb)"
+        echo "Anda memasukkan sandi 2,  akan keluar dari program."
 sleep 5
-echo " "
-echo "Pess ctrl+c untuk cancel"
-sleep 10
+        exit 0
+    else
+        echo "Sandi salah, ketik 2 lalu enter untuk keluar"
+    fi
+done
 
-proot-distro login ubuntu  -- bash -c "dpkg --configure -a; apt remove sudo -y; apt install sudo -y"
 
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; apt update"
 
-clear
 
-echo -e "\033[0;31mSilahkan Ketik angka Password :" "\033[0;32m123456" "\033[0;37mlalu ENTER di keyboard kalian" 
-echo "(password tidak terlihat, ketik aja, lalu enter)"
-echo " "
-
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt install chromium -y; sudo sed -i 's/chromium %U/chromium --no-sandbox %U/g' /usr/share/applications/chromium.desktop"
-
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
-
-clear
-echo " "
-echo "Berhasil install Chromium Web Browser,  Silahkan masuk ke linux kalian"
-echo " " 
-
-else
-
-echo "❓ Install Custom adalah install aplikasi sesuai request Customer dan berbayar. Jika tidak request maka tidak perlu akses ke fitur ini"
-
-sleep 10 
-clear
-echo "❌ Gagal ❌"
-echo " "
-model=$(getprop ro.product.model)
-echo " "
-echo -e "\033[32mID Perangkat kamu" :  "\033[31m$model"
-
-echo -e "\033[37m"
-echo " " 
-echo "Hubungi 085865480245 & Sertakan ID Perangkat kamu jika ingin request sesuatu."
-echo " "
-sleep 10
-echo " "
-fi
