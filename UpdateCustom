@@ -7,8 +7,8 @@ if [ "$model" == "BA7H73-W59" ]; then
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
-elif [ "$model" == "24018RPACG" ]; then
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
+elif [ "$model" == "SM_T865" ]; then
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3 | bash
 
 elif [ "$model" == "2311DRK48G" ]; then
 #!/bin/bash
