@@ -15,7 +15,8 @@ OPTIONS=(
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
-54 "Cara ganti ke Double Click saat buka file"
+55 "setting touchpad tidak presisi naik atas kanan kiri"
+54 "Cara setting ke Double Click saat buka file"
 53 "Solusi Bacode WhatsApp Web Chromium tidak keluar"
 52 "Aktivkan WebGL Firefox"
 51 "Cara otomatis firefox download file masuk internal"
@@ -88,6 +89,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+55)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/mengatasi-touchpad-keyboard-tidak.html
 ;;
 
 54)
