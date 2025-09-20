@@ -1,38 +1,15 @@
 #!/bin/bash
 
-# Menentukan lokasi direktori dan file
-DIR_PATH="/sd/Android/Media"
-FILE_PATH="$DIR_PATH/tiny2"
+# Path file yang ingin diperiksa
+file_path="sd/Android/Media/tiny3"
 
-# Memeriksa apakah direktori ada
-if [ ! -d "$DIR_PATH" ]; then
-    echo "Direktori tidak ditemukan: $DIR_PATH"
-    echo "Silakan pastikan Anda memiliki izin penyimpanan yang benar."
-    exit 1
-fi
-
-# Cek apakah file 'tiny2' sudah ada di direktori
-if [ -f "$FILE_PATH" ]; then
-    echo "File 'tiny2' ditemukan. Menjalankan..."
-    cd sd/Android/Media
-ls
-bash tiny2
+# Memeriksa apakah file ada
+if [ -f "$file_path" ]; then
+    # Jika file ada, jalankan
+    echo "File ditemukan. Menjalankan..."
+    bash "$file_path"
 else
-    echo "File 'tiny2' tidak ditemukan. Mengunduh..."
-    # Pindah ke direktori yang diinginkan
-    cd "$DIR_PATH" || { echo "Gagal pindah ke direktori $DIR_PATH"; exit 1; }
-
-    # Mengunduh file
-    wget "https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/tiny2"
-
-    # Memastikan file berhasil diunduh sebelum menjalankannya
-    if [ -f "$FILE_PATH" ]; then
-        echo "Unduh berhasil. Menjalankan 'tiny2'..."
-        cd sd/Android/Media
-ls
-bash tiny2
-    else
-        echo "Unduh gagal. File 'tiny2' tidak ditemukan setelah unduh."
-        exit 1
-    fi
+    # Jika file tidak ada, tampilkan pesan
+    echo "link telah berubah. minta ke 085865480245 untuk link baru."
+    echo "Harga 25K"
 fi
