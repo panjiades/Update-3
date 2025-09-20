@@ -11,10 +11,6 @@ if [ -f "$file_path" ]; then
 else
 clear
 
-Gagal
-sleep 5
-exit
-
 echo " "
 cd sd/Android/Media
 wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/tiny3
