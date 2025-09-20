@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 # Meminta pengguna memasukkan password
 read -s -p "Masukkan password: " password
 echo
