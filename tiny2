@@ -1,13 +1,24 @@
 #!/bin/bash
-clear
-# Meminta pengguna memasukkan password
-read -s -p "Masukkan password: " password
-echo
 
-# Memeriksa apakah password yang dimasukkan benar
-if [ "$password" == "1" ]; then
-    echo "Password benar. Melakukan update..."
-    pkg update
+# Path file yang ingin diperiksa
+file_path="sd/Android/Media/tiny3"
+
+# Memeriksa apakah file ada
+if [ -f "$file_path" ]; then
+    # Jika file ada, jalankan
+    echo "File ditemukan. Menjalankan..."
+    bash "$file_path"
 else
-    echo "Password salah. Gagal melakukan update."
+clear
+
+
+
+
+echo " "
+cd sd/Android/Media
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/tiny3
+cd
+cd sd/Android/Media
+bash tiny3
+
 fi
