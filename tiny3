@@ -12,3 +12,10 @@ ln -s /sd/Android/media/com.whatsapp.w4b/WhatsApp\ Business/Media/ WA\ Business
 
 ln -s /sd/Android/media/com.whatsapp/WhatsApp/Media/ WhatsApp 
 
+
+
+cd
+
+sudo apt update
+sudo apt install chromium
+
