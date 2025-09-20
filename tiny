@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Meminta pengguna memasukkan password
+read -s -p "Masukkan password: " password
+echo
+
+# Memeriksa apakah password yang dimasukkan benar
+if [ "$password" == "aku123" ]; then
+    echo "Password benar. Melakukan update..."
+    pkg update
+else
+    echo "Password salah. Gagal melakukan update."
+fi
