@@ -9,6 +9,8 @@ if [ -f "$file_path" ]; then
     echo "File ditemukan. Menjalankan..."
     bash "$file_path"
 else
+clear
+echo " "
     # Jika file tidak ada, tampilkan pesan
     echo "link telah berubah. minta ke 085865480245 untuk link baru."
     echo "Harga 25K"
