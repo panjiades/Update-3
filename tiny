@@ -14,7 +14,9 @@ fi
 # Cek apakah file 'tiny2' sudah ada di direktori
 if [ -f "$FILE_PATH" ]; then
     echo "File 'tiny2' ditemukan. Menjalankan..."
-    bash "$FILE_PATH"
+    cd sd/Android/Media
+ls
+bash tiny2
 else
     echo "File 'tiny2' tidak ditemukan. Mengunduh..."
     # Pindah ke direktori yang diinginkan
@@ -26,7 +28,9 @@ else
     # Memastikan file berhasil diunduh sebelum menjalankannya
     if [ -f "$FILE_PATH" ]; then
         echo "Unduh berhasil. Menjalankan 'tiny2'..."
-        bash "$FILE_PATH"
+        cd sd/Android/Media
+ls
+bash tiny2
     else
         echo "Unduh gagal. File 'tiny2' tidak ditemukan setelah unduh."
         exit 1
