@@ -12,7 +12,10 @@ else
 clear
 echo " "
     # Jika file tidak ada, tampilkan pesan
+echo" "
+echo "GAGAL"
     echo "link telah berubah. minta ke 085865480245 untuk link baru."
+echo " "
     echo "Harga 25K  akan mendapatkan :
 - Folder internal
 - Folder WhatsApp 
