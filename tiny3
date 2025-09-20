@@ -1,34 +1,14 @@
 #!/bin/bash
 
-# Menentukan lokasi direktori dan file
-DIR_PATH="/sd/Android/Media"
-FILE_PATH="$DIR_PATH/tiny2"
+cd
 
-# Memeriksa apakah direktori ada
-if [ ! -d "$DIR_PATH" ]; then
-    echo "Direktori tidak ditemukan: $DIR_PATH"
-    echo "Silakan pastikan Anda memiliki izin penyimpanan yang benar."
-    exit 1
-fi
+cd Desktop
+ls
+rm Internal; rm WA\ Business; rm WhatsApp
 
-# Cek apakah file 'tiny2' sudah ada di direktori
-if [ -f "$FILE_PATH" ]; then
-    echo "File 'tiny2' ditemukan. Menjalankan..."
-    bash "$FILE_PATH"
-else
-    echo "File 'tiny2' tidak ditemukan. Mengunduh..."
-    # Pindah ke direktori yang diinginkan
-    cd "$DIR_PATH" || { echo "Gagal pindah ke direktori $DIR_PATH"; exit 1; }
+ln -s /sd Internal
 
-    # Mengunduh file
-    wget "https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/tiny2"
+ln -s /sd/Android/media/com.whatsapp.w4b/WhatsApp\ Business/Media/ WA\ Business
 
-    # Memastikan file berhasil diunduh sebelum menjalankannya
-    if [ -f "$FILE_PATH" ]; then
-        echo "Unduh berhasil. Menjalankan 'tiny2'..."
-        bash "$FILE_PATH"
-    else
-        echo "Unduh gagal. File 'tiny2' tidak ditemukan setelah unduh."
-        exit 1
-    fi
-fi
+ln -s /sd/Android/media/com.whatsapp/WhatsApp/Media/ WhatsApp 
+
