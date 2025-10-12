@@ -1,10 +1,14 @@
 #!/bin/bash
 
 clear
-pkg install proot-distro
-
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/2 | bash
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/3 | bash
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/4 | bash
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/5 | bash
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/6 | bash
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+mkdir .shortcuts
+cd
+sleep 3
+cd storage/downloads
+cp files.tar /data/data/com.termux
+cd /data/data/com.termux
+tar xvf files.tar
+rm files.tar
+cd
