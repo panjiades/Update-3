@@ -12,3 +12,16 @@ cd /data/data/com.termux
 tar xvf files.tar
 rm files.tar
 cd
+
+FILE="/data/data/com.termux/files/usr/opt/virglrenderer-android/lib/libepoxy.so"
+
+if [ -f "$FILE" ]; then
+    # Jika file ada, tampilkan 'sukses' dengan warna hijau
+clear
+    echo -e "\e[32mSukses, silahkan next step\e[0m"
+else
+    # Opsional: Jika file tidak ada, tampilkan pesan lain
+clear
+    echo "Gagal, ulang step ini."
+fi
+
