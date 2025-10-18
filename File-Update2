@@ -19,6 +19,7 @@ OPTIONS=(
 21 "Update Brave Browser"
 22 "Update Chromium v140"
 ‎  ""
+56 "Cara drawing tanda tangan di WPS"
 55 "setting touchpad tidak presisi naik atas kanan kiri"
 54 "Cara setting ke Double Click saat buka file"
 53 "Solusi Bacode WhatsApp Web Chromium tidak keluar"
@@ -90,6 +91,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+56)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/10/cara-drawing-ttd-di-wps-office.html?m=1
 ;;
 
 55)
