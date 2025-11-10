@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Brave Browser
+Comment=
+Exec=brave-browser --no-sandbox
+Icon=brave-browser
+Path=
+Terminal=false
+StartupNotify=false
