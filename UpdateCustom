@@ -35,7 +35,11 @@ echo -e "\033[0;31mSilahkan Ketik angka Password :" "\033[0;32m123456" "\033[0;3
 echo "(password tidak terlihat, ketik aja, lalu enter)"
 echo " "
 
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo add-apt-repository ppa:xtradeb/apps; sudo apt update;"
+
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt install chromium -y; sudo sed -i 's/chromium %U/chromium --no-sandbox %U/g' /usr/share/applications/chromium.desktop"
+
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo sed -i 's/chromium %U/chromium --no-sandbox %U/g' /usr/share/applications/chromium.desktop"
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
 
