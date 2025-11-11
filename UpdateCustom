@@ -2,15 +2,15 @@
 
 clear
 model=$(getprop ro.product.model)
-if [ "$model" == "BA7H73-W59" ]; then
+if [ "$model" == "BA76H73-W59" ]; then
   clear
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
-elif [ "$model" == "SM_T865" ]; then
+elif [ "$model" == "SM6_T865" ]; then
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3 | bash
 
-elif [ "$model" == "2311DRK48G" ]; then
+elif [ "$model" == "23611DRK48G" ]; then
 #!/bin/bash
 termux-setup-storage
 termux-change-repo && pkg update && pkg install proot-distro && pkg install wget && pkg install android-tools && pkg install x11-repo && pkg install termux-x11-nightly && pkg install file && pkg install pulseaudio && pkg install virglrenderer-android && read -n 1 -s; exit 0
@@ -42,6 +42,9 @@ proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt ins
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo sed -i 's/chromium %U/chromium --no-sandbox %U/g' /usr/share/applications/chromium.desktop"
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd Desktop; wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Chromium.desktop"
+
 
 clear
 echo " "
