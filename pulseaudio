@@ -2,11 +2,12 @@
 
 clear
 
-echo -e "\033[37mMasukan password " "\033[32m123456" "\033[37m, lalu enter saja ( password tidak terlihat ) dan kemudian enter lagi"
-echo " "
-
 proot-distro login ubuntu -- bash -c "cd; apt remove sudo -y; apt install sudo -y;"
 
+clear 
+
+echo -e "\033[37mMasukan password " "\033[32m123456" "\033[37m, lalu enter saja ( password tidak terlihat ) dan kemudian enter lagi"
+echo " "
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt update;"
 
 clear
