@@ -20,6 +20,7 @@ OPTIONS=(
 22 "Update Chromium v140"
 16 "Mode touch & Setting scrool 1 jari"
 ‎  ""
+
 56 "Cara drawing tanda tangan di WPS"
 55 "setting touchpad tidak presisi naik atas kanan kiri"
 54 "Cara setting ke Double Click saat buka file"
@@ -91,6 +92,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+57)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/11/agar-dokumen-dari-wps-ke-microsoft-word.html?m=1
 ;;
 
 56)
