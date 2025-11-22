@@ -95,6 +95,10 @@ case $CHOICE in
 exit
 ;;
 
+59)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/11/cara-perbesar-cursor.html?m=1
+;;
+
 58)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/pulseaudio | bash
 ;;
