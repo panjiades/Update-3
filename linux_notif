@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sleep 10
 # Tentukan URL yang ingin dibuka
 URL="https://www.google.com"
 NOTIF_TITLE="Haii.."
