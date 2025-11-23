@@ -11,7 +11,7 @@ Silahkan pilih menu setting, scrool ke bawah pake tanda panah"
 
 # INI MENU AWAL
 OPTIONS=(
-1 "Cara install ulang sendiri FREE"
+1 "Cara install ulang full sendiri FREE"
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
@@ -50,7 +50,7 @@ OPTIONS=(
 27 "Update Audacity"
 58 "Update Audio"
 ‎  ""
-‎  "=====  BAGIAN INSTALL  ====="
+‎  "=====  BAGIAN INSTALL APP  ====="
 29 "Install Sudo"
 19 "Instal Audacity"
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
