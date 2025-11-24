@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Tentukan path ke file yang ingin dicek
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
+
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+
+else
+
+fi
