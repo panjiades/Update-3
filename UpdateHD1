@@ -59,6 +59,9 @@ if [ -f "$file" ]; then
  read -n 1 -p "Tekan sembarang tombol untuk Memulai instalasi Upgrade ke Linux versi HD.. ( proses sekitar 10 menit )"
 proot-distro remove ubuntu
 
+mkdir -pv storage/shared/Linux\ Download\ Files
+mkdir -pv storage/shared/WPS\ Backup
+
 mkdir -pv "/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/halo"
 
 chmod 777 -R "/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs"
@@ -83,15 +86,11 @@ rm Paket1HD.tar
 cd
 ls
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/linux123 | bash
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PintasanWA | bash
-
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
-
-read -n 1 -s; exit 0
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash; read -n 1 -s; exit 0
 
 else
 
