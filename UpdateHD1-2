@@ -7,25 +7,11 @@ CHOICE_HEIGHT=4
 TITLE="DESKRIPSI UPDATE KE PAKET 1 HD"
 MENU="
 
-PAKET 1 ( ONLY WPS & FIREFOX )
-
-UPDATE INI ADALAH DIPERUNTUKKAN UNTUK YANG SUDAH INSTAL PAKET 1 SEBELUM 23 JARUARI 2025.
-
-JIKA KALIAN INSTALL PAKET 2 MAKA PILIH PAKET 2.
-
-TAMPILAN AKAN FULL HD+
-
-Data Linux sebelumnya akan digantikan ulang atau terhapus semua namun di folder internal aman. 
-pastikan kalian memiliki koneksi internet. 
-
-Ukuran file 3 GB.
-
-Silakan pilih download file update terlebih dahulu. 
-setelah itu lanjut install."
+PAKET 1 ZOTERO"
 
 # INI MENU AWAL
 OPTIONS=(
-1 "Download Bahan Update"
+1 "Download Paket1 Zotero"
 2 "Install"
 3 "Batal")
 
@@ -45,7 +31,13 @@ exit
 ;;
 
 1)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1 | bash
+cd storage/downloads
+ls
+rm Paket1HD.tar
+rm Paket2HD.tar
+rm Paket3HD.tar
+cd
+am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=1wKH9108FSXwM-VIKKqU2_FlzP_CxofU7&export=download&authuser=0
 ;;
 
 2)
