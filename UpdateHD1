@@ -57,6 +57,8 @@ if [ -f "$file" ]; then
 
   # Jika file ada, tampilkan pesan "Ada"
  read -n 1 -p "Tekan sembarang tombol untuk Memulai instalasi Upgrade ke Linux versi HD.. ( proses sekitar 10 menit )"
+pkill -f com.termux.x11
+
 proot-distro remove ubuntu
 
 mkdir -pv storage/shared/Linux\ Download\ Files
