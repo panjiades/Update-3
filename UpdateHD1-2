@@ -34,8 +34,6 @@ exit
 cd storage/downloads
 ls
 rm Paket1HD.tar
-rm Paket2HD.tar
-rm Paket3HD.tar
 cd
 am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=1wKH9108FSXwM-VIKKqU2_FlzP_CxofU7&export=download&authuser=0
 ;;
