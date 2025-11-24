@@ -36,6 +36,7 @@ ls
 rm Paket1HD.tar
 cd
 am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=1wKH9108FSXwM-VIKKqU2_FlzP_CxofU7&export=download&authuser=0
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1-2 | bash
 ;;
 
 2)
