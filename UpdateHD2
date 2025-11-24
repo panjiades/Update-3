@@ -13,21 +13,7 @@ echo " "
 echo -e "\033[33mDeskripsi :"
 echo -e "\033[37m
 
-PAKET 2
-
-Upgrade Ini di tujukan Untuk instalasi LINUX WPS sebelum 23 Januari 2025. Bagi yang install sesudah tanggal itu tidak perlu upgrade.
-
-Update ini akan mengganti full Linux sebelumnya, dari segi tampilan dan konfigurasi. 
-
-Cata ini juga bisa untuk install ulang linux kamu.
-
-Untuk paket aplikasi terinstall tidak jauh berbeda. 
-Data linux akan hilang, namun data di internal aman. 
-Silahkan Backup data di Document/Download linux kalian."
-echo " "
-echo "Akan di arahkan untuk Download file update 3.5 GB.
-Setelah download selesai, silahkan masuk ke menu ini lagi."
-
+PAKET 2 ZOTERO"
 echo " "
 echo " "
 
@@ -72,6 +58,10 @@ if [ -f "$file" ]; then
  read -n 1 -p "Tekan sembarang tombol untuk Memulai instalasi Upgrade ke Linux versi HD.. ( proses sekitar 10 menit )"
 proot-distro remove ubuntu
 
+mkdir -pv storage/shared/Linux\ Download\ Files
+
+mkdir -pv storage/shared/WPS\ Backup
+
 mkdir -pv "/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/halo"
 
 chmod 777 -R "/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs"
@@ -96,15 +86,13 @@ rm Paket2HD.tar
 cd
 ls
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/wawebfix | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/linux123 | bash
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PintasanWA | bash
-
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
-
-read -n 1 -s; exit 0
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash; read -n 1 -s; exit 0
 
 else
 
