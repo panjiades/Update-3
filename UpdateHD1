@@ -13,20 +13,7 @@ echo " "
 echo -e "\033[33mDeskripsi :"
 echo -e "\033[37m
 
-PAKET 1
-
-Upgrade Ini di tujukan Untuk instalasi LINUX WPS sebelum 23 Januari 2025. Bagi yang install sesudah tanggal itu tidak perlu upgrade.
-
-Update ini akan mengganti full Linux sebelumnya, dari segi tampilan dan konfigurasi. 
-
-Cata ini juga bisa untuk install ulang linux kamu.
-
-Untuk paket aplikasi terinstall tidak jauh berbeda. 
-Data linux akan hilang, namun data di internal aman. 
-Silahkan Backup data di Document/Download linux kalian."
-echo " "
-echo "Akan di arahkan untuk Download file update 3.5 GB.
-Setelah download selesai, silahkan masuk ke menu ini lagi."
+PAKET 1 ZOTERO
 
 echo " "
 echo " "
