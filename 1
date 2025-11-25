@@ -1,7 +1,10 @@
 #!/bin/bash
-
+clear
+echo "Silahkan ketuk sembarang tombol"
 clear
 read -n 1 -s
+mkdir -pv storage/shared/Linux\ Download\ Files
+mkdir -pv storage/shared/WPS\ Backup
 mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
 mkdir .shortcuts
