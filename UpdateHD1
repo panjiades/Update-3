@@ -13,7 +13,7 @@ echo " "
 echo -e "\033[33mDeskripsi :"
 echo -e "\033[37m
 
-PAKET 1 ZOTERO
+PAKET 1 ZOTERO"
 
 echo " "
 echo " "
@@ -96,6 +96,10 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/d
 else
 
 clear
+
+clear
+
+echo "gagal, pastikan nama file Paket1HD.tar di folder download, atau download filenya dulu"
 
 
 fi
