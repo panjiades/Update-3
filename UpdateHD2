@@ -96,7 +96,9 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/d
 
 else
 
-echo "gagal"
+clear
+echo "gagal, pastikan nama file Paket2HD.tar di folder download, atau download filenya dulu"
+
 
 fi
 exit 0
