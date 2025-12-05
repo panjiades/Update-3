@@ -86,13 +86,15 @@ rm Paket2HD.tar
 cd
 ls
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/wawebfix | bash
-
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/linux123 | bash
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash; read -n 1 -s; exit 0
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/wawebfix | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/wawebfix | bash; exit 0
 
 else
 
