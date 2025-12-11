@@ -1,4 +1,24 @@
 #!/bin/bash
+# Update bashrc
+
+# Definisikan path folder yang akan diperiksa
+FOLDER_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1"
+
+# Periksa apakah folder ada (-d checks if it is a directory)
+if [ -d "$FOLDER_PATH" ]; then
+    # Jika folder ada
+    echo " "
+else
+    # Jika folder tidak ada
+
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
+
+
+clear
+fi
+
 clear
 
 # Path ke file-file yang akan diperiksa
@@ -67,20 +87,3 @@ fi
 
 
 
-# Update bashrc
-
-# Definisikan path folder yang akan diperiksa
-FOLDER_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1"
-
-# Periksa apakah folder ada (-d checks if it is a directory)
-if [ -d "$FOLDER_PATH" ]; then
-    # Jika folder ada
-    echo " "
-else
-    # Jika folder tidak ada
-    mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
-
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash; read -n 1 -s; exit 0
-
-clear
-fi
