@@ -23,7 +23,7 @@ tampilkan_menu() {
     echo -e "==========================================="
     echo -e ""
     echo -e " \033[44;1m1\033[0m. \033[36mMatikan System\033[0m      (\033[35mShutdown & exit\033[0m)"
-    echo -e " \033[44;1m2\033[0m. \033[36mBuka Update\033[0m         (\033[35mUpdate & Tutorial\033[0m)"
+    echo -e " \033[44;1m2\033[0m. \033[36mBuku Update\033[0m         (\033[35mUpdate & Tutorial\033[0m)"
     echo -e " \033[44;1m3\033[0m. \033[36mHidupkan Linux\033[0m      [Status: $STATUS_ON]"
     echo -e " \033[44;1m0\033[0m. \033[31mKeluar\033[0m"
     echo -e ""
