@@ -25,7 +25,7 @@ tampilkan_menu() {
     echo -e " \033[44;1m1\033[0m. \033[36mMatikan System\033[0m      (\033[35mShutdown & exit\033[0m)"
     echo -e " \033[44;1m2\033[0m. \033[36mBuku Update\033[0m         (\033[35mUpdate & Tutorial\033[0m)"
     echo -e " \033[44;1m3\033[0m. \033[36mHidupkan Linux\033[0m      [Status: $STATUS_ON]"
-    echo -e " \033[44;1m0\033[0m. \033[31mKeluar\033[0m"
+    echo -e " \033[44;1m4\033[0m. \033[31mPengaturan\033[0m"
     echo -e ""
     echo -e "==========================================="
     echo -n "Pilih opsi: "
@@ -57,9 +57,9 @@ exit 0;
                 echo -e "\n\033[32mPerintah 'bash on' telah dimulai.\033[0m"
             fi
             ;;
-        0)
-            echo -e "\n\033[33mKeluar dari Menu. Sampai jumpa!\033[0m"
-            exit 0
+        4)
+            am start --user 0 -n com.termux.x11/com.termux.x11.LoriePreferences
+
             ;;
         *)
             echo -e "\n\033[31mPilihan tidak valid. Silakan coba lagi.\033[0m"
@@ -75,10 +75,10 @@ while true; do
     read -r pilihan
 
     # Pastikan input adalah angka
-    if [[ $pilihan =~ ^[0-3]$ ]]; then
+    if [[ $pilihan =~ ^[1-4]$ ]]; then
         jalankan_aksi "$pilihan"
     else
-        echo -e "\n\033[31mInput tidak valid. Silakan masukkan angka 0-3.\033[0m"
+        echo -e "\n\033[31mInput tidak valid. Silakan masukkan angka 1-4.\033[0m"
         echo -e "\nTekan \033[1mENTER\033[0m untuk kembali ke menu..."
         read
     fi
