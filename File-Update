@@ -1,7 +1,6 @@
 #!/bin/bash
 clear
 
-
 # Path ke file-file yang akan diperiksa
 file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user/Desktop/WPS Writer.desktop"
 file2="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
@@ -62,4 +61,26 @@ am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update2 | bash
 
+fi
+
+
+
+
+
+#Update bashrc
+
+# Definisikan path folder yang akan diperiksa
+FOLDER_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1"
+
+# Periksa apakah folder ada (-d checks if it is a directory)
+if [ -d "$FOLDER_PATH" ]; then
+    # Jika folder ada
+    
+else
+    # Jika folder tidak ada
+    mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash; read -n 1 -s; exit 0
+
+clear
 fi
