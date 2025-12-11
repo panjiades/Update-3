@@ -34,6 +34,26 @@ chmod +x off
 
 cd
 
+# Update bashrc
+
+# Definisikan path folder yang akan diperiksa
+FOLDER_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1"
+
+# Periksa apakah folder ada (-d checks if it is a directory)
+if [ -d "$FOLDER_PATH" ]; then
+    # Jika folder ada
+    echo " "
+else
+    # Jika folder tidak ada
+
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
+
+
+clear
+fi
+
 clear
 echo -e "\033[0;32mBERHASIL DIPERBAHARUI"
 echo -e "\033[1;33mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
