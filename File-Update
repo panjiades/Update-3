@@ -67,7 +67,7 @@ fi
 
 
 
-#Update bashrc
+# Update bashrc
 
 # Definisikan path folder yang akan diperiksa
 FOLDER_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1"
