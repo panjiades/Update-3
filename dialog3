@@ -15,11 +15,6 @@ rm dialog2
 wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/.bashrc
 
 
-cd .shortcuts
-rm Buka
-rm Tutup
-rm Buka_Update
-
 cd
 clear
 
