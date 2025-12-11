@@ -16,8 +16,11 @@ wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/.bashr
 
 
 cd .shortcuts
-rm Buka Tutup Buka_Update
+rm Buka
+rm Tutup
+rm Buka_Update
 
+cd
 clear
 
 echo " "
