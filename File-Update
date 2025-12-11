@@ -75,7 +75,7 @@ FOLDER_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-root
 # Periksa apakah folder ada (-d checks if it is a directory)
 if [ -d "$FOLDER_PATH" ]; then
     # Jika folder ada
-    
+    echo " "
 else
     # Jika folder tidak ada
     mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
