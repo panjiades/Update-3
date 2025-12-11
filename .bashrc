@@ -37,6 +37,7 @@ jalankan_aksi() {
         1)
             echo -e "\n\033[36mMenjalankan Shutdown...\033[0m"
             pkill -f com.termux.x11
+pkill -f com.termux
 exit 0;
             echo -e "\n\033[32mPerintah pkill selesai.\033[0m"
             ;;
