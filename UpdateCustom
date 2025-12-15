@@ -45,6 +45,7 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/D
 
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd Desktop; wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Chromium.desktop"
 
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; cd Desktop; wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop; chmod 444 chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop"
 
 clear
 echo " "
