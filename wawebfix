@@ -10,10 +10,9 @@ cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/
 ls
 rm chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop
 
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; cd Desktop; wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop; chmod 444 chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop"
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; cd Desktop; chmod 7777 chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop; rm chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop; wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop; chmod 444 chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop"
+"
 
-
- 
 
 echo "SUKSES PINTASAN WHATSAPP SUDAH AKTIV"
 
