@@ -44,7 +44,7 @@ exit 0;
         2)
             echo -e "\n\033[36mMenjalankan Buka Update...\033[0m"
             wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update | bash
-            echo -e "\n\033[32mProses Update selesai.\033[0m"
+            echo -e "\n\033[32mDone.\033[0m"
             ;;
         3)
             STATUS=$(get_status_on)
