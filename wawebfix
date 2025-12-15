@@ -9,14 +9,13 @@ if [ -f "$file" ]; then
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/
 ls
 rm chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop
-wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop
 
-cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/zotero.desktop
-cd
-clear
-echo " "
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; cd Desktop; wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop; chmod 444 chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_2.desktop"
+
+
+ 
+
 echo "SUKSES PINTASAN WHATSAPP SUDAH AKTIV"
-sleep 10
 
 else
 echo "Gagal, paket2 belum terinstal"
