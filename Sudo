@@ -1,6 +1,6 @@
 #!/bin/bash
 
-proot-distro login ubuntu --shared-tmp -- bash -c "cd; apt update; apt remove sudo -y; apt install sudo -y;"
+proot-distro login ubuntu --shared-tmp -- bash -c "cd; apt remove sudo -y; apt install sudo -y;"
 
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; a2dismod php8.3; a2dismod mpm_prefork; a2dismod mpm_worker; a2dismod mpm_event; service apache2 restart; a2enmod php8.3; service apache2 restart;"
 clear
