@@ -47,5 +47,6 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/d
 clear
 fi
 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update2 | bash
 clear
 
