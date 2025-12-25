@@ -11,7 +11,7 @@ PAKET 1 ZYREX"
 
 # INI MENU AWAL
 OPTIONS=(
-1 "Download Paket1 Code ZYREX"
+1 "Download Paket1"
 2 "Install"
 3 "Batal")
 
