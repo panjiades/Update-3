@@ -7,7 +7,7 @@ CHOICE_HEIGHT=4
 TITLE="DESKRIPSI UPDATE KE PAKET 3/4/5 HD"
 MENU="
 
-PAKET 3 ZOTERO"
+PAKET 3 ZYREX"
 
 # INI MENU AWAL
 OPTIONS=(
@@ -35,7 +35,7 @@ cd storage/downloads
 ls
 rm Paket3HD.tar
 cd
-am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=151tNV7_vLoy2ODQ5g747WOtqvV9vSghA&export=download&authuser=0
+am start -a android.intent.action.VIEW -d https://drive.usercontent.google.com/download?id=1W37-P6YSi-ctLAlqz03lqqTgHz3c00Rf&export=download&authuser=0
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 ;;
