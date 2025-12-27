@@ -93,7 +93,18 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
 
 clear 
-echo "SELESAI ✅"
+FILE_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
+
+HIJAU='\033[0;32m'
+MERAH='\033[0;31m'
+NC='\033[0m' # No Color (Reset)
+
+if [ -e "$FILE_PATH" ]; then
+    echo -e "${HIJAU}Sukses install ✅${NC}"
+echo "press any key.. to exit"
+else
+    echo -e "${MERAH}Gagal ❌ kemungkinan file Paket belum di folder downloads, atau file rusak. Ulangi langkah install lagi${NC}"
+fi
 read -n 1 -s
 exit
 
