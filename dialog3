@@ -18,6 +18,16 @@ wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/.bashr
 cd
 clear
 
+
+GREEN='\033[0;32m'
+GRAY_ITALIC='\033[3;90m'
+NC='\033[0m' # No Color (Reset)
+
+echo -e "${GREEN}✅ SUCCESS ✅ • Please close termux app and reopen it${NC}"
 echo " "
-echo "SUKSES DI PASANG, METODE MASUK LINUX TELAH DIRUBAH"
-echo " "
+echo -e "${GRAY_ITALIC}Press any key to exit${NC}"
+
+# Menunggu input satu karakter dari user sebelum keluar
+read -n 1 -s
+exit
+
