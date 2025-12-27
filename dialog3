@@ -28,5 +28,5 @@ echo " "
 echo -e "${GRAY_ITALIC}Press any key to exit${NC}"
 
 # Menunggu input satu karakter dari user sebelum keluar
-read -n 1 -s
+
 
