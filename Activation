@@ -1,0 +1,11 @@
+#!/bin/bash
+
+clear
+#!/bin/bash
+
+# Definisi warna
+HIJAU='\e[32m'
+NORMAL='\e[0m'
+
+echo -e "You can get activation code from ${HIJAU}wpsarmlinux@gmail.com${NORMAL} or WhatApp ${HIJAU}085865480245${NORMAL}"
+
