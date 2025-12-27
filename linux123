@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path ke file-file yang akan diperiksa
-file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user/Desktop/WPS Writer.desktop"
+file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user/Desktop/wps-office-wps.desktop"
 file2="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
 file3="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/code"
 
