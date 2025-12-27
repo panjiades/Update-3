@@ -7,5 +7,5 @@ clear
 HIJAU='\e[32m'
 NORMAL='\e[0m'
 
-echo -e "You can get activation code from ${HIJAU}wpsarmlinux@gmail.com${NORMAL} or WhatApp ${HIJAU}085865480245${NORMAL}"
+echo -e "WPS linux build v2512, you can get product key from ${HIJAU}wpsarmlinux@gmail.com${NORMAL} or WhatsApp ${HIJAU}085865480245${NORMAL}"
 
