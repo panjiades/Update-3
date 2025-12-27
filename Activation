@@ -7,5 +7,6 @@ clear
 HIJAU='\e[32m'
 NORMAL='\e[0m'
 
-echo -e "WPS linux build v2512, you can get product key from ${HIJAU}wpsarmlinux@gmail.com${NORMAL} or WhatsApp ${HIJAU}085865480245${NORMAL}"
+echo -e "LINUX include WPS Office PC Level need activate, you can get product key from ${HIJAU}wpsarmlinux@gmail.com${NORMAL} or WhatsApp ${HIJAU}085865480245${NORMAL}"
 
+echo " "
