@@ -51,6 +51,7 @@ OPTIONS=(
 58 "Update Audio"
 ‎  ""
 ‎  "=====  BAGIAN INSTALL APP  ====="
+61 "Install Zotero x Libre Office"
 29 "Install Sudo"
 19 "Instal Audacity"
 8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
@@ -99,6 +100,10 @@ case $CHOICE in
 
 ‎ )
 exit
+;;
+
+61)
+wget -O - https://raw.githubusercontent.com/panjiades/Zotero/refs/heads/main/install2 | bash
 ;;
 
 60) 
