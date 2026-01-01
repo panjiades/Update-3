@@ -103,7 +103,7 @@ exit
 ;;
 
 61)
-wget -O - https://raw.githubusercontent.com/panjiades/Zotero/refs/heads/main/install2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Zotero/refs/heads/main/install | bash
 ;;
 
 60) 
