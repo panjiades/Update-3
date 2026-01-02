@@ -1,12 +1,25 @@
 #!/bin/bash
-
 clear
-#!/bin/bash
-
 # Definisi warna
 HIJAU='\e[32m'
 NORMAL='\e[0m'
 
-echo -e "LINUX include WPS Office PC Level need activate, you can get product key from ${HIJAU}wpsarmlinux@gmail.com${NORMAL} or WhatsApp ${HIJAU}085865480245${NORMAL}"
+# Lokasi file
+file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/wps-office-wps.desktop"
+file2="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/waweb.desktop"
+file3="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/code"
+echo " "
+# Cek keberadaan file (Prioritas file3 > file2 > file1)
+if [ -e "$file3" ]; then
+    echo -e "Your linux is : ${HIJAU}Linux 3${NORMAL}"
+elif [ -e "$file2" ]; then
+    echo -e "Your linux is : ${HIJAU}Linux 2${NORMAL}"
+elif [ -e "$file1" ]; then
+    echo -e "Your linux is : ${HIJAU}Linux 1${NORMAL}"
+else
+    echo "TYPE : NOT FOUND"
+fi
 
+echo " "
+echo -e "LINUX include WPS Office PC Level need activate, you can get product key from ${HIJAU}wpsarmlinux@gmail.com${NORMAL} or WhatsApp ${HIJAU}085865480245${NORMAL}"
 echo " "
