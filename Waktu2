@@ -22,7 +22,8 @@ WIT ( Maluku, Papua )"
 OPTIONS=(
 1 "Set WIB"
 2 "Set WITA"
-3 "Set WIT")
+3 "Set WIT"
+4 "Set Brunei")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -65,6 +66,17 @@ echo -e "\033[37m "
 
 3)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jayapura /etc/localtime;"
+
+clear
+
+echo " "
+
+echo -e "\033[32mSelesai, sekarang buka linux kembali, klik di bagian jam. Jam akan menyesuaikan waktu tempat kalian."
+echo -e "\033[37m "
+;;
+
+4)
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Brunei /etc/localtime;"
 
 clear
 
