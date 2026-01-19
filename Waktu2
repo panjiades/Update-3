@@ -77,7 +77,7 @@ echo -e "\033[37m "
 
 4)
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Brunei /etc/localtime; date -s "yesterday"
-";"
+"; date -s "DD-MM-YYYY";"
 
 clear
 
