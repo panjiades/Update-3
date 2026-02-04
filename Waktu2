@@ -1,28 +1,23 @@
 #!/bin/bash
 
+# Pastikan package dialog terinstall
+if ! command -v dialog &> /dev/null; then
+    echo "Package 'dialog' belum terinstall. Install dulu dengan: apt install dialog"
+    exit
+fi
+
 clear
-# INI MENU PILIHAN
 HEIGHT=30
 WIDTH=80
 CHOICE_HEIGHT=4
+BACKTITLE="Timezone Fixer by Gemini"
 TITLE="FIX WAKTU KURANG SESUAI"
-MENU="
+MENU="Pilih zona waktu untuk Linux kamu. Pastikan Linux ditutup dulu sebelum eksekusi.\n\nWIB: Sumatra, Jawa, Madura, dkk\nWITA: Bali, NTT, Sulawesi, dkk\nWIT: Papua, Maluku"
 
-Fix Jam kelebihan 1 jam atau kelambatan 2jam dll.
-Ini akan mengubah Zona Jam, pada linux kalian.
-
-TUTUP LINUX DULU
-Lalu pilih zona kalian :
-WIB ( Sumatra, Jawa, madura, Kalbar, Kalteng )
-WITA ( Kaltim, Kalsel, Bali, NTB, NTT, Sulawesi )
-WIT ( Maluku, Papua )"
-
-
-# INI MENU AWAL
 OPTIONS=(
-1 "Set WIB"
-2 "Set WITA"
-3 "Set WIT"
+1 "Set WIB (Jakarta)"
+2 "Set WITA (Makassar)"
+3 "Set WIT (Jayapura)"
 4 "Set Brunei")
 
 CHOICE=$(dialog --clear \
@@ -34,57 +29,22 @@ CHOICE=$(dialog --clear \
                 2>&1 >/dev/tty)
 
 clear
+
+# Fungsi bantu untuk eksekusi perintah proot
+run_timezone() {
+    # Menggunakan sudo jika user2 bukan root, hilangkan sudo jika tidak perlu
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "ln -sf /usr/share/zoneinfo/Asia/$1 /etc/localtime"
+}
+
 case $CHOICE in
-
-‎ )
-exit
-;;
-
-1)
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime;"
-
-clear
-
-echo " "
-
-echo -e "\033[32mSelesai, sekarang buka linux kembali, klik di bagian jam. Jam akan menyesuaikan waktu tempat kalian."
-
-echo -e "\033[37m "
-;;
-
-2)
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Makassar /etc/localtime;"
-
-clear
-
-echo " "
-
-echo -e "\033[32mSelesai, sekarang buka linux kembali, klik di bagian jam. Jam akan menyesuaikan waktu tempat kalian."
-
-echo -e "\033[37m "
-;;
-
-3)
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Jayapura /etc/localtime;"
-
-clear
-
-echo " "
-
-echo -e "\033[32mSelesai, sekarang buka linux kembali, klik di bagian jam. Jam akan menyesuaikan waktu tempat kalian."
-echo -e "\033[37m "
-;;
-
-4)
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; ln -sf /usr/share/zoneinfo/Asia/Brunei /etc/localtime; date -s "yesterday"
-"; date -s "DD-MM-YYYY";"
-
-clear
-
-echo " "
-
-echo -e "\033[32mSelesai, sekarang buka linux kembali, klik di bagian jam. Jam akan menyesuaikan waktu tempat kalian."
-echo -e "\033[37m "
-;;
-
+    1) run_timezone "Jakarta" ;;
+    2) run_timezone "Makassar" ;;
+    3) run_timezone "Jayapura" ;;
+    4) 
+        # Perbaikan kutip untuk Brunei
+        proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "ln -sf /usr/share/zoneinfo/Asia/Brunei /etc/localtime"
+        ;;
+    *) exit ;; # Keluar jika menekan Cancel atau tombol lain
 esac
+
+echo -e "\n\033[32mSelesai! Jam akan menyesuaikan setelah kamu membuka kembali Linux.\033[0m\n"
