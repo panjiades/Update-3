@@ -2,13 +2,13 @@
 
 clear
 model=$(getprop ro.product.model)
-if [ "$model" == "2410CRP4CG" ]; then
+if [ "$model" == "2410uCRP4CG" ]; then
   clear
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
-elif [ "$model" == "Infijnix-X1102" ]; then
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2-2 | bash
+elif [ "$model" == "Infinix X1102" ]; then
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
 elif [ "$model" == "23n611DRsK48G" ]; then
 #!/bin/bash
