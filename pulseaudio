@@ -1,10 +1,7 @@
 #!bin/bash
 
 clear
-
-proot-distro login ubuntu -- bash -c "cd; apt remove sudo -y; apt install sudo -y;"
-
-clear 
+pkg remove pulseaudio; pkg install pulseaudio;
 
 echo -e "\033[37mMasukan password " "\033[32m123456" "\033[37m, lalu enter saja ( password tidak terlihat ) dan kemudian enter lagi"
 echo " "
