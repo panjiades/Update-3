@@ -361,7 +361,7 @@ fi
 
 5)
 # Tentukan path ke file yang ingin dicek
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu//home/user2/opt/android-studio/build.txt"
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/opt/android-studio/build.txt"
 
 # Periksa keberadaan file
 if [ -f "$file" ]; then
