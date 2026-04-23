@@ -338,6 +338,7 @@ else
   sleep 15
   exit 0
 fi
+;;
 
 4)
 # Tentukan path ke FOLDER yang ingin dicek
