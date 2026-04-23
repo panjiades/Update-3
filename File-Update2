@@ -361,7 +361,7 @@ exit 0
 fi
 ;;
 
-5)
+4)
 # Tentukan path ke FOLDER yang ingin dicek
 folder="/data/data/com.termux/files/home/storage/shared/android/media/linux3"
 
@@ -373,8 +373,12 @@ if [ -d "$folder" ]; then
 else
   # Jika file tidak ada, tampilkan pesan "Tidak ada"
 echo " "
-echo -e  "Gagal :" "\033[31mTerdeteksi perangkat baru atau Silahkan memakai jasa 085865480245 untuk menginstall Paket 3 linux terlebih dahulu.."
+echo -e  "Gagal :" "\033[31mTerdeteksi belum pernah install Paket 3.
+Atau terdeteksi perangkat baru.
+Silahkan memakai jasa 085865480245 untuk menginstall Paket 3 linux terlebih dahulu.."
 
+sleep 15
+exit 0
 fi
 ;;
 
