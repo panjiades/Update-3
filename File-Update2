@@ -319,31 +319,32 @@ am start -a android.intent.action.VIEW -d https://tiktok.com/@rekberinnet
 ;;
 
 3)
-# Tentukan path ke file yang ingin dicek
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user/Desktop/WPS Writer.desktop"
 
-# Periksa keberadaan file
-if [ -f "$file" ]; then
-  # Jika file ada, tampilkan pesan "Ada"
+# Tentukan path ke FOLDER yang ingin dicek
+folder="/data/data/com.termux/files/home/storage/shared/android/media/linux1"
+
+# Periksa keberadaan FOLDER (-d digunakan untuk direktori)
+if [ -d "$folder" ]; then
+  # Jika folder ada, jalankan script update
   wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1-2 | bash
 
 else
-  # Jika file tidak ada, tampilkan pesan "Tidak ada"
-echo " "
-echo -e  "Gagal :" "\033[31mTerdeteksi belum pernah instal Paket 1. 
-Atau Terdeteksi perangkat baru.
-Silahkan memakai jasa 085865480245 untuk menginstall Paket 1 linux terlebih dahulu.."
-sleep 15
-exit 0
+  # Jika folder tidak ada, tampilkan pesan kesalahan
+  echo " "
+  echo -e "Gagal : \033[31mTerdeteksi belum pernah instal Paket 1."
+  echo "Atau Terdeteksi perangkat baru."
+  echo "Silahkan memakai jasa 085865480245 untuk menginstall Paket 1 linux terlebih dahulu.."
+  
+  sleep 15
+  exit 0
 fi
-;;
 
 4)
-# Tentukan path ke file yang ingin dicek
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
+# Tentukan path ke FOLDER yang ingin dicek
+folder="/data/data/com.termux/files/home/storage/shared/android/media/linux2"
 
-# Periksa keberadaan file
-if [ -f "$file" ]; then
+# Periksa keberadaan FOLDER (-d digunakan untuk direktori)
+if [ -d "$folder" ]; then
   # Jika file ada, tampilkan pesan "Ada"
   wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2-2 | bash
 
@@ -360,11 +361,11 @@ fi
 ;;
 
 5)
-# Tentukan path ke file yang ingin dicek
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/opt/android-studio/build.txt"
+# Tentukan path ke FOLDER yang ingin dicek
+folder="/data/data/com.termux/files/home/storage/shared/android/media/linux3"
 
-# Periksa keberadaan file
-if [ -f "$file" ]; then
+# Periksa keberadaan FOLDER (-d digunakan untuk direktori)
+if [ -d "$folder" ]; then
   # Jika file ada, tampilkan pesan "Ada"
   wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
 
