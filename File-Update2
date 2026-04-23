@@ -361,7 +361,7 @@ exit 0
 fi
 ;;
 
-4)
+5)
 # Tentukan path ke FOLDER yang ingin dicek
 folder="/data/data/com.termux/files/home/storage/shared/android/media/linux3"
 
