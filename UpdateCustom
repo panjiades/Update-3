@@ -2,7 +2,7 @@
 
 clear
 model=$(getprop ro.product.model)
-if [ "$model" == "25099RP13" ]; then
+if [ "$model" == "25099RP13G" ]; then
   clear
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2-2 | bash
