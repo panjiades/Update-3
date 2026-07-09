@@ -50,9 +50,9 @@ mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/
 
 wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/dialog3 | bash
 
-clear
+
 fi
 
-clear
+
 echo -e "\033[0;32mBERHASIL DIPERBAHARUI"
 echo -e "\033[1;33mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
