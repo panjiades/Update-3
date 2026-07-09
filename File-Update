@@ -36,12 +36,12 @@ else
 
 mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
+wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/dialog3 | bash
 
 
 clear
 fi
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update2 | bash
+wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/File-Update2 | bash
 clear
 
