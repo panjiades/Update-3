@@ -12,7 +12,9 @@ rm dialog
 rm dialog1
 rm dialog2
 
-wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/.bashrc
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/.bashrc
+
+
 
 rm $PREFIX/etc/profile.d/a.sh
 
