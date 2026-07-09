@@ -1,0 +1,9 @@
+CATATAN LAMA SEBELUM UBAH CDN
+
+wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/dialog3 | bash
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/.bashrc
+
+
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Tutup
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Buka_Update
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Buka
