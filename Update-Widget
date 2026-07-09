@@ -15,9 +15,9 @@ rm Tutup.2
 rm Buka_Update
 rm Buka_Update.1
 rm Buka_Update.2
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Buka
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Tutup
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Buka_Update
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/Buka
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/Tutup
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/Buka_Update
 chmod +x Buka
 chmod +x Tutup
 chmod +x Buka_Update
@@ -27,8 +27,8 @@ cd /data/data/com.termux/files/usr/bin/
 ls
 rm off
 rm on
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/on
-wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/off
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/on
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/off
 chmod +x on
 chmod +x off
 
@@ -48,8 +48,7 @@ else
 
 mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/dialog3 | bash
-
+wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/dialog3 | bash
 
 clear
 fi
