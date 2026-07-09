@@ -15,9 +15,9 @@ rm Tutup.2
 rm Buka_Update
 rm Buka_Update.1
 rm Buka_Update.2
-wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Buka
-wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Tutup
-wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Buka_Update
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Buka
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Tutup
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/Buka_Update
 chmod +x Buka
 chmod +x Tutup
 chmod +x Buka_Update
@@ -27,8 +27,8 @@ cd /data/data/com.termux/files/usr/bin/
 ls
 rm off
 rm on
-wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/on
-wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/off
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/on
+wget https://raw.githubusercontent.com/panjiades/Update2/refs/heads/main/off
 chmod +x on
 chmod +x off
 
