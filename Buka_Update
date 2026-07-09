@@ -9,7 +9,7 @@ rm -rf File-Update
 rm -rf File-Update1
 rm -rf File-Update2
 rm -rf File-Update3
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update | bash
+wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/File-Update | bash
 
 echo " "
 echo " "
