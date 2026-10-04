@@ -8,3 +8,10 @@ clear
 echo " "
 echo "Sudo aktiv. Password default : 123456"
 echo " "
+GREEN='\033[0;32m'
+GRAY_ITALIC='\033[3;90m'
+NC='\033[0m' # No Color (Reset)
+
+echo -e "${GREEN}✅ SUCCESS ✅ • Please close termux app and reopen it${NC}"
+echo " "
+echo -e "${GRAY_ITALIC}Press any key to exit${NC}"
