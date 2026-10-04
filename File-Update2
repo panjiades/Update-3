@@ -1,4 +1,65 @@
 #!/bin/bash
 
-clear
-echo -e "\033[1;31mUPDATE DI BUTUHKAN !\033[0m"
+# Fungsi untuk menampilkan teks header
+tampilkan_header() {
+    clear
+    echo -e "\033[1;31mSUDAH TIDAK DIDUKUNG / KEDALUARSA\033[0m"
+    echo -e "VERSI INI SUDAH TIDAK DIDUKUNG KARENA OUT OF DATE!\n"
+    echo "Gunakan tombol Panah Atas/Bawah, lalu tekan ENTER untuk memilih:"
+    echo "--------------------------------------------------"
+}
+
+# Inisialisasi pilihan awal (0 untuk pilihan A, 1 untuk pilihan B)
+pilihan=0
+jumlah_menu=2
+
+while true; do
+    tampilkan_header
+
+    # Render menu interaktif dengan highlight warna
+    if [ $pilihan -eq 0 ]; then
+        echo -e " \033[7m > A. Tutorial update \033[0m"
+        echo -e "   B. Cancel exit"
+    else
+        echo -e "   A. Tutorial update"
+        echo -e " \033[7m > B. Cancel exit \033[0m"
+    fi
+
+    # Membaca input tombol dari keyboard
+    IFS= read -rsn1 key
+
+    # Mendeteksi tombol panah
+    if [[ $key == $'\x1b' ]]; then
+        read -rsn2 key 
+        case "$key" in
+            '[A') # Panah Atas
+                ((pilihan--))
+                if [ $pilihan -lt 0 ]; then
+                    pilihan=$((jumlah_menu - 1))
+                fi
+                ;;
+            '[B') # Panah Bawah
+                ((pilihan++))
+                if [ $pilihan -ge $jumlah_menu ]; then
+                    pilihan=0
+                fi
+                ;;
+        esac
+    elif [[ -z $key ]]; then
+        # Jika tombol ENTER ditekan
+        case $pilihan in
+            0)
+                clear
+                echo -e "\n\033[36mMembuka Tutorial update...\033[0m"
+                # Masukkan aksi/link tutorial update di sini
+                sleep 1
+                exit 0
+                ;;
+            1)
+                clear
+                echo -e "\n\033[31mKeluar dari program.\033[0m"
+                exit 0
+                ;;
+        esac
+    fi
+done
