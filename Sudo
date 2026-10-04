@@ -15,3 +15,5 @@ NC='\033[0m' # No Color (Reset)
 echo -e "${GREEN}✅ SUCCESS ✅ • Please close termux app and reopen it${NC}"
 echo " "
 echo -e "${GRAY_ITALIC}Press any key to exit${NC}"
+read -n 1 -s
+exit
