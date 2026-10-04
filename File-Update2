@@ -1,3 +1,4 @@
 #!/bin/bash
 
+clear
 echo -e "\033[1;31mUPDATE DI BUTUHKAN !\033[0m"
