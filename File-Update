@@ -13,5 +13,4 @@ else
     wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/File-Update2 | bash
 fi
 
-clear
 
