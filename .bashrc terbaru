@@ -1,4 +1,4 @@
-cat << 'EOF' > ~/.bashrc
+
 #!/bin/bash
 
 # Fungsi untuk mengecek status (murni hanya mendeteksi apakah proses 'on' sedang berjalan)
@@ -44,9 +44,9 @@ tampilkan_menu() {
 jalankan_aksi() {
     case $1 in
         1)
-            echo -e "\n\033[36mMenjalankan Shutdown...\033[0m"
-            off
-            echo -e "\n\033[32mSistem berhasil dimatikan.\033[0m"
+            # Langsung jalankan pembersihan/off dan keluar tanpa echo & jeda
+            off >/dev/null 2>&1
+            exit 0
             ;;
         2)
             echo -e "\n\033[36mMenjalankan Buka Update...\033[0m"
@@ -68,6 +68,7 @@ jalankan_aksi() {
             echo -e "\n\033[31mPilihan tidak valid. Silakan coba lagi.\033[0m"
             ;;
     esac
+    
     echo -e "\nTekan \033[1mENTER\033[0m untuk kembali ke menu..."
     read
 }
@@ -85,7 +86,4 @@ while true; do
         read
     fi
 done
-EOF
 
-chmod +x .bashrc
-echo "Berhasil memperbarui ~/.bashrc!"
