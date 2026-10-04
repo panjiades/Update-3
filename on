@@ -1,19 +1,24 @@
 #!/bin/bash
 
-# Kill all old processes
-killall -9 termux-x11 Xwayland pulseaudio virgl_test_server_android termux-wake-lock
+# 1. Bersihkan total semua proses lama termasuk zombie PulseAudio
+killall -9 termux-x11 Xwayland pulseaudio virgl_test_server_android termux-wake-lock 2>/dev/null
+pkill -9 -f pulseaudio 2>/dev/null
+
+# 2. Hapus file socket sisa agar tidak error "Module initialization failed"
+rm -f $PREFIX/tmp/pulse-socket
+
+# 3. Nyalakan PulseAudio dengan Unix socket "pulse-socket" & buka izin akses penuh (777)
+pulseaudio --start --load="module-native-protocol-unix socket=$PREFIX/tmp/pulse-socket auth-anonymous=1" --exit-idle-time=-1
+chmod 777 $PREFIX/tmp/pulse-socket 2>/dev/null
+
+# 4. Jalankan server pendukung secara paralel
+virgl_test_server_android &
 
 # Start Termux X11
 am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity
-XDG_RUNTIME_DIR=${TMPDIR}
+export XDG_RUNTIME_DIR=${TMPDIR}
 termux-x11 :0 -ac &
 
-# Start PulseAudio
-pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
+# 5. Masuk ke PRoot Ubuntu dengan variabel environment audio mengarah ke pulse-socket
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0 PULSE_SERVER=unix:/data/data/com.termux/files/usr/tmp/pulse-socket; dbus-launch --exit-with-session startxfce4"
 
-# Start GPU accelerated virglserver
-virgl_test_server_android &
-
-# Log in to proot Ubuntu and start the desktop environment. Note that startxfce4 at the end is used to start the XFCE4 desktop.
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1; dbus-launch --exit-with-session startxfce4"
