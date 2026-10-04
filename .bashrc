@@ -36,8 +36,20 @@ jalankan_aksi() {
     case $1 in
         1)
             echo -e "\n\033[36mMenjalankan Shutdown...\033[0m"
-            pkill -f com.termux.x11
-pkill -f com.termux
+    
+# 1. Matikan sesi PRoot Ubuntu secara paksa jika masih berjalan
+pkill -9 -f proot-distro 2>/dev/null
+pkill -9 -f startxfce4 2>/dev/null
+
+# 2. Matikan server pendukung, X11, dan PulseAudio
+pkill -9 -f termux.x11 2>/dev/null
+pkill -9 -f virgl_test_server_android 2>/dev/null
+pkill -9 -f pulseaudio 2>/dev/null
+
+# 3. Hapus sisa file socket agar bersih saat startup berikutnya
+rm -f $PREFIX/tmp/pulse-socket
+
+# 4. Keluar dari skrip
 exit 0;
             echo -e "\n\033[32mPerintah pkill selesai.\033[0m"
             ;;
