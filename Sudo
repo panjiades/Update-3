@@ -16,4 +16,4 @@ echo -e "${GREEN}✅ SUCCESS ✅ • Please close termux app and reopen it${NC}"
 echo " "
 echo -e "${GRAY_ITALIC}Press any key to exit${NC}"
 read -n 1 -s
-exit
+exit -0
