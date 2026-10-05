@@ -1,4 +1,4 @@
-
+cat << 'EOF' > ~/bin/termux-file-editor
 #!/bin/bash
 
 # 1. Tangkap path file yang dikirim dari Android
@@ -26,42 +26,22 @@ fi
 # Arahkan langsung ke /internal/
 PRU_PATH="/internal/$CLEAN_PATH"
 
-# 3. Pengecekan PulseAudio:
+# 3. Pengecekan Ekstrem: Jika PulseAudio mati, panggil Termux utama saja agar hidup
 if ! pgrep -x "pulseaudio" > /dev/null; then
-    echo "PulseAudio mati. Memanggil Termux biasa terlebih dahulu..."
-    
-    # 1. Panggil aplikasi Termux biasa agar aktif
+    echo "PulseAudio mati. Memanggil Termux utama..."
     am start --user 0 -n com.termux/.HomeActivity 2>/dev/null
     sleep 1
-
-    # 2. Bersihkan socket lama
-    rm -f $PREFIX/tmp/pulse-socket
-
-    # 3. Menyalakan PulseAudio
-    pulseaudio --start --load="module-native-protocol-unix socket=$PREFIX/tmp/pulse-socket auth-anonymous=1" --exit-idle-time=-1
-    chmod 777 $PREFIX/tmp/pulse-socket 2>/dev/null
-
-    # 4. Menjalankan server pendukung & Termux X11
-    virgl_test_server_android &
-    export XDG_RUNTIME_DIR=${TMPDIR}
-    termux-x11 :0 -ac &
-    sleep 1
-
-    # 5. Masuk PRoot dan jalankan XFCE dengan D-Bus dan Pulse Server
-    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0 PULSE_SERVER=unix:/data/data/com.termux/files/usr/tmp/pulse-socket; dbus-launch --exit-with-session startxfce4" &
-    
-    # 6. Panggil Intent Termux-X11 agar tampil ke depan layar
-    am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
-    
-    # Beri jeda agar desktop XFCE siap sepenuhnya
-    sleep 10
+bash .bashrc
 else
-    # Jika PulseAudio sudah aktif, langsung panggil Intent Termux-X11
+    # Jika hidup, panggil Termux-X11 agar naik ke depan layar
     echo "PulseAudio aktif. Memanggil Termux-X11..."
     am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
     sleep 1
 fi
 
-# 4. Jalankan WPS Office di PRoot Ubuntu menggunakan path /internal/ tanpa salin file
+# 4. Langsung panggil path file (WPS Office di PRoot Ubuntu)
 echo "Membuka file di PRoot Ubuntu: $PRU_PATH"
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+EOF
+
+chmod +x ~/bin/termux-file-editor
