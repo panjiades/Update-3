@@ -26,23 +26,24 @@ fi
 # Arahkan langsung ke /internal/
 PRU_PATH="/internal/$CLEAN_PATH"
 
-# 3.  Jika PulseAudio mati
+# 3. Pengecekan PulseAudio
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
-nohup bash .bashrc &
-sleep 10
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
-bash .bashrc
-
+    nohup bash .bashrc &
+    sleep 10
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+    bash .bashrc
+clear
+clear
 else
-    # Jika hidup, panggil Termux-X11 agar naik ke depan layar
+    # Jika PulseAudio HIDUP: Panggil Termux-X11 & langsung buka file (Nomor 4)
     echo "PulseAudio aktif. Memanggil Termux-X11..."
     am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
+    
+    # 4. Langsung panggil path file (WPS Office di PRoot Ubuntu) khusus saat hidup
+    echo "Membuka file di PRoot Ubuntu: $PRU_PATH"
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
 fi
-
-# 4. Langsung panggil path file (WPS Office di PRoot Ubuntu)
-echo "Membuka file di PRoot Ubuntu: $PRU_PATH"
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
 EOF
 
 chmod +x ~/bin/termux-file-editor
