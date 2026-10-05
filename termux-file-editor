@@ -31,13 +31,12 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
 bash .bashrc
 am start --user 0 -n com.termux/.HomeActivity 2>/dev/null
-sleep 5
+sleep 10
 
 else
     # Jika hidup, panggil Termux-X11 agar naik ke depan layar
     echo "PulseAudio aktif. Memanggil Termux-X11..."
     am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
-    sleep 1
 fi
 
 # 4. Langsung panggil path file (WPS Office di PRoot Ubuntu)
