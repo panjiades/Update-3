@@ -29,9 +29,9 @@ PRU_PATH="/internal/$CLEAN_PATH"
 # 3. Pengecekan Ekstrem: Jika PulseAudio mati, panggil Termux utama saja agar hidup
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
-bash .bashrc
+nohup bash .bashrc
 am start --user 0 -n com.termux/.HomeActivity 2>/dev/null
-sleep 10
+sleep 5
 
 else
     # Jika hidup, panggil Termux-X11 agar naik ke depan layar
