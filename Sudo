@@ -5,6 +5,14 @@ proot-distro login ubuntu --shared-tmp -- bash -c "cd; apt remove sudo -y; apt i
 proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; a2dismod php8.3; a2dismod mpm_prefork; a2dismod mpm_worker; a2dismod mpm_event; service apache2 restart; a2enmod php8.3; service apache2 restart;"
 clear
 
+
+cd
+
+cd ~/bin/
+
+
+
+
 echo " "
 echo "Sudo aktiv. Password default : 123456"
 echo " "
