@@ -32,7 +32,7 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     
     # 1. Panggil aplikasi Termux biasa agar aktif
     am start --user 0 -n com.termux/.HomeActivity 2>/dev/null
-    sleep 2
+    sleep 1
 
     # 2. Bersihkan socket lama
     rm -f $PREFIX/tmp/pulse-socket
@@ -45,7 +45,7 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     virgl_test_server_android &
     export XDG_RUNTIME_DIR=${TMPDIR}
     termux-x11 :0 -ac &
-    sleep 3
+    sleep 1
 
     # 5. Masuk PRoot dan jalankan XFCE dengan D-Bus dan Pulse Server
     proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0 PULSE_SERVER=unix:/data/data/com.termux/files/usr/tmp/pulse-socket; dbus-launch --exit-with-session startxfce4" &
@@ -54,7 +54,7 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
     
     # Beri jeda agar desktop XFCE siap sepenuhnya
-    sleep 3
+    sleep 10
 else
     # Jika PulseAudio sudah aktif, langsung panggil Intent Termux-X11
     echo "PulseAudio aktif. Memanggil Termux-X11..."
