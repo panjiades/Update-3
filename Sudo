@@ -9,8 +9,10 @@ clear
 cd
 
 cd ~/bin/
-
-
+rm termux-file-editor
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/termux-file-editor
+chmod +x termux-file-editor
+cd
 
 
 echo " "
