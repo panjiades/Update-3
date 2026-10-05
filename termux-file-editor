@@ -1,0 +1,67 @@
+
+#!/bin/bash
+
+# 1. Tangkap path file yang dikirim dari Android
+RAW_PATH="$1"
+
+if [ -z "$RAW_PATH" ]; then
+    echo "Error: No file path provided."
+    exit 1
+fi
+
+# 2. Konversi string content:// atau path fisik Android ke /internal/ (tanpa salin file)
+if [[ "$RAW_PATH" == content://* ]]; then
+    CLEAN_PATH=$(echo "$RAW_PATH" | sed -E 's|.*content://[^/]+/[^/]+/(.*)|\1|' | sed 's/%20/ /g')
+    if [ -z "$CLEAN_PATH" ]; then
+        CLEAN_PATH=$(echo "$RAW_PATH" | sed 's|.*%2F||' | sed 's/%20/ /g')
+    fi
+else
+    if [[ "$RAW_PATH" == /storage/emulated/0/* ]]; then
+        CLEAN_PATH="${RAW_PATH#/storage/emulated/0/}"
+    else
+        CLEAN_PATH=$(basename "$RAW_PATH")
+    fi
+fi
+
+# Arahkan langsung ke /internal/
+PRU_PATH="/internal/$CLEAN_PATH"
+
+# 3. Pengecekan PulseAudio:
+if ! pgrep -x "pulseaudio" > /dev/null; then
+    echo "PulseAudio mati. Memanggil Termux biasa terlebih dahulu..."
+    
+    # 1. Panggil aplikasi Termux biasa agar aktif
+    am start --user 0 -n com.termux/.HomeActivity 2>/dev/null
+    sleep 2
+
+    # 2. Bersihkan socket lama
+    rm -f $PREFIX/tmp/pulse-socket
+
+    # 3. Menyalakan PulseAudio
+    pulseaudio --start --load="module-native-protocol-unix socket=$PREFIX/tmp/pulse-socket auth-anonymous=1" --exit-idle-time=-1
+    chmod 777 $PREFIX/tmp/pulse-socket 2>/dev/null
+
+    # 4. Menjalankan server pendukung & Termux X11
+    virgl_test_server_android &
+    export XDG_RUNTIME_DIR=${TMPDIR}
+    termux-x11 :0 -ac &
+    sleep 3
+
+    # 5. Masuk PRoot dan jalankan XFCE dengan D-Bus dan Pulse Server
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0 PULSE_SERVER=unix:/data/data/com.termux/files/usr/tmp/pulse-socket; dbus-launch --exit-with-session startxfce4" &
+    
+    # 6. Panggil Intent Termux-X11 agar tampil ke depan layar
+    am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
+    
+    # Beri jeda agar desktop XFCE siap sepenuhnya
+    sleep 3
+else
+    # Jika PulseAudio sudah aktif, langsung panggil Intent Termux-X11
+    echo "PulseAudio aktif. Memanggil Termux-X11..."
+    am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
+    sleep 1
+fi
+
+# 4. Jalankan WPS Office di PRoot Ubuntu menggunakan path /internal/ tanpa salin file
+echo "Membuka file di PRoot Ubuntu: $PRU_PATH"
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
