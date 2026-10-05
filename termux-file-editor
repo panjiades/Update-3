@@ -26,12 +26,13 @@ fi
 # Arahkan langsung ke /internal/
 PRU_PATH="/internal/$CLEAN_PATH"
 
-# 3. Pengecekan Ekstrem: Jika PulseAudio mati, panggil Termux utama saja agar hidup
+# 3.  Jika PulseAudio mati
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
-nohup bash .bashrc >/dev/null 2>&1 &
-am start --user 0 -n com.termux/.HomeActivity 2>/dev/null
+nohup bash .bashrc &
 sleep 10
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+bash .bashrc
 
 else
     # Jika hidup, panggil Termux-X11 agar naik ke depan layar
