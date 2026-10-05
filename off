@@ -11,6 +11,8 @@ pkill -9 -f pulseaudio 2>/dev/null
 
 # 3. Hapus sisa file socket agar bersih saat startup berikutnya
 rm -f $PREFIX/tmp/pulse-socket
-
+pkill -f com.termux.x11
+pkill -9 com.termux
+exit
 # 4. Keluar dari skrip
 exit
