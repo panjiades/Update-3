@@ -31,7 +31,7 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
 nohup bash .bashrc >/dev/null 2>&1 &
 am start --user 0 -n com.termux/.HomeActivity 2>/dev/null
-sleep 5
+sleep 10
 
 else
     # Jika hidup, panggil Termux-X11 agar naik ke depan layar
