@@ -1,14 +1,10 @@
-# ==========================================
-# LANJUTAN: PEMERIKSAAN Notif1.txt (Setelah Bersih)
-# ==========================================
-clear
-echo "Melanjutkan ke proses berikutnya..."
+
 
 file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Notif1.txt"
 
 # Periksa keberadaan file1
 if [ -f "$file1" ]; then
-    # Jika file ada, buat direktori lalu jalankan File-Update3
+    # Jika file ada, buat direktori lalu jalankan File-Update0
     mkdir -pv storage/shared/android/media/linux1
     wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update0 | bash
 else
