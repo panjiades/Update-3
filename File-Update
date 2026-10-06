@@ -37,27 +37,31 @@ DIR_UPDATE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootf
 # Pastikan folder target ada (jika belum, buat)
 mkdir -p "$DIR_UPDATE"
 
-FILE1="$DIR_UPDATE/Update4.txt"
-FILE2="$DIR_UPDATE/Update5.txt"
+# Looping agar skrip kembali mengecek menu sampai semua file bersih/terbuat
+while true; do
+    FILE1="$DIR_UPDATE/Update4.txt"
+    FILE2="$DIR_UPDATE/Update5.txt"
 
-# Menyiapkan array pilihan menu secara dinamis berdasarkan file yang kosong
-MENU_ITEMS=()
+    # Menyiapkan array pilihan menu secara dinamis berdasarkan file yang kosong
+    MENU_ITEMS=()
 
-if [ ! -f "$FILE1" ]; then
-    MENU_ITEMS+=("1" "Fix shutdown tidak bersih")
-fi
+    if [ ! -f "$FILE1" ]; then
+        MENU_ITEMS+=("1" "Fix shutdown tidak bersih")
+    fi
 
-if [ ! -f "$FILE2" ]; then
-    MENU_ITEMS+=("2" "Open file manager Android")
-fi
+    if [ ! -f "$FILE2" ]; then
+        MENU_ITEMS+=("2" "Open file manager Android")
+    fi
 
-# Cek apakah semua file sudah ada. Jika iya, bersihkan layar, tampilkan pesan sukses, lalu lanjut.
-if [ ${#MENU_ITEMS[@]} -eq 0 ]; then
-    clear
-    echo -e "\e[32mSemua sudah update ✅\e[0m"
-    echo "Done."
-else
-    # Jika ada file yang belum ada, tampilkan dialog menu interaktif
+    # Cek apakah semua file sudah ada. Jika iya, hentikan looping dan lanjut ke bawah.
+    if [ ${#MENU_ITEMS[@]} -eq 0 ]; then
+        clear
+        echo -e "\e[32mSemua sudah update ✅\e[0m"
+        sleep 1
+        break
+    fi
+
+    # Jika masih ada file yang belum ada, tampilkan dialog menu interaktif
     CHOICE=$(dialog --clear \
                     --title " UPDATE DI TEMUKAN " \
                     --menu "Silakan pilih menu update di bawah ini:" 15 60 5 \
@@ -71,23 +75,33 @@ else
             echo "Menjalankan perbaikan shutdown..."
             echo "Info: Ini akan fix setelah shutdown masuk langsung bisa."
             pkg update -y
-            echo "Done."
+            # Contoh otomatis membuat file setelah dipilih (sesuaikan kebutuhanmu)
+            # touch "$FILE1"
+            echo "Selesai. Memuat ulang menu..."
+            sleep 2
             ;;
         2)
             echo "Menjalankan penyesuaian file manager..."
             echo "Info: Penyesuaian saat termux belum dibuka."
             pkg install -y 
-            echo "Done."
+            # Contoh otomatis membuat file setelah dipilih (sesuaikan kebutuhanmu)
+            # touch "$FILE2"
+            echo "Selesai. Memuat ulang menu..."
+            sleep 2
             ;;
         *)
-            echo "Menu dibatalkan."
+            echo "Menu dibatalkan atau ditutup."
+            exit 0
             ;;
     esac
-fi
+done
 
 # ==========================================
-# LANJUTAN: PEMERIKSAAN Notif1.txt
+# LANJUTAN: PEMERIKSAAN Notif1.txt (Setelah Bersih)
 # ==========================================
+clear
+echo "Melanjutkan ke proses berikutnya..."
+
 file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Notif1.txt"
 
 # Periksa keberadaan file1
