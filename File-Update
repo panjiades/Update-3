@@ -1,5 +1,23 @@
 #!/bin/bash
 
+# Tentukan path target folder
+TARGET_DIR="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/home/user2/Update"
+
+# Cek apakah folder belum ada
+if [ ! -d "$TARGET_DIR" ]; then
+    # Jika belum ada, buat foldernya (beserta subfoldernya jika ada yang kurang)
+    mkdir -p "$TARGET_DIR"
+    echo "Folder belum ada. Berhasil membuat folder: $TARGET_DIR"
+else
+    # Jika sudah ada, lewati
+    echo "Folder sudah ada, melewati proses pembuatan."
+fi
+
+
+
+
+
+
 # Path ke file yang akan diperiksa
 file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Notif1.txt"
 
