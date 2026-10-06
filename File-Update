@@ -29,7 +29,7 @@ clear
 
 
 
-####### UPDATE SKRIP ########
+#!/bin/bash
 
 # Path direktori update
 DIR_UPDATE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Update"
@@ -37,18 +37,21 @@ DIR_UPDATE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootf
 # Pastikan folder target ada (jika belum, buat)
 mkdir -p "$DIR_UPDATE"
 
-FILE1="$DIR_UPDATE/Update4.txt"
-FILE2="$DIR_UPDATE/Update4.txt"
+# Diperbaiki agar menggunakan file yang berbeda (Update1 dan Update2)
+FILE1="$DIR_UPDATE/Update1.txt"
+FILE2="$DIR_UPDATE/Update2.txt"
 
 # Menyiapkan array pilihan menu secara dinamis berdasarkan file yang kosong
 MENU_ITEMS=()
 
 if [ ! -f "$FILE1" ]; then
-    MENU_ITEMS+=("1" "Update shutdown tak bersih. Ini akan fix setelah shutdown masuk langsung bisa")
+    # Teks diringkas agar aman dari terpotong di layar terminal
+    MENU_ITEMS+=("1" "Fix shutdown tidak bersih")
 fi
 
 if [ ! -f "$FILE2" ]; then
-    MENU_ITEMS+=("2" "Open file dari manager android. penyesuaian saat termux belum dibuka")
+    # Teks diringkas agar aman dari terpotong di layar terminal
+    MENU_ITEMS+=("2" "Open file manager Android")
 fi
 
 # Cek apakah semua file sudah ada. Jika iya, bersihkan layar, tampilkan pesan sukses, lalu lanjut tanpa exit.
@@ -68,12 +71,16 @@ else
     clear
     case $CHOICE in
         1)
-            echo "Menjalankan pembaruan sistem..."
+            echo "Menjalankan perbaikan shutdown..."
+            echo "Info: Ini akan fix setelah shutdown masuk langsung bisa."
+            # Masukkan perintah update untuk pilihan 1 di sini
             pkg update -y
             echo "Done."
             ;;
         2)
-            echo "Menjalankan instalasi paket..."
+            echo "Menjalankan penyesuaian file manager..."
+            echo "Info: Penyesuaian saat termux belum dibuka."
+            # Masukkan perintah update untuk pilihan 2 di sini
             pkg install -y 
             echo "Done."
             ;;
