@@ -38,8 +38,8 @@ DIR_UPDATE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootf
 mkdir -p "$DIR_UPDATE"
 
 # Diperbaiki agar menggunakan file yang berbeda (Update1 dan Update2)
-FILE1="$DIR_UPDATE/Update1.txt"
-FILE2="$DIR_UPDATE/Update2.txt"
+FILE1="$DIR_UPDATE/Update4.txt"
+FILE2="$DIR_UPDATE/Update5.txt"
 
 # Menyiapkan array pilihan menu secara dinamis berdasarkan file yang kosong
 MENU_ITEMS=()
