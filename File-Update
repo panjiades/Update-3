@@ -72,14 +72,14 @@ while true; do
     clear
     case $CHOICE in
         1)
-            echo "Menjalankan perbaikan shutdown..."
-            echo "Info: Ini akan fix setelah shutdown masuk langsung bisa."
-            pkg update -y
-            # Contoh otomatis membuat file setelah dipilih (sesuaikan kebutuhanmu)
-            # touch "$FILE1"
-            echo "Selesai. Memuat ulang menu..."
-            sleep 2
-            ;;
+cd /data/data/com.termux/files/usr/bin/
+rm off
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/off
+chmod +x off
+cd
+touch /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Update/Update4.txt
+;;
+
         2)
             echo "Menjalankan penyesuaian file manager..."
             echo "Info: Penyesuaian saat termux belum dibuka."
