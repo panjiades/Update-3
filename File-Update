@@ -57,7 +57,7 @@ while true; do
     if [ ${#MENU_ITEMS[@]} -eq 0 ]; then
         clear
         echo -e "\e[32mSemua sudah update ✅\e[0m"
-        sleep 1
+        sleep 3
         break
     fi
 
