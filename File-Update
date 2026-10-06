@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Tentukan path target folder
+# BUAT FOLDER
 TARGET_DIR="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/home/user2/Update"
 
 # Cek apakah folder belum ada
@@ -14,6 +14,17 @@ else
 fi
 
 
+
+#ANIMASI PEMBAHARUAN
+clear
+# Teks dan titik berjalan dengan warna hijau
+echo -ne "\e[32m🔍 Memeriksa pembaruan\e[0m"
+for i in {1..3}; do
+    echo -ne "\e[32m.\e[0m"
+    sleep 1
+done
+echo -e "\n\e[32mSelesai!\e[0m"
+clear
 
 
 
