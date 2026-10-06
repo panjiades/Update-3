@@ -37,7 +37,6 @@ DIR_UPDATE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootf
 # Pastikan folder target ada (jika belum, buat)
 mkdir -p "$DIR_UPDATE"
 
-# Diperbaiki agar menggunakan file yang berbeda (Update1 dan Update2)
 FILE1="$DIR_UPDATE/Update4.txt"
 FILE2="$DIR_UPDATE/Update5.txt"
 
@@ -45,16 +44,14 @@ FILE2="$DIR_UPDATE/Update5.txt"
 MENU_ITEMS=()
 
 if [ ! -f "$FILE1" ]; then
-    # Teks diringkas agar aman dari terpotong di layar terminal
     MENU_ITEMS+=("1" "Fix shutdown tidak bersih")
 fi
 
 if [ ! -f "$FILE2" ]; then
-    # Teks diringkas agar aman dari terpotong di layar terminal
     MENU_ITEMS+=("2" "Open file manager Android")
 fi
 
-# Cek apakah semua file sudah ada. Jika iya, bersihkan layar, tampilkan pesan sukses, lalu lanjut tanpa exit.
+# Cek apakah semua file sudah ada. Jika iya, bersihkan layar, tampilkan pesan sukses, lalu lanjut.
 if [ ${#MENU_ITEMS[@]} -eq 0 ]; then
     clear
     echo -e "\e[32mSemua sudah update ✅\e[0m"
@@ -73,14 +70,12 @@ else
         1)
             echo "Menjalankan perbaikan shutdown..."
             echo "Info: Ini akan fix setelah shutdown masuk langsung bisa."
-            # Masukkan perintah update untuk pilihan 1 di sini
             pkg update -y
             echo "Done."
             ;;
         2)
             echo "Menjalankan penyesuaian file manager..."
             echo "Info: Penyesuaian saat termux belum dibuka."
-            # Masukkan perintah update untuk pilihan 2 di sini
             pkg install -y 
             echo "Done."
             ;;
@@ -90,19 +85,17 @@ else
     esac
 fi
 
-
-
-# Path ke file yang akan diperiksa
+# ==========================================
+# LANJUTAN: PEMERIKSAAN Notif1.txt
+# ==========================================
 file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Notif1.txt"
 
 # Periksa keberadaan file1
 if [ -f "$file1" ]; then
     # Jika file ada, buat direktori lalu jalankan File-Update3
     mkdir -pv storage/shared/android/media/linux1
-wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/File-Update3 | bash
+    wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/File-Update3 | bash
 else
     # Jika file tidak ada, jalankan File-Update2 (tanpa mkdir)
-wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/File-Update2 | bash
+    wget -O - https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/File-Update2 | bash
 fi
-
-
