@@ -92,4 +92,4 @@ touch /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubun
     esac
 done
 
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update2 | bash
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/File-Update3 | bash
