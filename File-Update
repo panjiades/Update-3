@@ -29,6 +29,62 @@ clear
 
 
 
+####### UPDATE SKRIP ########
+
+# Path direktori update
+DIR_UPDATE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Update"
+
+# Pastikan folder target ada (jika belum, buat)
+mkdir -p "$DIR_UPDATE"
+
+FILE1="$DIR_UPDATE/Update1.txt"
+FILE2="$DIR_UPDATE/Update2.txt"
+
+# Menyiapkan array pilihan menu secara dinamis berdasarkan file yang kosong
+MENU_ITEMS=()
+
+if [ ! -f "$FILE1" ]; then
+    MENU_ITEMS+=("1" "Update 1 (Jalankan pkg update)")
+fi
+
+if [ ! -f "$FILE2" ]; then
+    MENU_ITEMS+=("2" "Update 2 (Jalankan pkg install)")
+fi
+
+# Cek apakah semua file sudah ada. Jika iya, bersihkan layar, tampilkan pesan sukses, lalu lanjut tanpa exit.
+if [ ${#MENU_ITEMS[@]} -eq 0 ]; then
+    clear
+    echo -e "\e[32mSemua sudah update ✅\e[0m"
+    echo "Done."
+else
+    # Jika ada file yang belum ada, tampilkan dialog menu interaktif
+    CHOICE=$(dialog --clear \
+                    --title " UPDATE DI TEMUKAN " \
+                    --menu "Silakan pilih menu update di bawah ini:" 15 60 5 \
+                    "${MENU_ITEMS[@]}" \
+                    2>&1 >/dev/tty)
+
+    # Menangkap pilihan dan mengeksekusi perintah
+    clear
+    case $CHOICE in
+        1)
+            echo "Menjalankan pembaruan sistem..."
+            pkg update -y
+            echo "Done."
+            ;;
+        2)
+            echo "Menjalankan instalasi paket..."
+            pkg install -y 
+            echo "Done."
+            ;;
+        *)
+            echo "Menu dibatalkan."
+            ;;
+    esac
+fi
+
+
+
 # Path ke file yang akan diperiksa
 file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Notif1.txt"
 
