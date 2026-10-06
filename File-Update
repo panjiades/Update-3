@@ -37,18 +37,18 @@ DIR_UPDATE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootf
 # Pastikan folder target ada (jika belum, buat)
 mkdir -p "$DIR_UPDATE"
 
-FILE1="$DIR_UPDATE/Update1.txt"
-FILE2="$DIR_UPDATE/Update2.txt"
+FILE1="$DIR_UPDATE/Update4.txt"
+FILE2="$DIR_UPDATE/Update4.txt"
 
 # Menyiapkan array pilihan menu secara dinamis berdasarkan file yang kosong
 MENU_ITEMS=()
 
 if [ ! -f "$FILE1" ]; then
-    MENU_ITEMS+=("1" "Update 1 (Jalankan pkg update)")
+    MENU_ITEMS+=("1" "Update shutdown tak bersih. Ini akan fix setelah shutdown masuk langsung bisa")
 fi
 
 if [ ! -f "$FILE2" ]; then
-    MENU_ITEMS+=("2" "Update 2 (Jalankan pkg install)")
+    MENU_ITEMS+=("2" "Open file dari manager android. penyesuaian saat termux belum dibuka")
 fi
 
 # Cek apakah semua file sudah ada. Jika iya, bersihkan layar, tampilkan pesan sukses, lalu lanjut tanpa exit.
