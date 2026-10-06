@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # BUAT FOLDER
-TARGET_DIR="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/home/user2/Update"
+TARGET_DIR="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Update"
 
 # Cek apakah folder belum ada
 if [ ! -d "$TARGET_DIR" ]; then
