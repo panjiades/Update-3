@@ -1,3 +1,4 @@
+## GG
 #!/bin/bash
 
 proot-distro login ubuntu --shared-tmp -- bash -c "cd; apt remove sudo -y; apt install sudo -y;"
