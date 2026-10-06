@@ -81,17 +81,13 @@ touch /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubun
 ;;
 
         2)
-            echo "Menjalankan penyesuaian file manager..."
-            echo "Info: Penyesuaian saat termux belum dibuka."
-            pkg install -y 
-            # Contoh otomatis membuat file setelah dipilih (sesuaikan kebutuhanmu)
-            # touch "$FILE2"
-            echo "Selesai. Memuat ulang menu..."
-            sleep 2
-            ;;
-        *)
-            echo "Menu dibatalkan atau ditutup."
-            exit 0
+cd /data/data/com.termux/files/home/bin/
+rm termux-file-editor
+wget https://cdn.jsdelivr.net/gh/panjiades/Update-3@main/termux-file-editor
+chmod +x termux-file-editor
+cd
+touch /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Update/Update5.txt
+
             ;;
     esac
 done
