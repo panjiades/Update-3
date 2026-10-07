@@ -3,9 +3,9 @@
 # Fungsi untuk menampilkan teks header
 tampilkan_header() {
     clear
-    echo -e "\033[1;31mSUDAH TIDAK DIDUKUNG / KEDALUARSA\033[0m"
+    echo -e "\033[1;31mVERSI TERMUX INI SUDAH TIDAK DIDUKUNG / KEDALUARSA\033[0m"
     echo " "
-    echo "Gunakan tombol Panah Atas/Bawah, lalu tekan ENTER untuk memilih:"
+    echo "Update terbaru akan mendapatkan dukungan lebih lama : fitur print, fix audio tidak keluar, open file dokumen langsung dari file manager android, dan masih banyak lagi."
     echo "--------------------------------------------------"
 }
 
