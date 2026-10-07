@@ -4,14 +4,14 @@
 HEIGHT=40
 WIDTH=170
 CHOICE_HEIGHT=7
-TITLE="VERSI TERMUX TERBARU"
-MENU="Tolong rutin cek ke sini, untuk cek update baru.
+TITLE="VERSI TERMUX SUDAH TERUPDATE"
+MENU="Dibawah ini adalah menu setting tambahan untuk termux kamu.
 
-Silahkan pilih menu setting, scrool ke bawah pake tanda panah"
+Scrool ke bawah memakai tanda panah."
 
 # INI MENU AWAL
 OPTIONS=(
-1 "Cara install ulang full sendiri FREE"
+1 " "
 2 "Tiktok Creator"
 11 "Install Custom (Premium)"
 ‎  ""
