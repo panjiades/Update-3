@@ -5,8 +5,14 @@ tampilkan_header() {
     clear
     echo -e "\033[1;31mVERSI TERMUX INI SUDAH TIDAK DIDUKUNG / KEDALUARSA\033[0m"
     echo " "
-    echo "Update terbaru akan mendapatkan dukungan lebih lama : fitur print, fix audio tidak keluar, open file dokumen langsung dari file manager android, dan masih banyak lagi."
+    echo "Update terbaru akan mendapatkan dukungan lebih lama :"
+    echo -e "\033[32m- Fitur print\033[0m"
+    echo -e "\033[32m- Fix audio tidak keluar\033[0m"
+    echo -e "\033[32m- Open file dokumen langsung dari file manager android\033[0m"
+    echo -e "\033[32m- Dan masih banyak lagi\033[0m"
+echo " "
     echo "--------------------------------------------------"
+
 }
 
 # Inisialisasi pilihan awal (0 untuk pilihan A, 1 untuk pilihan B)
@@ -50,9 +56,13 @@ while true; do
         case $pilihan in
             0)
                 clear
-                echo -e "\n\033[36mMembuka Tutorial update...\033[0m"
-                # Masukkan aksi/link tutorial update di sini
-                sleep 1
+                echo -e "\n\033[36mMembuka Tutorial update di YouTube...\033[0m"
+                # Perintah am start untuk membuka YouTube melalui aplikasi Android
+                #am start -a android.intent.action.VIEW -d "https://www.youtube.com" >/dev/null 2>&1
+
+clear
+echo "Blm tersedia, tunggu notif tersedia di linux kamu"
+                sleep 10
                 exit 0
                 ;;
             1)
