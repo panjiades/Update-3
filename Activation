@@ -5,9 +5,9 @@ HIJAU='\e[32m'
 NORMAL='\e[0m'
 
 # Lokasi file
-file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/wps-office-wps.desktop"
-file2="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/waweb.desktop"
-file3="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/code"
+file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Notif1.txt"
+file2="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/waw6eb.desktop"
+file3="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/cod4e"
 echo " "
 # Cek keberadaan file (Prioritas file3 > file2 > file1)
 if [ -e "$file3" ]; then
