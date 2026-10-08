@@ -1,0 +1,38 @@
+cat << 'EOF' > ~/bin/termux-file-editor
+
+#!/bin/bash
+
+# 1. Tangkap path file yang dikirim dari Android
+RAW_PATH="$1"
+
+if [ -z "$RAW_PATH" ]; then
+    echo "Error: No file path provided."
+    exit 1
+fi
+
+# 2. Konversi string content:// atau path fisik Android ke /internal/ (tanpa salin file)
+if [[ "$RAW_PATH" == content://* ]]; then
+    CLEAN_PATH=$(echo "$RAW_PATH" | sed -E 's|.*content://[^/]+/[^/]+/(.*)|\1|' | sed 's/%20/ /g')
+    if [ -z "$CLEAN_PATH" ]; then
+        CLEAN_PATH=$(echo "$RAW_PATH" | sed 's|.*%2F||' | sed 's/%20/ /g')
+    fi
+else
+    if [[ "$RAW_PATH" == /storage/emulated/0/* ]]; then
+        CLEAN_PATH="${RAW_PATH#/storage/emulated/0/}"
+    else
+        CLEAN_PATH=$(basename "$RAW_PATH")
+    fi
+fi
+
+# Arahkan langsung ke /internal/
+PRU_PATH="/internal/$CLEAN_PATH"
+
+# 3. Pengecekan PulseAudio
+if ! pgrep -x "pulseaudio" > /dev/null; then
+    echo "PulseAudio mati. Memanggil Termux utama..."
+    nohup bash .bashrc &
+    sleep 10
+    nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+    EOF
+
+chmod +x ~/bin/termux-file-editor
