@@ -1,6 +1,8 @@
 cat << 'EOF' > ~/bin/termux-file-editor
 #!/bin/bash
 
+#!/bin/bash
+
 # 1. Tangkap path file yang dikirim dari Android
 RAW_PATH="$1"
 
@@ -9,7 +11,7 @@ if [ -z "$RAW_PATH" ]; then
     exit 1
 fi
 
-# 2. Konversi string content:// atau path fisik Android ke /internal/
+# 2. Konversi string content:// atau path fisik Android ke /internal/ (tanpa salin file)
 if [[ "$RAW_PATH" == content://* ]]; then
     CLEAN_PATH=$(echo "$RAW_PATH" | sed -E 's|.*content://[^/]+/[^/]+/(.*)|\1|' | sed 's/%20/ /g')
     if [ -z "$CLEAN_PATH" ]; then
@@ -29,20 +31,18 @@ PRU_PATH="/internal/$CLEAN_PATH"
 # 3. Pengecekan PulseAudio
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
-
-    am start --user 0 -n com.termux/com.termux.app.TermuxActivity
-    bash .bashrc
-    sleep 10
+    nohup on &
+    sleep 5
     nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
-pkill -9 com.termux
-
-
-
+    bash .bashrc
+clear
+clear
 else
-    # Jika PulseAudio HIDUP: Panggil Termux-X11 & langsung buka file
+    # Jika PulseAudio HIDUP: Panggil Termux-X11 & langsung buka file (Nomor 4)
     echo "PulseAudio aktif. Memanggil Termux-X11..."
     am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
 
+    # 4. Langsung panggil path file (WPS Office di PRoot Ubuntu) khusus saat hidup
     echo "Membuka file di PRoot Ubuntu: $PRU_PATH"
     proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
 fi
