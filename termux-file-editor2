@@ -1,5 +1,5 @@
 cat << 'EOF' > ~/bin/termux-file-editor
-#!/bin/bash
+tmux new -s sesi_baru2
 
 #!/bin/bash
 
@@ -31,12 +31,10 @@ PRU_PATH="/internal/$CLEAN_PATH"
 # 3. Pengecekan PulseAudio
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
-
-tmux new -s sesi_baru2
-sleep 10
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
-#unset TMUX && nohup bash --norc --noprofile -c "on" >/dev/null 2>&1 & nohup bash --norc --noprofile -c "sleep 10; proot-distro login ubuntu --user user2 --shared-tmp -- bash -c \"export DISPLAY=:0; wps '$PRU_PATH'\"" >/dev/null 2>&1 & am start --user 0 -n com.termux/com.termux.app.TermuxActivity
-
+    nohup bash .bashrc &
+    sleep 10
+    nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+    tmux new -s sesi_baru2
 clear
 clear
 else
@@ -48,9 +46,6 @@ else
     echo "Membuka file di PRoot Ubuntu: $PRU_PATH"
     proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
 fi
-
-
-
 EOF
 
 chmod +x ~/bin/termux-file-editor
