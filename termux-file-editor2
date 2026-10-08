@@ -31,7 +31,7 @@ PRU_PATH="/internal/$CLEAN_PATH"
 # 3. Pengecekan PulseAudio
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
-    nohup on &
+    nohup bash on &
     sleep 5
     nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
 clear
