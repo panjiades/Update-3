@@ -1,5 +1,4 @@
 cat << 'EOF' > ~/bin/termux-file-editor
-tmux new -s sesi_baru2
 
 #!/bin/bash
 
