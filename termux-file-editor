@@ -32,6 +32,7 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     sleep 10
     nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
     bash .bashrc
+pkill -9 com.termux
 clear
 clear
 else
