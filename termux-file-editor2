@@ -34,6 +34,10 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     bash .bashrc
     sleep 10
     nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+pkill -9 com.termux
+
+
+
 else
     # Jika PulseAudio HIDUP: Panggil Termux-X11 & langsung buka file
     echo "PulseAudio aktif. Memanggil Termux-X11..."
