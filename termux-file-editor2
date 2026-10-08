@@ -34,6 +34,7 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     nohup bash .bashrc &
     sleep 10
     nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+sleep 10
     tmux new -s sesi_baru2
 clear
 clear
