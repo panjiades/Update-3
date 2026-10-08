@@ -14,3 +14,16 @@ rm termux-file-editor
 wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/termux-file-editor
 chmod +x termux-file-editor
 cd
+
+cd /data/data/com.termux/files/usr/bin/
+ls
+rm on
+rm off
+
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/on
+wget https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/off
+
+chmod +x on
+chmod +x off
+cd
+
