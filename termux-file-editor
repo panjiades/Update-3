@@ -1,4 +1,4 @@
-cat << 'EOF' > ~/bin/termux-file-editor
+
 #!/bin/bash
 
 # 1. Tangkap path file yang dikirim dari Android
@@ -44,6 +44,4 @@ else
     echo "Membuka file di PRoot Ubuntu: $PRU_PATH"
     proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
 fi
-EOF
 
-chmod +x ~/bin/termux-file-editor
