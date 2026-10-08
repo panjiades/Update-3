@@ -32,13 +32,10 @@ PRU_PATH="/internal/$CLEAN_PATH"
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
 
-       
-nohup bash on &
-
-sleep 10
+tmux new-s bersih2 "bash --norc --noprofile -c \"proot-distro login ubuntu --user user2 --shared-tmp -- bash -c \\\"export DISPLAY=:0; wps '$PRU_PATH'\\\"\""
+sleep 5
 unset TMUX
-tmux new-s bersih "bash --norc --noprofile -c \"proot-distro login ubuntu --user user2 --shared-tmp -- bash -c \\\"export DISPLAY=:0; wps '$PRU_PATH'\\\"\""
-
+tmux new-s bersih
 
 clear
 clear
