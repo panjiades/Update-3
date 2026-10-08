@@ -33,7 +33,7 @@ if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
 
        
-tmux new -s sesi_baru
+nohup bash on &
 
 sleep 10
 unset TMUX
