@@ -29,7 +29,7 @@ PRU_PATH="/internal/$CLEAN_PATH"
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
     nohup bash .bashrc &
-    sleep 5
+    sleep 3
     nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
     bash .bashrc
 pkill -9 com.termux
