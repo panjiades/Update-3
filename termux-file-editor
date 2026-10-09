@@ -40,6 +40,9 @@ case "$EXT" in
     ppt|pptx|potm|odp)
         WPS_CMD="wpp"
         ;;
+    pdf)
+        WPS_CMD="wpspdf"
+        ;;
     *)
         # Default jika ekstensinya tidak dikenal, gunakan wps standar
         WPS_CMD="wps"
