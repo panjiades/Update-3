@@ -39,8 +39,8 @@ mkdir -p "$DIR_UPDATE"
 
 # Looping agar skrip kembali mengecek menu sampai semua file bersih/terbuat
 while true; do
-    FILE1="$DIR_UPDATE/Update6.txt"
-    FILE2="$DIR_UPDATE/Update5.txt"
+    FILE1="$DIR_UPDATE/Update7.txt"
+    FILE2="$DIR_UPDATE/Update1.txt"
 
     # Menyiapkan array pilihan menu secara dinamis berdasarkan file yang kosong
     MENU_ITEMS=()
@@ -74,7 +74,7 @@ while true; do
         1)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/main/Sudo | bash
 cd
-touch /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Update/Update6.txt
+touch /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Update/Update7.txt
 ;;
 
         2)
