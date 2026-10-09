@@ -25,22 +25,43 @@ fi
 # Arahkan langsung ke /internal/
 PRU_PATH="/internal/$CLEAN_PATH"
 
+# Ambil ekstensi file (diubah ke huruf kecil agar tidak case-sensitive)
+EXT="${RAW_PATH##*.}"
+EXT=$(echo "$EXT" | tr '[:upper:]' '[:lower:]')
+
+# Tentukan perintah WPS berdasarkan ekstensi file
+case "$EXT" in
+    doc|docx|dotm|dox|odt|rtf)
+        WPS_CMD="wps"
+        ;;
+    xls|xlsx|xlsm|xlsb|csv|ods)
+        WPS_CMD="et"
+        ;;
+    ppt|pptx|potm|odp)
+        WPS_CMD="wpp"
+        ;;
+    *)
+        # Default jika ekstensinya tidak dikenal, gunakan wps standar
+        WPS_CMD="wps"
+        ;;
+esac
+
 # 3. Pengecekan PulseAudio
 if ! pgrep -x "pulseaudio" > /dev/null; then
     echo "PulseAudio mati. Memanggil Termux utama..."
     nohup bash .bashrc &
     sleep 3
-    nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+    nohup proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; $WPS_CMD '$PRU_PATH'" &
     bash .bashrc
-pkill -9 com.termux
-clear
-clear
+    pkill -9 com.termux
+    clear
+    clear
 else
-    # Jika PulseAudio HIDUP: Panggil Termux-X11 & langsung buka file (Nomor 4)
+    # Jika PulseAudio HIDUP: Panggil Termux-X11 & langsung buka file
     echo "PulseAudio aktif. Memanggil Termux-X11..."
     am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity 2>/dev/null
-    
-    # 4. Langsung panggil path file (WPS Office di PRoot Ubuntu) khusus saat hidup
-    echo "Membuka file di PRoot Ubuntu: $PRU_PATH"
-    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; wps '$PRU_PATH'" &
+
+    # 4. Langsung panggil path file (WPS Office sesuai ekstensi di PRoot Ubuntu)
+    echo "Membuka file di PRoot Ubuntu ($WPS_CMD): $PRU_PATH"
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "export DISPLAY=:0; $WPS_CMD '$PRU_PATH'" &
 fi
