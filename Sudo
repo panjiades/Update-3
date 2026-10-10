@@ -12,6 +12,7 @@ cd
 
 mkdir -pv storage/shared/android/media/linux1
 touch /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Update/Update7.txt
+rm install.sh
 
 cd
 cd ~/bin/
