@@ -1,4 +1,4 @@
-
+mkdir -pv storage/shared/android/media/linux1
 
 file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Notif1.txt"
 
