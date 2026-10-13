@@ -9,8 +9,9 @@ tampilkan_header() {
     echo -e "\033[32m- Fitur print\033[0m"
     echo -e "\033[32m- Fix audio tidak keluar\033[0m"
     echo -e "\033[32m- Open file dokumen langsung dari file manager android\033[0m"
-    echo -e "\033[32m- Dan masih banyak lagi\033[0m"
+    
 echo -e "\033[32m- Scrool dan klik kanan 1 jari\033[0m"
+echo -e "\033[32m- Dan masih banyak lagi\033[0m"
 echo " "
     echo "--------------------------------------------------"
 
