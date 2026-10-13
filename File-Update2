@@ -67,7 +67,7 @@ while true; do
             1)
                 clear
                 echo -e "\n\033[31mKeluar dari program.\033[0m"
-                exit 0
+               
                 ;;
         esac
     fi
