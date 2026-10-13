@@ -58,10 +58,9 @@ while true; do
                 clear
                 echo -e "\n\033[36mMembuka Tutorial update di YouTube...\033[0m"
                 # Perintah am start untuk membuka YouTube melalui aplikasi Android
-                #am start -a android.intent.action.VIEW -d "https://youtube.com/watch?v=f6sP-8sJZZ4&si=ePGLKnU6PlLJ9l6Z" >/dev/null 2>&1
+                am start -a android.intent.action.VIEW -d "https://youtube.com/watch?v=f6sP-8sJZZ4&si=ePGLKnU6PlLJ9l6Z" >/dev/null 2>&1
 
 
-                exit 0
                 ;;
             1)
                 clear
