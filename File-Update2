@@ -9,12 +9,10 @@ tampilkan_header() {
     echo -e "\033[32m- Fitur print\033[0m"
     echo -e "\033[32m- Fix audio tidak keluar\033[0m"
     echo -e "\033[32m- Open file dokumen langsung dari file manager android\033[0m"
-    
-echo -e "\033[32m- Scrool dan klik kanan 1 jari\033[0m"
-echo -e "\033[32m- Dan masih banyak lagi\033[0m"
-echo " "
+    echo -e "\033[32m- Scrool dan klik kanan 1 jari\033[0m"
+    echo -e "\033[32m- Dan masih banyak lagi\033[0m"
+    echo " "
     echo "--------------------------------------------------"
-
 }
 
 # Inisialisasi pilihan awal (0 untuk pilihan A, 1 untuk pilihan B)
@@ -61,13 +59,11 @@ while true; do
                 echo -e "\n\033[36mMembuka Tutorial update di YouTube...\033[0m"
                 # Perintah am start untuk membuka YouTube melalui aplikasi Android
                 am start -a android.intent.action.VIEW -d "https://youtube.com/watch?v=f6sP-8sJZZ4&si=ePGLKnU6PlLJ9l6Z" >/dev/null 2>&1
-
-
                 ;;
             1)
                 clear
                 echo -e "\n\033[31mKeluar dari program.\033[0m"
-               
+                exit 0
                 ;;
         esac
     fi
