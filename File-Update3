@@ -29,7 +29,7 @@ OPTIONS=(
 12 "Update Audio"
 ‎  ""
 ‎  "=====  BAGIAN INSTALL APP  ====="
-13 "Install Rstudio 4.3.3 2023 Version"
+13 "Install Rstudio versi 4.3.3 2023 version"
 14 "Install Rstudio 4.3.3 2026 Version"
 15 "Install Zotero x Libre Office"
 16 "Install Sudo"
@@ -170,8 +170,8 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/p
 # [Menu: Install Rstudio versi 4.3.3 2023 version]
 echo "Mengecek koneksi server RStudio 2023..."
 if wget --spider --quiet https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2023.03.0-548-arm64.deb; then
-    echo "Server aktif. Memulai instalasi..."
-    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && sudo apt update ; sudo apt install r-base -y && wget -O rstudio-2023.deb https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2023.03.0-548-arm64.deb && sudo dpkg -i rstudio-2023.deb ; sudo apt-get install -f -y && rm -f rstudio-2023.deb && printf "[Desktop Entry]\nType=Application\nName=Rstudio\nExec=/usr/lib/rstudio/rstudio --no-sandbox --disable-setuid-sandbox\nIcon=rstudio\nTerminal=false\n" > /home/user2/Desktop/Rstudio.desktop && chmod +x /home/user2/Desktop/Rstudio.desktop'
+    echo "Server aktif. Membersihkan sisa instalasi lama & memulai instalasi baru..."
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && rm -rf /home/user2/rstudio && sudo apt purge rstudio -y ; sudo apt update ; sudo apt install r-base -y && wget -O rstudio-2023.deb https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2023.03.0-548-arm64.deb && sudo dpkg -i rstudio-2023.deb ; sudo apt-get install -f -y && rm -f rstudio-2023.deb && rm -f /home/user2/Desktop/Rstudio2026.desktop && printf "[Desktop Entry]\nType=Application\nName=Rstudio 2023\nExec=/usr/lib/rstudio/rstudio --no-sandbox --disable-setuid-sandbox\nIcon=rstudio\nTerminal=false\n" > /home/user2/Desktop/Rstudio2023.desktop && chmod +x /home/user2/Desktop/Rstudio2023.desktop'
     
     clear 
     echo "Instal RStudio versi 2023 sukses! Silahkan tekan tombol apa saja untuk kembali..."
@@ -190,8 +190,8 @@ read -n 1 -s
 # [Menu: Install Rstudio 4.3.3 2026 Version]
 echo "Mengecek koneksi server RStudio 2026..."
 if wget --spider --quiet https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2026.11.0-daily-40-arm64-debian.tar.gz; then
-    echo "Server aktif. Memulai instalasi..."
-    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && sudo apt update ; sudo apt install r-base -y && wget -O rstudio-2026.tar.gz https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2026.11.0-daily-40-arm64-debian.tar.gz && mkdir -p /home/user2/rstudio && tar -xzf rstudio-2026.tar.gz -C /home/user2/rstudio --strip-components=1 && rm -f rstudio-2026.tar.gz && chmod +x /home/user2/rstudio/rstudio && printf "[Desktop Entry]\nType=Application\nName=Rstudio\nPath=/home/user2/rstudio\nExec=/usr/lib/rstudio/rstudio --no-sandbox --disable-setuid-sandbox\nIcon=/home/user2/rstudio/resources/app/rstudio.png\nTerminal=false\n" > /home/user2/Desktop/Rstudio.desktop && chmod +x /home/user2/Desktop/Rstudio.desktop'
+    echo "Server aktif. Membersihkan sisa instalasi lama & memulai instalasi baru..."
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && sudo apt purge rstudio -y ; rm -rf /home/user2/rstudio && sudo apt update ; sudo apt install r-base -y && wget -O rstudio-2026.tar.gz https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2026.11.0-daily-40-arm64-debian.tar.gz && mkdir -p /home/user2/rstudio && tar -xzf rstudio-2026.tar.gz -C /home/user2/rstudio --strip-components=1 && rm -f rstudio-2026.tar.gz && chmod +x /home/user2/rstudio/rstudio && rm -f /home/user2/Desktop/Rstudio2023.desktop && printf "[Desktop Entry]\nType=Application\nName=Rstudio 2026\nPath=/home/user2/rstudio\nExec=/home/user2/rstudio/rstudio --no-sandbox --disable-setuid-sandbox\nIcon=/home/user2/rstudio/resources/app/rstudio.png\nTerminal=false\n" > /home/user2/Desktop/Rstudio2026.desktop && chmod +x /home/user2/Desktop/Rstudio2026.desktop'
 
     clear
     echo "Instal RStudio versi 2026 sukses! Silahkan tekan tombol apa saja untuk kembali..."
