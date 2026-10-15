@@ -29,48 +29,51 @@ OPTIONS=(
 12 "Update Audio"
 ‎  ""
 ‎  "=====  BAGIAN INSTALL APP  ====="
-13 "Install Rstudio 4.3.3 2023 version"
-14 "Install Rstudio 4.3.3 2026 Version"
-15 "Install Zotero x Libre Office"
-16 "Install Sudo"
-17 "Instal Audacity"
-18 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
-19 "Instal Libre / Editor PDF"
+13 "Install WordCraft"
+14 "Install DeskCraft"
+15 "Install GridCraft"
+16 "Install Rstudio 4.3.3 2023 version"
+17 "Install Rstudio 4.3.3 2026 Version"
+18 "Install Zotero x Libre Office"
+19 "Install Sudo"
+20 "Instal Audacity"
+21 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
+22 "Instal Libre / Editor PDF"
 ‎  ""
 ‎  "=====  BAGIAN PERBESAR LAYAR  ====="
-20 "Cara Perbesar tampilan Linux"
+23 "Cara Perbesar tampilan Linux"
 ‎  ""
 ‎  "=====  BAGIAN TOUCHSCREEN  ====="
-21 "Mode touch scrool dan zoom dengan 1 jari"
-22 "Cara perbesar mouse atau pointer"
-23 "Setting touchpad tidak presisi naik atas kanan kiri"
-24 "Cara atur sensitivitas mouse external"
+24 "Mode touch scrool dan zoom dengan 1 jari"
+25 "Cara perbesar mouse atau pointer"
+26 "Setting touchpad tidak presisi naik atas kanan kiri"
+27 "Cara atur sensitivitas mouse external"
 ‎  ""
 ‎  "=====  BAGIAN PENGETIKAN WPS  ====="
-25 "Solusi Ketikan WPS berantakan saat pindah PC"
-26 "Cara tampilkan garis tepi Word WPS"
-27 "Cara save file WPS ke tablet"
-28 "Cara Buka Dokumen & Cara insert Gambar ke WPS"
-29 "Cara Auto Kapital saat mengetik di WPS"
-30 "Fix Keyboard tidak mau mengetik & Capital manual"
-31 "Jika Bagian bawah kanan WPS ketutup"
-32 "Cara ketik Font arab"
-33 "Cara install/tambah font"
-34 "Cara Export PDF di WPS"
+28 "Solusi Ketikan WPS berantakan saat pindah PC"
+29 "Cara tampilkan garis tepi Word WPS"
+30 "Cara save file WPS ke tablet"
+31 "Cara Buka Dokumen & Cara insert Gambar ke WPS"
+32 "Cara Auto Kapital saat mengetik di WPS"
+33 "Fix Keyboard tidak mau mengetik & Capital manual"
+34 "Jika Bagian bawah kanan WPS ketutup"
+35 "Cara ketik Font arab"
+36 "Cara install/tambah font"
+37 "Cara Export PDF di WPS"
 ‎  ""
 ‎  "=====  BAGIAN TOMBOL dan CLICK  ====="
-35 "Cara setting ke Double Click saat buka file"
-36 "Cara keyboard Melayang/Floating/Kecil"
-37 "Ubah fungsi Tombol volume & swipe keyboard"
+38 "Cara setting ke Double Click saat buka file"
+39 "Cara keyboard Melayang/Floating/Kecil"
+40 "Ubah fungsi Tombol volume & swipe keyboard"
 ‎  ""
 ‎  "=====  BAGIAN LAINYA  ====="
-38 "Aktivkan WebGL Firefox"
-39 "Cara otomatis firefox download file masuk internal"
-40 "Cara ganti walpaper"
-41 "Perbaiki jam linux"
-42 "Cara kembalikan Panel bawah yang hilang"
-43 "PhpMyAdmin No Privileges to Create Database"
-44 "Install XRDB Not Cenected"
+41 "Aktivkan WebGL Firefox"
+42 "Cara otomatis firefox download file masuk internal"
+43 "Cara ganti walpaper"
+44 "Perbaiki jam linux"
+45 "Cara kembalikan Panel bawah yang hilang"
+46 "PhpMyAdmin No Privileges to Create Database"
+47 "Install XRDB Not Cenected"
 ‎  ""
 )
 
@@ -167,12 +170,30 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/p
 ;;
 
 13)
+# [Menu: Install Word Craft]
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && echo "Mengecek koneksi server Wordcraft..." && if wget --spider --quiet https://github.com/storytold/wordcraft/releases/download/v0.5.0/wordcraft-0.5.0-linux-aarch64.AppImage; then echo "Server aktif. Memeriksa dependencies sistem..."; dpkg -s file libfuse2 binutils libgl1-mesa-dri mesa-utils >/dev/null 2>&1 && echo "Semua dependencies sudah terinstal, melewati proses apt install..." || { echo "Menginstal dependencies yang belum ada..."; sudo apt update && sudo apt install -y file libfuse2 binutils libgl1-mesa-dri mesa-utils; }; echo "Membersihkan file lama & memulai instalasi..."; rm -f wordcraft.AppImage && rm -rf wordcraft && wget -O wordcraft.AppImage https://github.com/storytold/wordcraft/releases/download/v0.5.0/wordcraft-0.5.0-linux-aarch64.AppImage && chmod +x wordcraft.AppImage && ./wordcraft.AppImage --appimage-extract && mv squashfs-root wordcraft && rm -f wordcraft.AppImage && printf "[Desktop Entry]\nType=Application\nName=Wordcraft\nPath=/home/user2/wordcraft\nExec=env XDG_RUNTIME_DIR=/tmp LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe WGPU_BACKEND=gl ./AppRun --no-sandbox\nIcon=/home/user2/wordcraft/ai.storyteller.wordcraft.png\nTerminal=false\n" > /home/user2/Desktop/Wordcraft.desktop && chmod +x /home/user2/Desktop/Wordcraft.desktop; echo "Instal Wordcraft sukses!"; else echo "Gagal terhubung ke server Wordcraft atau koneksi internet bermasalah!"; fi'
+read -n 1 -s
+;;
+
+14)
+# [Menu: Install DeskCraft]
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && echo "Mengecek koneksi server DeckCraft..." && if wget --spider --quiet https://github.com/storytold/deckcraft/releases/download/v0.5.0/deckcraft-0.5.0-linux-aarch64.AppImage; then echo "Server aktif. Memeriksa dependencies sistem..."; dpkg -s file libfuse2 binutils libgl1-mesa-dri mesa-utils >/dev/null 2>&1 && echo "Semua dependencies sudah terinstal, melewati proses apt install..." || { echo "Menginstal dependencies yang belum ada..."; sudo apt update && sudo apt install -y file libfuse2 binutils libgl1-mesa-dri mesa-utils; }; echo "Membersihkan file lama & memulai instalasi..."; rm -f deckcraft.AppImage && rm -rf deckcraft && wget -O deckcraft.AppImage https://github.com/storytold/deckcraft/releases/download/v0.5.0/deckcraft-0.5.0-linux-aarch64.AppImage && chmod +x deckcraft.AppImage && ./deckcraft.AppImage --appimage-extract && mv squashfs-root deckcraft && rm -f deckcraft.AppImage && printf "[Desktop Entry]\nType=Application\nName=DeckCraft\nPath=/home/user2/deckcraft\nExec=env XDG_RUNTIME_DIR=/tmp LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe WGPU_BACKEND=gl ./AppRun --no-sandbox\nIcon=/home/user2/deckcraft/ai.storyteller.deckcraft.png\nTerminal=false\n" > /home/user2/Desktop/Deckcraft.desktop && chmod +x /home/user2/Desktop/Deckcraft.desktop; echo "Instal DeckCraft sukses!"; else echo "Gagal terhubung ke server DeckCraft atau koneksi internet bermasalah!"; fi'
+read -n 1 -s
+;;
+
+15)
+# [Menu: Install Grid Craft]
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && echo "Mengecek koneksi server GridCraft..." && if wget --spider --quiet https://github.com/storytold/gridcraft/releases/download/v0.5.0/gridcraft-0.5.0-linux-aarch64.AppImage; then echo "Server aktif. Memeriksa dependencies sistem..."; dpkg -s file libfuse2 binutils libgl1-mesa-dri mesa-utils >/dev/null 2>&1 && echo "Semua dependencies sudah terinstal, melewati proses apt install..." || { echo "Menginstal dependencies yang belum ada..."; sudo apt update && sudo apt install -y file libfuse2 binutils libgl1-mesa-dri mesa-utils; }; echo "Membersihkan file lama & memulai instalasi..."; rm -f gridcraft.AppImage && rm -rf gridcraft && wget -O gridcraft.AppImage https://github.com/storytold/gridcraft/releases/download/v0.5.0/gridcraft-0.5.0-linux-aarch64.AppImage && chmod +x gridcraft.AppImage && ./gridcraft.AppImage --appimage-extract && mv squashfs-root gridcraft && rm -f gridcraft.AppImage && printf "[Desktop Entry]\nType=Application\nName=GridCraft\nPath=/home/user2/gridcraft\nExec=env XDG_RUNTIME_DIR=/tmp LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe WGPU_BACKEND=gl ./AppRun --no-sandbox\nIcon=/home/user2/gridcraft/ai.storyteller.gridcraft.png\nTerminal=false\n" > /home/user2/Desktop/Gridcraft.desktop && chmod +x /home/user2/Desktop/Gridcraft.desktop; echo "Instal GridCraft sukses!"; else echo "Gagal terhubung ke server GridCraft atau koneksi internet bermasalah!"; fi'
+read -n 1 -s
+;;
+
+16)
 # [Menu: Install Rstudio versi 4.3.3 2023 version]
 echo "Mengecek koneksi server RStudio 2023..."
 if wget --spider --quiet https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2023.03.0-548-arm64.deb; then
     echo "Server aktif. Membersihkan sisa instalasi lama & memulai instalasi baru..."
     proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && rm -rf /home/user2/rstudio && sudo apt purge rstudio -y ; sudo apt update ; sudo apt install r-base -y && wget -O rstudio-2023.deb https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2023.03.0-548-arm64.deb && sudo dpkg -i rstudio-2023.deb ; sudo apt-get install -f -y && rm -f rstudio-2023.deb && rm -f /home/user2/Desktop/Rstudio2026.desktop && printf "[Desktop Entry]\nType=Application\nName=Rstudio 2023\nExec=/usr/lib/rstudio/rstudio --no-sandbox --disable-setuid-sandbox\nIcon=rstudio\nTerminal=false\n" > /home/user2/Desktop/Rstudio2023.desktop && chmod +x /home/user2/Desktop/Rstudio2023.desktop'
-    
+
     clear 
     echo "Instal RStudio versi 2023 sukses! Silahkan tekan tombol apa saja untuk kembali..."
 else
@@ -186,7 +207,7 @@ fi
 read -n 1 -s
 ;;
 
-14)
+17)
 # [Menu: Install Rstudio 4.3.3 2026 Version]
 echo "Mengecek koneksi server RStudio 2026..."
 if wget --spider --quiet https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2026.11.0-daily-40-arm64-debian.tar.gz; then
@@ -206,152 +227,152 @@ fi
 read -n 1 -s
 ;;
 
-15)
+18)
 # [Menu: Install Zotero x Libre Office]
 wget -O - https://raw.githubusercontent.com/panjiades/Zotero/refs/heads/main/install | bash
 ;;
 
-16)
+19)
 # [Menu: Install Sudo]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Sudo | bash
 ;;
 
-17)
+20)
 # [Menu: Instal Audacity]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Audacity2 | bash
 ;;
 
-18)
+21)
 # [Menu: Install GIMP & Inkscape ( Alternative photoshop & corel )]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape2 | bash
 ;;
 
-19)
+22)
 # [Menu: Instal Libre / Editor PDF]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Libre2 | bash
 ;;
 
-20)
+23)
 # [Menu: Cara Perbesar tampilan Linux]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/cara-memperbesar-tampilan-jika-terlalu.html
 ;;
 
-21)
+24)
 # [Menu: Mode touch scrool dan zoom dengan 1 jari]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/02/mengubah-metode-scrool.html?m=1
 ;;
 
-22)
+25)
 # [Menu: Cara perbesar mouse atau pointer]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/11/cara-perbesar-cursor.html?m=1
 ;;
 
-23)
+26)
 # [Menu: Setting touchpad tidak presisi naik atas kanan kiri]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/mengatasi-touchpad-keyboard-tidak.html
 ;;
 
-24)
+27)
 # [Menu: Cara atur sensitivitas mouse external]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/setting-touchpadmouse-terlalu-pelan.html
 ;;
 
-25)
+28)
 # [Menu: Solusi Ketikan WPS berantakan saat pindah PC]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/11/agar-dokumen-dari-wps-ke-microsoft-word.html?m=1
 ;;
 
-26)
+29)
 # [Menu: Cara tampilkan garis tepi Word WPS]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/cara-aktivkan-garis-terpi-margin-di-wps.html?m=1
 ;;
 
-27)
+30)
 # [Menu: Cara save file WPS ke tablet]
 am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMnPbdsk/
 ;;
 
-28)
+31)
 # [Menu: Cara Buka Dokumen & Cara insert Gambar ke WPS]
 am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMn5TrCQ/
 ;;
 
-29)
+32)
 # [Menu: Cara Auto Kapital saat mengetik di WPS]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/04/automatic-uppercase-awal-paragraf_30.html?m=1
 ;;
 
-30)
+33)
 # [Menu: Fix Keyboard tidak mau mengetik & Capital manual]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/cara-mengatasi-keyboard-hapus.html?m=1
 ;;
 
-31)
+34)
 # [Menu: Jika Bagian bawah kanan WPS ketutup]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/mengatasi-bar-bawah-wps-ketutup.html?m=1
 ;;
 
-32)
+35)
 # [Menu: Cara ketik Font arab]
 am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSfK9ksxM/
 ;;
 
-33)
+36)
 # [Menu: Cara install/tambah font]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/cara-download-font.html?m=1
 ;;
 
-34)
+37)
 # [Menu: Cara Export PDF di WPS]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/cara-export-pdf-di-wps.html?m=1
 ;;
 
-35)
+38)
 # [Menu: Cara setting ke Double Click saat buka file]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/mengubah-single-click-menjadi-double.html
 ;;
 
-36)
+39)
 # [Menu: Cara keyboard Melayang/Floating/Kecil]
 am start -a android.intent.action.VIEW -d https://youtube.com/shorts/ytnSd2uiRiM?si=Q-ZJIN8poz6lOesM
 ;;
 
-37)
+40)
 # [Menu: Ubah fungsi Tombol volume & swipe keyboard]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/ubah-tombol-volume-keyboard-swipe.html?m=1
 ;;
 
-38)
+41)
 # [Menu: Aktivkan WebGL Firefox]
 am start -a android.intent.action.VIEW -d wps-pclevel.blogspot.com/2025/08/install-webgl.html
 ;;
 
-39)
+42)
 # [Menu: Cara otomatis firefox download file masuk internal]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/08/cara-downloadan-firefox-otomatis-masuk.html?m=1
 ;;
 
-40)
+43)
 # [Menu: Cara ganti walpaper]
 am start -a android.intent.action.VIEW -d https://www.youtube.com/watch?v=V6UmleoH-rU
 ;;
 
-41)
+44)
 # [Menu: Perbaiki jam linux]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Waktu2 | bash
 ;;
 
-42)
+45)
 # [Menu: Cara kembalikan Panel bawah yang hilang]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/BackupPanel | bash
 ;;
 
-43)
+46)
 # [Menu: PhpMyAdmin No Privileges to Create Database]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/solusi-no-privilege-to-create-database.html?m=1
 ;;
 
-44)
+47)
 # [Menu: Install XRDB Not Cenected]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Xrdb | bash
 ;;
@@ -360,17 +381,17 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/X
 # CADANGAN: Pilihan di bawah ini ada di case lama namun belum dipasang di OPTIONS
 # ==============================================================================
 
-45)
+48)
 # (Dulunya nomor 6 - UpdateFixWAweb2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFixWAweb2 | bash
 ;;
 
-46)
+49)
 # (Dulunya nomor 9 - UpdateWPS365-2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateWPS365-2 | bash
 ;;
 
-47)
+50)
 # (Dulunya nomor 17 - DarkChrome1)
 # Tentukan path ke file yang ingin dicek
 file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
@@ -388,17 +409,17 @@ echo " "
 fi
 ;;
 
-48)
+51)
 # (Dulunya nomor 25 - UpdateCode2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateCode2 | bash
 ;;
 
-49)
+52)
 # (Dulunya nomor 28 - Notify2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Notify2 | bash
 ;;
 
-50)
+53)
 # (Dulunya nomor 45 - PintasanWA)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PintasanWA | bash
 
