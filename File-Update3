@@ -11,9 +11,9 @@ Scrool ke bawah memakai tanda panah."
 
 # INI MENU AWAL
 OPTIONS=(
-1 " "
-2 "Tiktok Creator"
-3 "Install Custom (Premium)"
+
+1 "Tiktok Creator"
+2 "Install Custom (Premium)"
 ‎  ""
 ‎  "=====  BAGIAN INSTALL ULANG CEPAT  ====="
 4 "Install ulang Paket1 ZYREX"
@@ -102,17 +102,13 @@ case $CHOICE in
 exit
 ;;
 
-1)
-# [Menu: " "] (Dulunya nomor 1)
-am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/08/install-ulang-free.html?m=1
-;;
 
-2)
+1)
 # [Menu: Tiktok Creator] (Dulunya nomor 2)
 am start -a android.intent.action.VIEW -d https://tiktok.com/@rekberinnet
 ;;
 
-3)
+2)
 # [Menu: Install Custom (Premium)] (Dulunya nomor 11)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateCustom | bash
 ;;
