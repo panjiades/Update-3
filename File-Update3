@@ -29,46 +29,48 @@ OPTIONS=(
 12 "Update Audio"
 ‎  ""
 ‎  "=====  BAGIAN INSTALL APP  ====="
-13 "Install Zotero x Libre Office"
-14 "Install Sudo"
-15 "Instal Audacity"
-16 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
-17 "Instal Libre / Editor PDF"
+13 "Install Rstudio versi 4.3.3 2023 version"
+14 "Install Rstudio 4.3.3 2026 Version"
+15 "Install Zotero x Libre Office"
+16 "Install Sudo"
+17 "Instal Audacity"
+18 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
+19 "Instal Libre / Editor PDF"
 ‎  ""
 ‎  "=====  BAGIAN PERBESAR LAYAR  ====="
-18 "Cara Perbesar tampilan Linux"
+20 "Cara Perbesar tampilan Linux"
 ‎  ""
 ‎  "=====  BAGIAN TOUCHSCREEN  ====="
-19 "Mode touch scrool dan zoom dengan 1 jari"
-20 "Cara perbesar mouse atau pointer"
-21 "Setting touchpad tidak presisi naik atas kanan kiri"
-22 "Cara atur sensitivitas mouse external"
+21 "Mode touch scrool dan zoom dengan 1 jari"
+22 "Cara perbesar mouse atau pointer"
+23 "Setting touchpad tidak presisi naik atas kanan kiri"
+24 "Cara atur sensitivitas mouse external"
 ‎  ""
 ‎  "=====  BAGIAN PENGETIKAN WPS  ====="
-23 "Solusi Ketikan WPS berantakan saat pindah PC"
-24 "Cara tampilkan garis tepi Word WPS"
-25 "Cara save file WPS ke tablet"
-26 "Cara Buka Dokumen & Cara insert Gambar ke WPS"
-27 "Cara Auto Kapital saat mengetik di WPS"
-28 "Fix Keyboard tidak mau mengetik & Capital manual"
-29 "Jika Bagian bawah kanan WPS ketutup"
-30 "Cara ketik Font arab"
-31 "Cara install/tambah font"
-32 "Cara Export PDF di WPS"
+25 "Solusi Ketikan WPS berantakan saat pindah PC"
+26 "Cara tampilkan garis tepi Word WPS"
+27 "Cara save file WPS ke tablet"
+28 "Cara Buka Dokumen & Cara insert Gambar ke WPS"
+29 "Cara Auto Kapital saat mengetik di WPS"
+30 "Fix Keyboard tidak mau mengetik & Capital manual"
+31 "Jika Bagian bawah kanan WPS ketutup"
+32 "Cara ketik Font arab"
+33 "Cara install/tambah font"
+34 "Cara Export PDF di WPS"
 ‎  ""
 ‎  "=====  BAGIAN TOMBOL dan CLICK  ====="
-33 "Cara setting ke Double Click saat buka file"
-34 "Cara keyboard Melayang/Floating/Kecil"
-35 "Ubah fungsi Tombol volume & swipe keyboard"
+35 "Cara setting ke Double Click saat buka file"
+36 "Cara keyboard Melayang/Floating/Kecil"
+37 "Ubah fungsi Tombol volume & swipe keyboard"
 ‎  ""
 ‎  "=====  BAGIAN LAINYA  ====="
-36 "Aktivkan WebGL Firefox"
-37 "Cara otomatis firefox download file masuk internal"
-38 "Cara ganti walpaper"
-39 "Perbaiki jam linux"
-40 "Cara kembalikan Panel bawah yang hilang"
-41 "PhpMyAdmin No Privileges to Create Database"
-42 "Install XRDB Not Cenected"
+38 "Aktivkan WebGL Firefox"
+39 "Cara otomatis firefox download file masuk internal"
+40 "Cara ganti walpaper"
+41 "Perbaiki jam linux"
+42 "Cara kembalikan Panel bawah yang hilang"
+43 "PhpMyAdmin No Privileges to Create Database"
+44 "Install XRDB Not Cenected"
 ‎  ""
 )
 
@@ -165,151 +167,191 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/p
 ;;
 
 13)
+# [Menu: Install Rstudio versi 4.3.3 2023 version]
+echo "Mengecek koneksi server RStudio 2023..."
+if wget --spider --quiet https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2023.03.0-548-arm64.deb; then
+    echo "Server aktif. Memulai instalasi..."
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && sudo apt update ; sudo apt install r-base -y && wget -O rstudio-2023.deb https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2023.03.0-548-arm64.deb && sudo dpkg -i rstudio-2023.deb ; sudo apt-get install -f -y && rm -f rstudio-2023.deb && printf "[Desktop Entry]\nType=Application\nName=Rstudio\nExec=/usr/lib/rstudio/rstudio --no-sandbox --disable-setuid-sandbox\nIcon=rstudio\nTerminal=false\n" > /home/user2/Desktop/Rstudio.desktop && chmod +x /home/user2/Desktop/Rstudio.desktop'
+    
+    clear 
+    echo "Instal RStudio versi 2023 sukses! Silahkan tekan tombol apa saja untuk kembali..."
+else
+    echo ""
+    echo "========================================================"
+    echo " GAGAL TERHUBUNG KE SERVER RSTUDIO 2023!"
+    echo " Silahkan beritahu Admin melalui WhatsApp: 085865480245"
+    echo "========================================================"
+    echo "Tekan tombol apa saja untuk kembali ke menu..."
+fi
+read -n 1 -s
+;;
+
+14)
+# [Menu: Install Rstudio 4.3.3 2026 Version]
+echo "Mengecek koneksi server RStudio 2026..."
+if wget --spider --quiet https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2026.11.0-daily-40-arm64-debian.tar.gz; then
+    echo "Server aktif. Memulai instalasi..."
+    proot-distro login ubuntu --user user2 --shared-tmp -- bash -c 'cd && sudo apt update ; sudo apt install r-base -y && wget -O rstudio-2026.tar.gz https://dl.dailies.rstudio.com/electron/jammy/arm64/rstudio-2026.11.0-daily-40-arm64-debian.tar.gz && mkdir -p /home/user2/rstudio && tar -xzf rstudio-2026.tar.gz -C /home/user2/rstudio --strip-components=1 && rm -f rstudio-2026.tar.gz && chmod +x /home/user2/rstudio/rstudio && printf "[Desktop Entry]\nType=Application\nName=Rstudio\nPath=/home/user2/rstudio\nExec=/usr/lib/rstudio/rstudio --no-sandbox --disable-setuid-sandbox\nIcon=/home/user2/rstudio/resources/app/rstudio.png\nTerminal=false\n" > /home/user2/Desktop/Rstudio.desktop && chmod +x /home/user2/Desktop/Rstudio.desktop'
+
+    clear
+    echo "Instal RStudio versi 2026 sukses! Silahkan tekan tombol apa saja untuk kembali..."
+else
+    echo ""
+    echo "========================================================"
+    echo " GAGAL TERHUBUNG KE SERVER RSTUDIO 2026!"
+    echo " Silahkan beritahu Admin melalui WhatsApp: 085865480245"
+    echo "========================================================"
+    echo "Tekan tombol apa saja untuk kembali ke menu..."
+fi
+read -n 1 -s
+;;
+
+15)
 # [Menu: Install Zotero x Libre Office]
 wget -O - https://raw.githubusercontent.com/panjiades/Zotero/refs/heads/main/install | bash
 ;;
 
-14)
+16)
 # [Menu: Install Sudo]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Sudo | bash
 ;;
 
-15)
+17)
 # [Menu: Instal Audacity]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Audacity2 | bash
 ;;
 
-16)
+18)
 # [Menu: Install GIMP & Inkscape ( Alternative photoshop & corel )]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape2 | bash
 ;;
 
-17)
+19)
 # [Menu: Instal Libre / Editor PDF]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Libre2 | bash
 ;;
 
-18)
+20)
 # [Menu: Cara Perbesar tampilan Linux]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/cara-memperbesar-tampilan-jika-terlalu.html
 ;;
 
-19)
+21)
 # [Menu: Mode touch scrool dan zoom dengan 1 jari]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/02/mengubah-metode-scrool.html?m=1
 ;;
 
-20)
+22)
 # [Menu: Cara perbesar mouse atau pointer]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/11/cara-perbesar-cursor.html?m=1
 ;;
 
-21)
+23)
 # [Menu: Setting touchpad tidak presisi naik atas kanan kiri]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/mengatasi-touchpad-keyboard-tidak.html
 ;;
 
-22)
+24)
 # [Menu: Cara atur sensitivitas mouse external]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/setting-touchpadmouse-terlalu-pelan.html
 ;;
 
-23)
+25)
 # [Menu: Solusi Ketikan WPS berantakan saat pindah PC]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/11/agar-dokumen-dari-wps-ke-microsoft-word.html?m=1
 ;;
 
-24)
+26)
 # [Menu: Cara tampilkan garis tepi Word WPS]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/cara-aktivkan-garis-terpi-margin-di-wps.html?m=1
 ;;
 
-25)
+27)
 # [Menu: Cara save file WPS ke tablet]
 am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMnPbdsk/
 ;;
 
-26)
+28)
 # [Menu: Cara Buka Dokumen & Cara insert Gambar ke WPS]
 am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMn5TrCQ/
 ;;
 
-27)
+29)
 # [Menu: Cara Auto Kapital saat mengetik di WPS]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/04/automatic-uppercase-awal-paragraf_30.html?m=1
 ;;
 
-28)
+30)
 # [Menu: Fix Keyboard tidak mau mengetik & Capital manual]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/cara-mengatasi-keyboard-hapus.html?m=1
 ;;
 
-29)
+31)
 # [Menu: Jika Bagian bawah kanan WPS ketutup]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/mengatasi-bar-bawah-wps-ketutup.html?m=1
 ;;
 
-30)
+32)
 # [Menu: Cara ketik Font arab]
 am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSfK9ksxM/
 ;;
 
-31)
+33)
 # [Menu: Cara install/tambah font]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/cara-download-font.html?m=1
 ;;
 
-32)
+34)
 # [Menu: Cara Export PDF di WPS]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/cara-export-pdf-di-wps.html?m=1
 ;;
 
-33)
+35)
 # [Menu: Cara setting ke Double Click saat buka file]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/mengubah-single-click-menjadi-double.html
 ;;
 
-34)
+36)
 # [Menu: Cara keyboard Melayang/Floating/Kecil]
 am start -a android.intent.action.VIEW -d https://youtube.com/shorts/ytnSd2uiRiM?si=Q-ZJIN8poz6lOesM
 ;;
 
-35)
+37)
 # [Menu: Ubah fungsi Tombol volume & swipe keyboard]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/ubah-tombol-volume-keyboard-swipe.html?m=1
 ;;
 
-36)
+38)
 # [Menu: Aktivkan WebGL Firefox]
 am start -a android.intent.action.VIEW -d wps-pclevel.blogspot.com/2025/08/install-webgl.html
 ;;
 
-37)
+39)
 # [Menu: Cara otomatis firefox download file masuk internal]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/08/cara-downloadan-firefox-otomatis-masuk.html?m=1
 ;;
 
-38)
+40)
 # [Menu: Cara ganti walpaper]
 am start -a android.intent.action.VIEW -d https://www.youtube.com/watch?v=V6UmleoH-rU
 ;;
 
-39)
+41)
 # [Menu: Perbaiki jam linux]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Waktu2 | bash
 ;;
 
-40)
+42)
 # [Menu: Cara kembalikan Panel bawah yang hilang]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/BackupPanel | bash
 ;;
 
-41)
+43)
 # [Menu: PhpMyAdmin No Privileges to Create Database]
 am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/solusi-no-privilege-to-create-database.html?m=1
 ;;
 
-42)
+44)
 # [Menu: Install XRDB Not Cenected]
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Xrdb | bash
 ;;
@@ -318,17 +360,17 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/X
 # CADANGAN: Pilihan di bawah ini ada di case lama namun belum dipasang di OPTIONS
 # ==============================================================================
 
-43)
+45)
 # (Dulunya nomor 6 - UpdateFixWAweb2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFixWAweb2 | bash
 ;;
 
-44)
+46)
 # (Dulunya nomor 9 - UpdateWPS365-2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateWPS365-2 | bash
 ;;
 
-45)
+47)
 # (Dulunya nomor 17 - DarkChrome1)
 # Tentukan path ke file yang ingin dicek
 file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
@@ -346,17 +388,17 @@ echo " "
 fi
 ;;
 
-46)
+48)
 # (Dulunya nomor 25 - UpdateCode2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateCode2 | bash
 ;;
 
-47)
+49)
 # (Dulunya nomor 28 - Notify2)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Notify2 | bash
 ;;
 
-48)
+50)
 # (Dulunya nomor 45 - PintasanWA)
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PintasanWA | bash
 
