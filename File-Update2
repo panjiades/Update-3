@@ -1,72 +1,37 @@
 #!/bin/bash
 
-# Fungsi untuk menampilkan teks header
-tampilkan_header() {
-    clear
-    echo -e "\033[1;31mVERSI TERMUX INI SUDAH TIDAK DIDUKUNG / KEDALUARSA\033[0m"
-    echo " "
-    echo "Update terbaru akan mendapatkan dukungan lebih lama :"
-    echo -e "\033[32m- Fitur print\033[0m"
-    echo -e "\033[32m- Fix audio tidak keluar\033[0m"
-    echo -e "\033[32m- Open file dokumen langsung dari file manager android\033[0m"
-    echo -e "\033[32m- Scrool dan klik kanan 1 jari\033[0m"
-    echo -e "\033[32m- Dan masih banyak lagi\033[0m"
-    echo " "
-    echo "--------------------------------------------------"
-}
+# Pastikan package dialog sudah terinstall: pkg install dialog
+BACKTITLE="Informasi Sistem Termux"
+TITLE="PERINGATAN"
+MENU="Versi Termux ini sudah tidak didukung / kedaluararsa.\n\nUpdate terbaru akan mendapatkan dukungan lebih lama:\n- Fitur print\n- Fix audio tidak keluar\n- Open file dokumen langsung dari file manager android\n- Scroll dan klik kanan 1 jari\n- Dan masih banyak lagi"
 
-# Inisialisasi pilihan awal (0 untuk pilihan A, 1 untuk pilihan B)
-pilihan=0
-jumlah_menu=2
+# Daftar pilihan menu (Tag dan Deskripsi)
+OPTIONS=(
+    "A" "Tutorial update"
+    "B" "Cancel exit"
+)
 
-while true; do
-    tampilkan_header
+# Memanggil kotak dialog berbasis teks (default layar biru dialog ncurses)
+CHOICE=$(dialog --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" 18 65 2 \
+                "${OPTIONS[@]}" 2>&1 >/dev/tty)
 
-    # Render menu interaktif dengan highlight warna
-    if [ $pilihan -eq 0 ]; then
-        echo -e " \033[7m > A. Tutorial update \033[0m"
-        echo -e "   B. Cancel exit"
-    else
-        echo -e "   A. Tutorial update"
-        echo -e " \033[7m > B. Cancel exit \033[0m"
-    fi
+clear
 
-    # Membaca input tombol dari keyboard
-    IFS= read -rsn1 key
-
-    # Mendeteksi tombol panah
-    if [[ $key == $'\x1b' ]]; then
-        read -rsn2 key 
-        case "$key" in
-            '[A') # Panah Atas
-                ((pilihan--))
-                if [ $pilihan -lt 0 ]; then
-                    pilihan=$((jumlah_menu - 1))
-                fi
-                ;;
-            '[B') # Panah Bawah
-                ((pilihan++))
-                if [ $pilihan -ge $jumlah_menu ]; then
-                    pilihan=0
-                fi
-                ;;
-        esac
-    elif [[ -z $key ]]; then
-        # Jika tombol ENTER ditekan
-        case $pilihan in
-            0)
-                clear
-                echo -e "\n\033[36mMembuka Tutorial update di YouTube...\033[0m"
-                # Perintah am start untuk membuka YouTube melalui aplikasi Android
-                am start -a android.intent.action.VIEW -d "https://youtube.com/watch?v=f6sP-8sJZZ4&si=ePGLKnU6PlLJ9l6Z"
-
-exit 0
-                ;;
-            1)
-                clear
-                echo -e "\n\033[31mKeluar dari program.\033[0m"
-                exit 0
-                ;;
-        esac
-    fi
-done
+# Menangani hasil pilihan pengguna
+case $CHOICE in
+    A)
+        echo -e "\n\033[36mMembuka Tutorial update di YouTube...\033[0m"
+        am start -a android.intent.action.VIEW -d "https://youtube.com/watch?v=f6sP-8sJZZ4&si=ePGLKnU6PlLJ9l6Z"
+        exit 0
+        ;;
+    B)
+        echo -e "\n\033[31mKeluar dari program.\033[0m"
+        exit 0
+        ;;
+    *)
+        echo -e "\nKeluar / Dibatalkan."
+        exit 0
+        ;;
+esac
