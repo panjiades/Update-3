@@ -3,11 +3,11 @@
 # Pastikan package dialog sudah terinstall: pkg install dialog
 BACKTITLE="Informasi Sistem Termux"
 TITLE="PERINGATAN"
-MENU="Versi Termux ini sudah tidak didukung / kedaluararsa.\n\nUpdate terbaru akan mendapatkan dukungan lebih lama:\n- Fitur print\n- Fix audio tidak keluar\n- Open file dokumen langsung dari file manager android\n- Scroll dan klik kanan 1 jari\n- Dan masih banyak lagi"
+MENU="Versi Termux ini sudah tidak didukung / kedaluararsa.\n\nUpdate Termux V4 terbaru akan mendapatkan dukungan lebih lama:\n- Fitur print\n- Fix audio tidak keluar\n- Open file dokumen langsung dari file manager android\n- Scroll dan klik kanan 1 jari\n- Dan masih banyak lagi"
 
 # Daftar pilihan menu (Tag dan Deskripsi)
 OPTIONS=(
-    "A" "Tutorial update"
+    "A" "Lihat Tutorial update"
     "B" "Cancel exit"
 )
 
