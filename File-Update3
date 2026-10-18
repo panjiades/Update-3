@@ -15,7 +15,7 @@ OPTIONS=(
 2 "Install Custom (Premium)"
 ‎  ""
 ‎  "=====  BAGIAN INSTALL ULANG CEPAT  ====="
-3 "Install ulang Paket1 ZYREX"
+3 "Install ulang Linux"
 ‎  ""
 ‎  "=====  BAGIAN UPDATE  ====="
 4 "Update Firefox"
@@ -104,18 +104,21 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 ;;
 
 3)
-# [Menu: Install ulang Paket1 ZYREX]
-folder="/data/data/com.termux/files/home/storage/shared/android/media/linux1"
-if [ -d "$folder" ]; then
-  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1-2 | bash
-else
-  echo " "
-  echo -e "Gagal : \033[31mTerdeteksi belum pernah instal Paket 1."
-  echo "Atau Terdeteksi perangkat baru."
-  echo "Silahkan memakai jasa 085865480245 untuk menginstall Paket 1 linux terlebih dahulu.."
-  sleep 15
-  exit 0
-fi
+proot-distro remove ubuntu
+mkdir -pv storage/shared/Linux\ Download\ Files
+mkdir -pv storage/shared/WPS\ Backup
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+cd storage/shared/download
+ls
+cp files.tar  /data/data/com.termux
+cd /data/data/com.termux
+tar xvf files.tar
+rm files.tar
+echo "Sukses"
+cd
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/main/Sudo | bash; read -n 1 -s; pkill -9 com.termux
+
 ;;
 
 4)
