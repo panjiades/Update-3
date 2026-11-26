@@ -1,34 +1,24 @@
 #!/bin/bash
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c '
+cd
+sudo apt install -y brave-browser
 
-# Tentukan path ke file yang ingin dicek
-file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/Brave Web Browser.desktop"
+mkdir -p "$HOME/Desktop" "$HOME/.local/share/applications"
 
-# Periksa keberadaan file
-if [ -f "$file" ]; then
-  # Jika file ada, tampilkan pesan "Ada"
+cat << "EOF" > "$HOME/Desktop/brave-browser.desktop"
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Brave Browser
+Comment=Access the Internet
+Exec=/usr/bin/brave-browser --no-sandbox --password-store=basic %U
+Icon=brave-browser
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
+EOF
 
-proot-distro login ubuntu -- bash -c "cd; apt remove sudo -y; apt install sudo -y;"
-
-clear
-
-echo " "
-echo -e "\033[37mMasukan password " "\033[32m123456" "\033[37m, lalu enter saja ( password tidak terlihat )"
-echo " "
-proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; sudo apt update; sudo apt install brave-browser -y;"
-
-clear
-
-echo " "
-echo "\033[32mSELESAI UPDATE BRAVE BROWSER"
-echo " "
-
-else
-  # Jika file tidak ada, tampilkan pesan "Tidak ada"
-clear
-echo " "
-echo -e  "Gagal :" "\033[31mTerdeteksi belum pernah instal Brave Browser. 
-Atau Terdeteksi perangkat baru.
-Silahkan memakai jasa 085865480245 untuk menginstall Paket 2 linux terlebih dahulu.."
-sleep 15
-exit 0
-fi
+chmod +x "$HOME/Desktop/brave-browser.desktop"
+cp "$HOME/Desktop/brave-browser.desktop" "$HOME/.local/share/applications/brave-browser.desktop"
+echo "Desktop entry berhasil dibuat di $HOME/Desktop/brave-browser.desktop"
+'
