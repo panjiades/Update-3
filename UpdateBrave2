@@ -1,42 +1,24 @@
 #!/bin/bash
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c '
+cd
+sudo apt install -y brave-browser
 
-# INI MENU PILIHAN
-HEIGHT=30
-WIDTH=80
-CHOICE_HEIGHT=4
-TITLE="UPDATE BRAVE BROWSER"
-MENU="
-Update Brave umumnya berkisar100mb+
-Data brave tidak akan hilang.
-Hanya lakukan ini ketika di brave ada notif meminta update."
+mkdir -p "$HOME/Desktop" "$HOME/.local/share/applications"
 
-# INI MENU AWAL
-OPTIONS=(
-1 "Update"
-2 "Batal")
+cat << "EOF" > "$HOME/Desktop/brave-browser.desktop"
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Brave Browser
+Comment=Access the Internet
+Exec=/usr/bin/brave-browser --no-sandbox --password-store=basic %U
+Icon=brave-browser
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
+EOF
 
-CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE" \
-                --title "$TITLE" \
-                --menu "$MENU" \
-                $HEIGHT $WIDTH $CHOICE_HEIGHT \
-                "${OPTIONS[@]}" \
-                2>&1 >/dev/tty)
-
-clear
-case $CHOICE in
-
-‎ )
-exit
-;;
-
-1)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBrave | bash
-;;
-
-2)
-exit
-;;
-
-
-esac
+chmod +x "$HOME/Desktop/brave-browser.desktop"
+cp "$HOME/Desktop/brave-browser.desktop" "$HOME/.local/share/applications/brave-browser.desktop"
+echo "Desktop entry berhasil dibuat di $HOME/Desktop/brave-browser.desktop"
+'
