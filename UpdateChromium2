@@ -1,41 +1,24 @@
 #!/bin/bash
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c '
+cd
+sudo apt install -y google-chrome-stable
 
-# INI MENU PILIHAN
-HEIGHT=30
-WIDTH=80
-CHOICE_HEIGHT=4
-TITLE="UPDATE CHROMIUM BROWSER"
-MENU="
-Data Chromium tidak akan hilang.
-Hanya lakukan ini ketika di Chromium ada notif meminta update."
+mkdir -p "$HOME/Desktop" "$HOME/.local/share/applications"
 
-# INI MENU AWAL
-OPTIONS=(
-1 "Update"
-2 "Batal")
+cat << "EOF" > "$HOME/Desktop/google-chrome.desktop"
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Google Chrome
+Comment=Access the Internet
+Exec=/usr/bin/google-chrome-stable --no-sandbox --password-store=basic %U
+Icon=google-chrome
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
+EOF
 
-CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE" \
-                --title "$TITLE" \
-                --menu "$MENU" \
-                $HEIGHT $WIDTH $CHOICE_HEIGHT \
-                "${OPTIONS[@]}" \
-                2>&1 >/dev/tty)
-
-clear
-case $CHOICE in
-
-‎ )
-exit
-;;
-
-1)
-wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateChromium | bash
-;;
-
-2)
-exit
-;;
-
-
-esac
+chmod +x "$HOME/Desktop/google-chrome.desktop"
+cp "$HOME/Desktop/google-chrome.desktop" "$HOME/.local/share/applications/google-chrome.desktop"
+echo "Desktop entry berhasil dibuat di $HOME/Desktop/google-chrome.desktop"
+'
