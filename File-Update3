@@ -20,7 +20,7 @@ OPTIONS=(
 ‎  "=====  BAGIAN UPDATE  ====="
 4 "Update Firefox"
 5 "Update Brave Browser"
-6 "Update Chromium v140"
+6 "Install/Update Google Chrome"
 7 "Update Termux"
 8 "Update Gimp"
 9 "Update Inkscape"
